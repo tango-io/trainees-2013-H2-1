@@ -1,50 +1,109 @@
-%div
-  .row
-    /First part
-    %section
-      .large-9.columns.back{:role => "content"}
-        %article
-          %p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          %hr/
+!!!
+%html
+  %head
+    %title Start Page
+    = stylesheet_link_tag "application", media: "all" , "data-turbolinks-track" => true
+    = javascript_include_tag "application", "data-turbolinks-track" => true
+    = csrf_meta_tags
+  %body
+    /Menu
+    .row
+      .large-2.columns
+        %p Lo del logo
+      .large-5.columns
+        %p OPALES
+      %nav.large-5.columns
+        %button.tiny{"data-reveal-id" => "myModal"} login
+        %input.small-3{:placeholder => "Search", :type => "text"}/
+        %ul.button-group
+          %li
+            %a.button.tiny.secondary{:href => "#"} SUCCES STORIES
+          %li
+            %a.button.tiny.secondary{:href => "#"} PURCHASE GIF CREDIT
+          %li
+            %a.button.tiny.secondary{:href => "#"} ONLINE STORE
+          %li
+            %a.button.tiny.secondary{:href => "#"} STARFISH STORIE
+          %li
+            %a.button.tiny{:href => "#"} VIDEO TRAINING
+          %li
+            %a.button.tiny{:href => "#"} HOW IT WORKS
+      %hr/
+    /End menu
+    /Content-1
+    .content1
+      %section.row
+        %article.large-9.columns
+          .moneybuttons
+            %ul.button-group
+              %li 
+                %a.button.tiny{:href => "#"}TOTAL DONATIONS BY USER
+              %li
+                %a.button.tiny{:href => "#"}TOTAL RAISED BY USER
+              %li 
+                %a.button.tiny{:href => "#"}TOTAL GRANT GIVEN
+          .phosouers
+            %img.imgclass{:src => "#" } image
+            %p change
         %aside.large-3.columns
           %ul.side-nav
             %li
               %a.button{:href => "#"} START A PROJECT MATCH
             %li
-              %a.button{:href => "#"} START A CAMPAING
-    %section
-      .large-9.columns{:role => "content"}
-        %article
-          %p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          %hr/
+              %a.button{:href => "#"} START A CAMPAING 
+      %section.row
+        %article.large-9.columns
+          %p Lorem impsum2
         %aside.large-3.columns
           %ul.side-nav
             %li
-              %a.button{:href => "#"} POST A GRANT
+              %a.button{:href => "#"} START A PROJECT MATCH
             %li
-              %a.button{:href => "#"} MESSAGES
-    %section
-      .large-9.columns{:role => "content"}
-        %article
-          %p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          %hr/
+              %a.button{:href => "#"} START A CAMPAING 
+      %section.row
+        %article.large-9.columns
+          %p Lorem impsum3
         %aside.large-3.columns
           %ul.side-nav
             %li
-              %a.button{:href => "#"} HISTORY
+              %a.button{:href => "#"} START A PROJECT MATCH
             %li
-              %a.button{:href => "#"} ACCOUNT SETTINGS
-  .row
-  / second part
-  %section
-    .large-12.columns{:role => "content"}
-      %article
-        %p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        %hr/
-      %article
-        %p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        %hr/
-      %article
-        %p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        %hr/
+              %a.button{:href => "#"} START A CAMPAING 
 
+    /Content-2
+    .content2
+      %section.row
+        %article.large-12.columns
+          %p USER COMUNITY SECTION
+          %hr
+      %section.row
+        %article.large-12.columns
+          %p PROJECTS I'VE SUPPORTED
+          %hr
+      %section.row
+        %article.large-12.columns
+          .row
+            .video.large-3.columns
+              %p Here is the video
+            .info.large-9.columns
+              %p About the DONOR
+          %hr
+
+    /Footer
+    %footer.row
+      .large-3.columns
+        %ul.button
+          %li Terms of Use
+          %li Contact us xxxxxx info@starfish.com
+      .large-6.columns
+        .whointhissite
+          %p WHO IN THE PRESS IS TALKING ABOUT STARFISH 
+        .privacyandpolicity
+          %a LOOK UP A NON=PROFIT(GUIDSTAR)
+          %a STARFISH ACADEMY
+          %a NON-PROFIT JOBS
+          %a PRIVACY POLICY
+      .large-3.columns
+        %ul.button
+          %li Facebook
+          %li Twitter
