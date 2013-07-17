@@ -1,0 +1,51 @@
+!!!
+%html
+  %head
+    %title Start Page
+    = stylesheet_link_tag "application ", media: "all" , "data-turbolinks-track" => true
+    = javascript_include_tag "application", "data-turbolinks-track" => true
+    = csrf_meta_tags
+  %body
+    /menu Bar
+    %nav.row
+      .large-12.columns
+        .left
+          %img/
+          %p Lo del logo
+        %nav.large-5.colums.nav-bar.right
+          %button.tiny{"data-reveal-id" => "myModal"} login
+          %text
+            / Div del Login
+          #myModal.reveal-modal
+            %h2 Awesome. I have it.
+            %p.lead Your couch.  It is mine.
+            %p Im a cool paragraph that lives inside of an even cooler modal. Wins
+            %a.close-reveal-modal ×
+          / T
+          %ul.button-group
+            %li
+              %a.button.tiny{:href => "#"} SUCCES STORIES
+            %li
+              %a.button.tiny{:href => "#"} PURCHASE GIF CREDIT
+            %li
+              %a.button.tiny{:href => "#"} ONLINE STORE
+            %li
+              %a.button.tiny{:href => "#"} STARFISH STORIE
+            %li
+              %a.button.tiny{:href => "#"} VIDEO TRAINING
+            %li
+              %a.button.tiny{:href => "#"} HOW IT WORKS
+      %hr/
+    / End menu
+
+    = yield
+
+    /Footer
+    %footer.row
+      .large-12.columns
+        %section.large-2.colums.left
+          %p Links 1
+        %section.large-8.colums.left
+          %p links 2
+          %section.large-2.colums.right
+            %p Links 3
