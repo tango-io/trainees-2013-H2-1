@@ -54,7 +54,7 @@ test:
 production:
   adapter: postgresql
   encoding: unicode
-  database: star_test
+  database: starfish
   pool: 5
-  username: star
-  password:
+  username: starfish
+  password: 1234
