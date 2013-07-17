@@ -5,7 +5,6 @@ app.controller("loginUserController", ['$scope', function ($scope){
   ]
 
   $scope.showUsers = function() {
-   $scope.users = users 
-    console.log('Hola');
+
   };
 }]);
