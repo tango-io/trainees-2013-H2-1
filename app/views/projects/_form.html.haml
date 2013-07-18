@@ -1,0 +1,9 @@
+= form_for @projects do |f|
+  - if @projects.errors.any?
+    .error_explanation
+      %h2
+        = pluralize(@projects.errors.count, "error")
+        Error!
+      %ul
+        - @projects.errors.full_messages.each do |msg|
+          %li.error_explanation= msg
