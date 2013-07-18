@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <!DOCTYPE html>
 %html
   %head
@@ -20,3 +21,15 @@
 
     = yield 
 
+=======
+!!! 
+%html(ng-app="app")
+  %head
+    %title AngularJsp1 
+    = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true 
+    = javascript_include_tag "application", "data-turbolinks-track" => true
+    = csrf_meta_tags
+  %body
+    =yield
+    =render 'layouts/head'
+>>>>>>> 6bed13c7dba8abc4ab85394bffa9fbd114c3d5d6

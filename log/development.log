@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
   [1m[36m (37.7ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
   [1m[35m (51.6ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
   [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
@@ -658,6 +659,26 @@ _hamlout.push_text("      signed as\n      #{
   actionpack (4.0.0) lib/action_view/renderer/template_renderer.rb:61:in `render_with_layout'
   actionpack (4.0.0) lib/action_view/renderer/template_renderer.rb:47:in `render_template'
   actionpack (4.0.0) lib/action_view/renderer/template_renderer.rb:17:in `render'
+=======
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.5ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-17 12:24:19 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (5.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+Completed 500 Internal Server Error in 239ms
+
+ActionView::MissingTemplate (Missing template users/index, application/index with {:locale=>[:en], :formats=>[:html], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder, :haml]}. Searched in:
+  * "/home/oscar/Documents/starfish/app/views"
+  * "/home/oscar/.rvm/gems/ruby-1.9.3-p448/gems/devise-3.0.0/app/views"
+):
+  actionpack (4.0.0) lib/action_view/path_set.rb:46:in `find'
+  actionpack (4.0.0) lib/action_view/lookup_context.rb:115:in `find'
+  actionpack (4.0.0) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionpack (4.0.0) lib/action_view/renderer/template_renderer.rb:35:in `determine_template'
+  actionpack (4.0.0) lib/action_view/renderer/template_renderer.rb:8:in `render'
+>>>>>>> 6bed13c7dba8abc4ab85394bffa9fbd114c3d5d6
   actionpack (4.0.0) lib/action_view/renderer/renderer.rb:42:in `render_template'
   actionpack (4.0.0) lib/action_view/renderer/renderer.rb:23:in `render'
   actionpack (4.0.0) lib/abstract_controller/rendering.rb:127:in `_render_template'
@@ -669,7 +690,11 @@ _hamlout.push_text("      signed as\n      #{
   actionpack (4.0.0) lib/action_controller/metal/rendering.rb:16:in `render'
   actionpack (4.0.0) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
   activesupport (4.0.0) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+<<<<<<< HEAD
   /home/hmeza/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+=======
+  /home/oscar/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+>>>>>>> 6bed13c7dba8abc4ab85394bffa9fbd114c3d5d6
   activesupport (4.0.0) lib/active_support/core_ext/benchmark.rb:12:in `ms'
   actionpack (4.0.0) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
   actionpack (4.0.0) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
@@ -680,7 +705,11 @@ _hamlout.push_text("      signed as\n      #{
   actionpack (4.0.0) lib/abstract_controller/base.rb:189:in `process_action'
   actionpack (4.0.0) lib/action_controller/metal/rendering.rb:10:in `process_action'
   actionpack (4.0.0) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+<<<<<<< HEAD
   activesupport (4.0.0) lib/active_support/callbacks.rb:403:in `_run__413710159177264187__process_action__callbacks'
+=======
+  activesupport (4.0.0) lib/active_support/callbacks.rb:403:in `_run__314202753__process_action__callbacks'
+>>>>>>> 6bed13c7dba8abc4ab85394bffa9fbd114c3d5d6
   activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
   actionpack (4.0.0) lib/abstract_controller/callbacks.rb:17:in `process_action'
   actionpack (4.0.0) lib/action_controller/metal/rescue.rb:29:in `process_action'
@@ -692,6 +721,7 @@ _hamlout.push_text("      signed as\n      #{
   actionpack (4.0.0) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
   activerecord (4.0.0) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
   actionpack (4.0.0) lib/abstract_controller/base.rb:136:in `process'
+<<<<<<< HEAD
 =======
   /home/manstike/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
   /home/manstike/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
@@ -777,6 +807,8 @@ Started GET "/users/institutional_user" for 127.0.0.1 at 2013-07-17 12:28:16 -05
 
 AbstractController::ActionNotFound (The action 'show' could not be found for UsersController):
   actionpack (4.0.0) lib/abstract_controller/base.rb:131:in `process'
+=======
+>>>>>>> 6bed13c7dba8abc4ab85394bffa9fbd114c3d5d6
   actionpack (4.0.0) lib/abstract_controller/rendering.rb:44:in `process'
   actionpack (4.0.0) lib/action_controller/metal.rb:195:in `dispatch'
   actionpack (4.0.0) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
@@ -803,7 +835,11 @@ AbstractController::ActionNotFound (The action 'show' could not be found for Use
   activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
   activerecord (4.0.0) lib/active_record/migration.rb:369:in `call'
   actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+<<<<<<< HEAD
   activesupport (4.0.0) lib/active_support/callbacks.rb:373:in `_run__965641936__call__callbacks'
+=======
+  activesupport (4.0.0) lib/active_support/callbacks.rb:373:in `_run__297151099__call__callbacks'
+>>>>>>> 6bed13c7dba8abc4ab85394bffa9fbd114c3d5d6
   activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
   actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
   actionpack (4.0.0) lib/action_dispatch/middleware/reloader.rb:64:in `call'
@@ -827,6 +863,7 @@ AbstractController::ActionNotFound (The action 'show' could not be found for Use
   rack (1.5.2) lib/rack/lock.rb:17:in `call'
   rack (1.5.2) lib/rack/content_length.rb:14:in `call'
   rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+<<<<<<< HEAD
   /home/manstike/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
   /home/manstike/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
   /home/manstike/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
@@ -1032,6 +1069,63 @@ Started GET "/users/institutional_user" for 127.0.0.1 at 2013-07-17 12:30:24 -05
 AbstractController::ActionNotFound (The action 'show' could not be found for UsersController):
   actionpack (4.0.0) lib/abstract_controller/base.rb:131:in `process'
 >>>>>>> d37b87458c8f1325489400193973f612ad322960
+=======
+  /home/oscar/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/oscar/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/oscar/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/oscar/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (9.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-17 12:24:20 -0500
+Processing by UsersController#index as HTML
+Completed 500 Internal Server Error in 3ms
+
+ActionView::MissingTemplate (Missing template users/index, application/index with {:locale=>[:en], :formats=>[:html], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder, :haml]}. Searched in:
+  * "/home/oscar/Documents/starfish/app/views"
+  * "/home/oscar/.rvm/gems/ruby-1.9.3-p448/gems/devise-3.0.0/app/views"
+):
+  actionpack (4.0.0) lib/action_view/path_set.rb:46:in `find'
+  actionpack (4.0.0) lib/action_view/lookup_context.rb:115:in `find'
+  actionpack (4.0.0) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionpack (4.0.0) lib/action_view/renderer/template_renderer.rb:35:in `determine_template'
+  actionpack (4.0.0) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionpack (4.0.0) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionpack (4.0.0) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionpack (4.0.0) lib/abstract_controller/rendering.rb:127:in `_render_template'
+  actionpack (4.0.0) lib/action_controller/metal/streaming.rb:219:in `_render_template'
+  actionpack (4.0.0) lib/abstract_controller/rendering.rb:120:in `render_to_body'
+  actionpack (4.0.0) lib/action_controller/metal/rendering.rb:33:in `render_to_body'
+  actionpack (4.0.0) lib/action_controller/metal/renderers.rb:26:in `render_to_body'
+  actionpack (4.0.0) lib/abstract_controller/rendering.rb:97:in `render'
+  actionpack (4.0.0) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.0.0) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+  activesupport (4.0.0) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /home/oscar/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+  activesupport (4.0.0) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.0.0) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+  actionpack (4.0.0) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+  activerecord (4.0.0) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.0.0) lib/action_controller/metal/instrumentation.rb:40:in `render'
+  actionpack (4.0.0) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.0.0) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.0.0) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.0.0) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.0.0) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:403:in `_run__314202753__process_action__callbacks'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.0) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (4.0.0) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.0.0) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.0.0) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.0) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.0) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.0) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.0.0) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+  activerecord (4.0.0) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.0.0) lib/abstract_controller/base.rb:136:in `process'
+>>>>>>> 6bed13c7dba8abc4ab85394bffa9fbd114c3d5d6
   actionpack (4.0.0) lib/abstract_controller/rendering.rb:44:in `process'
   actionpack (4.0.0) lib/action_controller/metal.rb:195:in `dispatch'
   actionpack (4.0.0) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
@@ -1059,10 +1153,14 @@ AbstractController::ActionNotFound (The action 'show' could not be found for Use
   activerecord (4.0.0) lib/active_record/migration.rb:369:in `call'
   actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
 <<<<<<< HEAD
+<<<<<<< HEAD
   activesupport (4.0.0) lib/active_support/callbacks.rb:373:in `_run__3633498575084012910__call__callbacks'
 =======
   activesupport (4.0.0) lib/active_support/callbacks.rb:373:in `_run__965641936__call__callbacks'
 >>>>>>> d37b87458c8f1325489400193973f612ad322960
+=======
+  activesupport (4.0.0) lib/active_support/callbacks.rb:373:in `_run__297151099__call__callbacks'
+>>>>>>> 6bed13c7dba8abc4ab85394bffa9fbd114c3d5d6
   activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
   actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
   actionpack (4.0.0) lib/action_dispatch/middleware/reloader.rb:64:in `call'
@@ -1086,6 +1184,7 @@ AbstractController::ActionNotFound (The action 'show' could not be found for Use
   rack (1.5.2) lib/rack/lock.rb:17:in `call'
   rack (1.5.2) lib/rack/content_length.rb:14:in `call'
   rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+<<<<<<< HEAD
 <<<<<<< HEAD
   /home/hmeza/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
   /home/hmeza/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
@@ -1274,6 +1373,29 @@ ActionView::Template::Error (/home/hmeza/TangoSource/starfish/app/views/layouts/
   actionpack (4.0.0) lib/action_view/renderer/template_renderer.rb:61:in `render_with_layout'
   actionpack (4.0.0) lib/action_view/renderer/template_renderer.rb:47:in `render_template'
   actionpack (4.0.0) lib/action_view/renderer/template_renderer.rb:17:in `render'
+=======
+  /home/oscar/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/oscar/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/oscar/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/oscar/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-17 12:29:39 -0500
+Processing by UsersController#index as HTML
+Completed 500 Internal Server Error in 5ms
+
+ActionView::MissingTemplate (Missing template users/index, application/index with {:locale=>[:en], :formats=>[:html], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder, :haml]}. Searched in:
+  * "/home/oscar/Documents/starfish/app/views"
+  * "/home/oscar/.rvm/gems/ruby-1.9.3-p448/gems/devise-3.0.0/app/views"
+):
+  actionpack (4.0.0) lib/action_view/path_set.rb:46:in `find'
+  actionpack (4.0.0) lib/action_view/lookup_context.rb:115:in `find'
+  actionpack (4.0.0) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionpack (4.0.0) lib/action_view/renderer/template_renderer.rb:35:in `determine_template'
+  actionpack (4.0.0) lib/action_view/renderer/template_renderer.rb:8:in `render'
+>>>>>>> 6bed13c7dba8abc4ab85394bffa9fbd114c3d5d6
   actionpack (4.0.0) lib/action_view/renderer/renderer.rb:42:in `render_template'
   actionpack (4.0.0) lib/action_view/renderer/renderer.rb:23:in `render'
   actionpack (4.0.0) lib/abstract_controller/rendering.rb:127:in `_render_template'
@@ -1285,7 +1407,11 @@ ActionView::Template::Error (/home/hmeza/TangoSource/starfish/app/views/layouts/
   actionpack (4.0.0) lib/action_controller/metal/rendering.rb:16:in `render'
   actionpack (4.0.0) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
   activesupport (4.0.0) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+<<<<<<< HEAD
   /home/hmeza/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+=======
+  /home/oscar/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+>>>>>>> 6bed13c7dba8abc4ab85394bffa9fbd114c3d5d6
   activesupport (4.0.0) lib/active_support/core_ext/benchmark.rb:12:in `ms'
   actionpack (4.0.0) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
   actionpack (4.0.0) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
@@ -1296,7 +1422,11 @@ ActionView::Template::Error (/home/hmeza/TangoSource/starfish/app/views/layouts/
   actionpack (4.0.0) lib/abstract_controller/base.rb:189:in `process_action'
   actionpack (4.0.0) lib/action_controller/metal/rendering.rb:10:in `process_action'
   actionpack (4.0.0) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+<<<<<<< HEAD
   activesupport (4.0.0) lib/active_support/callbacks.rb:403:in `_run__413710159177264187__process_action__callbacks'
+=======
+  activesupport (4.0.0) lib/active_support/callbacks.rb:403:in `_run__314202753__process_action__callbacks'
+>>>>>>> 6bed13c7dba8abc4ab85394bffa9fbd114c3d5d6
   activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
   actionpack (4.0.0) lib/abstract_controller/callbacks.rb:17:in `process_action'
   actionpack (4.0.0) lib/action_controller/metal/rescue.rb:29:in `process_action'
@@ -1308,6 +1438,7 @@ ActionView::Template::Error (/home/hmeza/TangoSource/starfish/app/views/layouts/
   actionpack (4.0.0) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
   activerecord (4.0.0) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
   actionpack (4.0.0) lib/abstract_controller/base.rb:136:in `process'
+<<<<<<< HEAD
 =======
   /home/manstike/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
   /home/manstike/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
@@ -1322,6 +1453,8 @@ Started GET "/users/institutional_user" for 127.0.0.1 at 2013-07-17 12:31:22 -05
 AbstractController::ActionNotFound (The action 'show' could not be found for UsersController):
   actionpack (4.0.0) lib/abstract_controller/base.rb:131:in `process'
 >>>>>>> d37b87458c8f1325489400193973f612ad322960
+=======
+>>>>>>> 6bed13c7dba8abc4ab85394bffa9fbd114c3d5d6
   actionpack (4.0.0) lib/abstract_controller/rendering.rb:44:in `process'
   actionpack (4.0.0) lib/action_controller/metal.rb:195:in `dispatch'
   actionpack (4.0.0) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
@@ -1349,10 +1482,14 @@ AbstractController::ActionNotFound (The action 'show' could not be found for Use
   activerecord (4.0.0) lib/active_record/migration.rb:369:in `call'
   actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
 <<<<<<< HEAD
+<<<<<<< HEAD
   activesupport (4.0.0) lib/active_support/callbacks.rb:373:in `_run__3633498575084012910__call__callbacks'
 =======
   activesupport (4.0.0) lib/active_support/callbacks.rb:373:in `_run__965641936__call__callbacks'
 >>>>>>> d37b87458c8f1325489400193973f612ad322960
+=======
+  activesupport (4.0.0) lib/active_support/callbacks.rb:373:in `_run__297151099__call__callbacks'
+>>>>>>> 6bed13c7dba8abc4ab85394bffa9fbd114c3d5d6
   activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
   actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
   actionpack (4.0.0) lib/action_dispatch/middleware/reloader.rb:64:in `call'
@@ -1376,6 +1513,7 @@ AbstractController::ActionNotFound (The action 'show' could not be found for Use
   rack (1.5.2) lib/rack/lock.rb:17:in `call'
   rack (1.5.2) lib/rack/content_length.rb:14:in `call'
   rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+<<<<<<< HEAD
 <<<<<<< HEAD
   /home/hmeza/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
   /home/hmeza/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
@@ -1576,6 +1714,29 @@ ActionView::Template::Error (/home/hmeza/TangoSource/starfish/app/views/layouts/
   actionpack (4.0.0) lib/action_view/renderer/template_renderer.rb:61:in `render_with_layout'
   actionpack (4.0.0) lib/action_view/renderer/template_renderer.rb:47:in `render_template'
   actionpack (4.0.0) lib/action_view/renderer/template_renderer.rb:17:in `render'
+=======
+  /home/oscar/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/oscar/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/oscar/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/oscar/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.6ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2013-07-17 12:29:52 -0500
+Processing by UsersController#show as HTML
+Completed 500 Internal Server Error in 3ms
+
+ActionView::MissingTemplate (Missing template users/show, application/show with {:locale=>[:en], :formats=>[:html], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder, :haml]}. Searched in:
+  * "/home/oscar/Documents/starfish/app/views"
+  * "/home/oscar/.rvm/gems/ruby-1.9.3-p448/gems/devise-3.0.0/app/views"
+):
+  actionpack (4.0.0) lib/action_view/path_set.rb:46:in `find'
+  actionpack (4.0.0) lib/action_view/lookup_context.rb:115:in `find'
+  actionpack (4.0.0) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionpack (4.0.0) lib/action_view/renderer/template_renderer.rb:35:in `determine_template'
+  actionpack (4.0.0) lib/action_view/renderer/template_renderer.rb:8:in `render'
+>>>>>>> 6bed13c7dba8abc4ab85394bffa9fbd114c3d5d6
   actionpack (4.0.0) lib/action_view/renderer/renderer.rb:42:in `render_template'
   actionpack (4.0.0) lib/action_view/renderer/renderer.rb:23:in `render'
   actionpack (4.0.0) lib/abstract_controller/rendering.rb:127:in `_render_template'
@@ -1587,7 +1748,11 @@ ActionView::Template::Error (/home/hmeza/TangoSource/starfish/app/views/layouts/
   actionpack (4.0.0) lib/action_controller/metal/rendering.rb:16:in `render'
   actionpack (4.0.0) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
   activesupport (4.0.0) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+<<<<<<< HEAD
   /home/hmeza/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+=======
+  /home/oscar/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+>>>>>>> 6bed13c7dba8abc4ab85394bffa9fbd114c3d5d6
   activesupport (4.0.0) lib/active_support/core_ext/benchmark.rb:12:in `ms'
   actionpack (4.0.0) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
   actionpack (4.0.0) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
@@ -1598,7 +1763,11 @@ ActionView::Template::Error (/home/hmeza/TangoSource/starfish/app/views/layouts/
   actionpack (4.0.0) lib/abstract_controller/base.rb:189:in `process_action'
   actionpack (4.0.0) lib/action_controller/metal/rendering.rb:10:in `process_action'
   actionpack (4.0.0) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+<<<<<<< HEAD
   activesupport (4.0.0) lib/active_support/callbacks.rb:403:in `_run__413710159177264187__process_action__callbacks'
+=======
+  activesupport (4.0.0) lib/active_support/callbacks.rb:403:in `_run__314202753__process_action__callbacks'
+>>>>>>> 6bed13c7dba8abc4ab85394bffa9fbd114c3d5d6
   activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
   actionpack (4.0.0) lib/abstract_controller/callbacks.rb:17:in `process_action'
   actionpack (4.0.0) lib/action_controller/metal/rescue.rb:29:in `process_action'
@@ -1636,12 +1805,17 @@ ActionView::Template::Error (/home/hmeza/TangoSource/starfish/app/views/layouts/
   activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
   activerecord (4.0.0) lib/active_record/migration.rb:369:in `call'
   actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+<<<<<<< HEAD
   activesupport (4.0.0) lib/active_support/callbacks.rb:373:in `_run__3633498575084012910__call__callbacks'
+=======
+  activesupport (4.0.0) lib/active_support/callbacks.rb:373:in `_run__297151099__call__callbacks'
+>>>>>>> 6bed13c7dba8abc4ab85394bffa9fbd114c3d5d6
   activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
   actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
   actionpack (4.0.0) lib/action_dispatch/middleware/reloader.rb:64:in `call'
   actionpack (4.0.0) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
   actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+<<<<<<< HEAD
 =======
   /home/manstike/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
   /home/manstike/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
@@ -1752,6 +1926,8 @@ Started GET "/users/css/foundation.css" for 127.0.0.1 at 2013-07-17 12:31:26 -05
 ActionController::RoutingError (No route matches [GET] "/users/css/foundation.css"):
   actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
 >>>>>>> d37b87458c8f1325489400193973f612ad322960
+=======
+>>>>>>> 6bed13c7dba8abc4ab85394bffa9fbd114c3d5d6
   actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
   railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
   railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
@@ -1770,6 +1946,7 @@ ActionController::RoutingError (No route matches [GET] "/users/css/foundation.cs
   rack (1.5.2) lib/rack/lock.rb:17:in `call'
   rack (1.5.2) lib/rack/content_length.rb:14:in `call'
   rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+<<<<<<< HEAD
 <<<<<<< HEAD
   /home/hmeza/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
   /home/hmeza/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
@@ -1958,6 +2135,29 @@ ActionView::Template::Error (/home/hmeza/TangoSource/starfish/app/views/layouts/
   actionpack (4.0.0) lib/action_view/renderer/template_renderer.rb:61:in `render_with_layout'
   actionpack (4.0.0) lib/action_view/renderer/template_renderer.rb:47:in `render_template'
   actionpack (4.0.0) lib/action_view/renderer/template_renderer.rb:17:in `render'
+=======
+  /home/oscar/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/oscar/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/oscar/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/oscar/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.6ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2013-07-17 12:29:52 -0500
+Processing by UsersController#show as HTML
+Completed 500 Internal Server Error in 5ms
+
+ActionView::MissingTemplate (Missing template users/show, application/show with {:locale=>[:en], :formats=>[:html], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder, :haml]}. Searched in:
+  * "/home/oscar/Documents/starfish/app/views"
+  * "/home/oscar/.rvm/gems/ruby-1.9.3-p448/gems/devise-3.0.0/app/views"
+):
+  actionpack (4.0.0) lib/action_view/path_set.rb:46:in `find'
+  actionpack (4.0.0) lib/action_view/lookup_context.rb:115:in `find'
+  actionpack (4.0.0) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionpack (4.0.0) lib/action_view/renderer/template_renderer.rb:35:in `determine_template'
+  actionpack (4.0.0) lib/action_view/renderer/template_renderer.rb:8:in `render'
+>>>>>>> 6bed13c7dba8abc4ab85394bffa9fbd114c3d5d6
   actionpack (4.0.0) lib/action_view/renderer/renderer.rb:42:in `render_template'
   actionpack (4.0.0) lib/action_view/renderer/renderer.rb:23:in `render'
   actionpack (4.0.0) lib/abstract_controller/rendering.rb:127:in `_render_template'
@@ -1969,7 +2169,11 @@ ActionView::Template::Error (/home/hmeza/TangoSource/starfish/app/views/layouts/
   actionpack (4.0.0) lib/action_controller/metal/rendering.rb:16:in `render'
   actionpack (4.0.0) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
   activesupport (4.0.0) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+<<<<<<< HEAD
   /home/hmeza/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+=======
+  /home/oscar/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+>>>>>>> 6bed13c7dba8abc4ab85394bffa9fbd114c3d5d6
   activesupport (4.0.0) lib/active_support/core_ext/benchmark.rb:12:in `ms'
   actionpack (4.0.0) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
   actionpack (4.0.0) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
@@ -1980,7 +2184,11 @@ ActionView::Template::Error (/home/hmeza/TangoSource/starfish/app/views/layouts/
   actionpack (4.0.0) lib/abstract_controller/base.rb:189:in `process_action'
   actionpack (4.0.0) lib/action_controller/metal/rendering.rb:10:in `process_action'
   actionpack (4.0.0) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+<<<<<<< HEAD
   activesupport (4.0.0) lib/active_support/callbacks.rb:403:in `_run__413710159177264187__process_action__callbacks'
+=======
+  activesupport (4.0.0) lib/active_support/callbacks.rb:403:in `_run__314202753__process_action__callbacks'
+>>>>>>> 6bed13c7dba8abc4ab85394bffa9fbd114c3d5d6
   activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
   actionpack (4.0.0) lib/abstract_controller/callbacks.rb:17:in `process_action'
   actionpack (4.0.0) lib/action_controller/metal/rescue.rb:29:in `process_action'
@@ -2018,12 +2226,17 @@ ActionView::Template::Error (/home/hmeza/TangoSource/starfish/app/views/layouts/
   activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
   activerecord (4.0.0) lib/active_record/migration.rb:369:in `call'
   actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+<<<<<<< HEAD
   activesupport (4.0.0) lib/active_support/callbacks.rb:373:in `_run__3633498575084012910__call__callbacks'
+=======
+  activesupport (4.0.0) lib/active_support/callbacks.rb:373:in `_run__297151099__call__callbacks'
+>>>>>>> 6bed13c7dba8abc4ab85394bffa9fbd114c3d5d6
   activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
   actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
   actionpack (4.0.0) lib/action_dispatch/middleware/reloader.rb:64:in `call'
   actionpack (4.0.0) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
   actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+<<<<<<< HEAD
 =======
   /home/manstike/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
   /home/manstike/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
@@ -2041,6 +2254,8 @@ Started GET "/users/js/vendor/custom.modernizr.js" for 127.0.0.1 at 2013-07-17 1
 ActionController::RoutingError (No route matches [GET] "/users/js/vendor/custom.modernizr.js"):
   actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
 >>>>>>> d37b87458c8f1325489400193973f612ad322960
+=======
+>>>>>>> 6bed13c7dba8abc4ab85394bffa9fbd114c3d5d6
   actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
   railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
   railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
@@ -2059,6 +2274,7 @@ ActionController::RoutingError (No route matches [GET] "/users/js/vendor/custom.
   rack (1.5.2) lib/rack/lock.rb:17:in `call'
   rack (1.5.2) lib/rack/content_length.rb:14:in `call'
   rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+<<<<<<< HEAD
 <<<<<<< HEAD
   /home/hmeza/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
   /home/hmeza/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
@@ -2240,6 +2456,29 @@ ActionView::Template::Error (/home/hmeza/TangoSource/starfish/app/views/layouts/
   actionpack (4.0.0) lib/action_view/renderer/template_renderer.rb:61:in `render_with_layout'
   actionpack (4.0.0) lib/action_view/renderer/template_renderer.rb:47:in `render_template'
   actionpack (4.0.0) lib/action_view/renderer/template_renderer.rb:17:in `render'
+=======
+  /home/oscar/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/oscar/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/oscar/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/oscar/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-17 12:30:02 -0500
+Processing by UsersController#index as HTML
+Completed 500 Internal Server Error in 3ms
+
+ActionView::MissingTemplate (Missing template users/index, application/index with {:locale=>[:en], :formats=>[:html], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder, :haml]}. Searched in:
+  * "/home/oscar/Documents/starfish/app/views"
+  * "/home/oscar/.rvm/gems/ruby-1.9.3-p448/gems/devise-3.0.0/app/views"
+):
+  actionpack (4.0.0) lib/action_view/path_set.rb:46:in `find'
+  actionpack (4.0.0) lib/action_view/lookup_context.rb:115:in `find'
+  actionpack (4.0.0) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionpack (4.0.0) lib/action_view/renderer/template_renderer.rb:35:in `determine_template'
+  actionpack (4.0.0) lib/action_view/renderer/template_renderer.rb:8:in `render'
+>>>>>>> 6bed13c7dba8abc4ab85394bffa9fbd114c3d5d6
   actionpack (4.0.0) lib/action_view/renderer/renderer.rb:42:in `render_template'
   actionpack (4.0.0) lib/action_view/renderer/renderer.rb:23:in `render'
   actionpack (4.0.0) lib/abstract_controller/rendering.rb:127:in `_render_template'
@@ -2251,7 +2490,11 @@ ActionView::Template::Error (/home/hmeza/TangoSource/starfish/app/views/layouts/
   actionpack (4.0.0) lib/action_controller/metal/rendering.rb:16:in `render'
   actionpack (4.0.0) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
   activesupport (4.0.0) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+<<<<<<< HEAD
   /home/hmeza/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+=======
+  /home/oscar/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+>>>>>>> 6bed13c7dba8abc4ab85394bffa9fbd114c3d5d6
   activesupport (4.0.0) lib/active_support/core_ext/benchmark.rb:12:in `ms'
   actionpack (4.0.0) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
   actionpack (4.0.0) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
@@ -2262,7 +2505,11 @@ ActionView::Template::Error (/home/hmeza/TangoSource/starfish/app/views/layouts/
   actionpack (4.0.0) lib/abstract_controller/base.rb:189:in `process_action'
   actionpack (4.0.0) lib/action_controller/metal/rendering.rb:10:in `process_action'
   actionpack (4.0.0) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+<<<<<<< HEAD
   activesupport (4.0.0) lib/active_support/callbacks.rb:403:in `_run__413710159177264187__process_action__callbacks'
+=======
+  activesupport (4.0.0) lib/active_support/callbacks.rb:403:in `_run__314202753__process_action__callbacks'
+>>>>>>> 6bed13c7dba8abc4ab85394bffa9fbd114c3d5d6
   activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
   actionpack (4.0.0) lib/abstract_controller/callbacks.rb:17:in `process_action'
   actionpack (4.0.0) lib/action_controller/metal/rescue.rb:29:in `process_action'
@@ -2274,6 +2521,7 @@ ActionView::Template::Error (/home/hmeza/TangoSource/starfish/app/views/layouts/
   actionpack (4.0.0) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
   activerecord (4.0.0) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
   actionpack (4.0.0) lib/abstract_controller/base.rb:136:in `process'
+<<<<<<< HEAD
 =======
   /home/manstike/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
   /home/manstike/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
@@ -2781,6 +3029,8 @@ Started GET "/users/institutional_user" for 127.0.0.1 at 2013-07-17 12:59:45 -05
 AbstractController::ActionNotFound (The action 'show' could not be found for UsersController):
   actionpack (4.0.0) lib/abstract_controller/base.rb:131:in `process'
 >>>>>>> d37b87458c8f1325489400193973f612ad322960
+=======
+>>>>>>> 6bed13c7dba8abc4ab85394bffa9fbd114c3d5d6
   actionpack (4.0.0) lib/abstract_controller/rendering.rb:44:in `process'
   actionpack (4.0.0) lib/action_controller/metal.rb:195:in `dispatch'
   actionpack (4.0.0) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
@@ -2794,6 +3044,7 @@ AbstractController::ActionNotFound (The action 'show' could not be found for Use
   actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:655:in `call'
   warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
   warden (1.2.3) lib/warden/manager.rb:34:in `catch'
+<<<<<<< HEAD
   warden (1.2.3) lib/warden/manager.rb:34:in `call'
   rack (1.5.2) lib/rack/etag.rb:23:in `call'
   rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
@@ -21332,3 +21583,3723 @@ Processing by UsersController#index as HTML
   Rendered users/index.html.haml within layouts/application (22.6ms)
 Completed 200 OK in 50ms (Views: 48.9ms | ActiveRecord: 0.0ms)
 >>>>>>> d37b87458c8f1325489400193973f612ad322960
+=======
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.0) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.0) lib/active_record/migration.rb:369:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:373:in `_run__297151099__call__callbacks'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/oscar/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/oscar/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/oscar/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/oscar/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-17 12:33:05 -0500
+Processing by UsersController#index as HTML
+  Rendered users/index.html.haml within layouts/application (2.5ms)
+Completed 500 Internal Server Error in 84ms
+
+ActionView::Template::Error (require_tree argument must be a directory
+  (in /home/oscar/Documents/starfish/app/assets/javascripts/application.js:17)):
+    3:   %head
+    4:     %title AngularJsp1
+    5:     = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true 
+    6:     = javascript_include_tag "application", "data-turbolinks-track" => true
+    7:     = csrf_meta_tags
+    8:   %body
+    9:     =yield
+  app/views/layouts/application.html.haml:6:in `_app_views_layouts_application_html_haml__605605280_85364640'
+
+
+  Rendered /home/oscar/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+  Rendered /home/oscar/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.8ms)
+  Rendered /home/oscar/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (21.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-17 12:37:42 -0500
+Processing by UsersController#index as HTML
+  Rendered users/index.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 901ms (Views: 900.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-17 12:37:43 -0500
+
+
+Started GET "/assets/foundation.min.css?body=1" for 127.0.0.1 at 2013-07-17 12:37:43 -0500
+
+
+Started GET "/assets/foundation.css?body=1" for 127.0.0.1 at 2013-07-17 12:37:43 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-17 12:37:43 -0500
+
+
+Started GET "/assets/foundation.min.js?body=1" for 127.0.0.1 at 2013-07-17 12:37:43 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-17 12:37:43 -0500
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2013-07-17 12:37:43 -0500
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-07-17 12:37:43 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-17 12:37:43 -0500
+
+
+Started GET "/assets/foundation/foundation.alerts.js?body=1" for 127.0.0.1 at 2013-07-17 12:37:43 -0500
+
+
+Started GET "/assets/foundation/foundation.clearing.js?body=1" for 127.0.0.1 at 2013-07-17 12:37:43 -0500
+
+
+Started GET "/assets/foundation/foundation.cookie.js?body=1" for 127.0.0.1 at 2013-07-17 12:37:43 -0500
+
+
+Started GET "/assets/foundation/foundation.dropdown.js?body=1" for 127.0.0.1 at 2013-07-17 12:37:43 -0500
+
+
+Started GET "/assets/foundation/foundation.forms.js?body=1" for 127.0.0.1 at 2013-07-17 12:37:43 -0500
+
+
+Started GET "/assets/foundation/foundation.interchange.js?body=1" for 127.0.0.1 at 2013-07-17 12:37:43 -0500
+
+
+Started GET "/assets/foundation/foundation.joyride.js?body=1" for 127.0.0.1 at 2013-07-17 12:37:43 -0500
+
+
+Started GET "/assets/foundation/foundation.js?body=1" for 127.0.0.1 at 2013-07-17 12:37:43 -0500
+
+
+Started GET "/assets/foundation/foundation.magellan.js?body=1" for 127.0.0.1 at 2013-07-17 12:37:43 -0500
+
+
+Started GET "/assets/foundation/foundation.orbit.js?body=1" for 127.0.0.1 at 2013-07-17 12:37:43 -0500
+
+
+Started GET "/assets/foundation/foundation.placeholder.js?body=1" for 127.0.0.1 at 2013-07-17 12:37:43 -0500
+
+
+Started GET "/assets/foundation/foundation.section.js?body=1" for 127.0.0.1 at 2013-07-17 12:37:43 -0500
+
+
+Started GET "/assets/foundation/foundation.reveal.js?body=1" for 127.0.0.1 at 2013-07-17 12:37:43 -0500
+
+
+Started GET "/assets/foundation/foundation.tooltips.js?body=1" for 127.0.0.1 at 2013-07-17 12:37:43 -0500
+
+
+Started GET "/assets/foundation/foundation.topbar.js?body=1" for 127.0.0.1 at 2013-07-17 12:37:43 -0500
+
+
+Started GET "/assets/vendor/custom.modernizr.js?body=1" for 127.0.0.1 at 2013-07-17 12:37:43 -0500
+
+
+Started GET "/assets/vendor/jquery.js?body=1" for 127.0.0.1 at 2013-07-17 12:37:43 -0500
+
+
+Started GET "/assets/vendor/zepto.js?body=1" for 127.0.0.1 at 2013-07-17 12:37:43 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-17 12:37:43 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-17 15:10:13 -0500
+Processing by UsersController#index as HTML
+  Rendered users/index.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 419ms (Views: 414.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-17 15:10:14 -0500
+
+
+Started GET "/assets/foundation.css?body=1" for 127.0.0.1 at 2013-07-17 15:10:14 -0500
+
+
+Started GET "/assets/foundation.min.css?body=1" for 127.0.0.1 at 2013-07-17 15:10:14 -0500
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-07-17 15:10:14 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-17 15:10:14 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-17 15:10:14 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-17 15:10:14 -0500
+
+
+Started GET "/assets/angular/controllers/loginUserController.js?body=1" for 127.0.0.1 at 2013-07-17 15:10:14 -0500
+
+
+Started GET "/assets/foundation/foundation.alerts.js?body=1" for 127.0.0.1 at 2013-07-17 15:10:14 -0500
+
+
+Started GET "/assets/foundation/foundation.clearing.js?body=1" for 127.0.0.1 at 2013-07-17 15:10:14 -0500
+
+
+Started GET "/assets/foundation/foundation.cookie.js?body=1" for 127.0.0.1 at 2013-07-17 15:10:14 -0500
+
+
+Started GET "/assets/foundation/foundation.dropdown.js?body=1" for 127.0.0.1 at 2013-07-17 15:10:14 -0500
+
+
+Started GET "/assets/foundation/foundation.forms.js?body=1" for 127.0.0.1 at 2013-07-17 15:10:14 -0500
+
+
+Started GET "/assets/foundation/foundation.interchange.js?body=1" for 127.0.0.1 at 2013-07-17 15:10:14 -0500
+
+
+Started GET "/assets/foundation/foundation.joyride.js?body=1" for 127.0.0.1 at 2013-07-17 15:10:14 -0500
+
+
+Started GET "/assets/foundation/foundation.js?body=1" for 127.0.0.1 at 2013-07-17 15:10:14 -0500
+
+
+Started GET "/assets/foundation/foundation.magellan.js?body=1" for 127.0.0.1 at 2013-07-17 15:10:14 -0500
+
+
+Started GET "/assets/foundation/foundation.orbit.js?body=1" for 127.0.0.1 at 2013-07-17 15:10:14 -0500
+
+
+Started GET "/assets/foundation/foundation.placeholder.js?body=1" for 127.0.0.1 at 2013-07-17 15:10:14 -0500
+
+
+Started GET "/assets/foundation/foundation.reveal.js?body=1" for 127.0.0.1 at 2013-07-17 15:10:14 -0500
+
+
+Started GET "/assets/foundation/foundation.section.js?body=1" for 127.0.0.1 at 2013-07-17 15:10:15 -0500
+
+
+Started GET "/assets/foundation/foundation.tooltips.js?body=1" for 127.0.0.1 at 2013-07-17 15:10:15 -0500
+
+
+Started GET "/assets/foundation/foundation.topbar.js?body=1" for 127.0.0.1 at 2013-07-17 15:10:15 -0500
+
+
+Started GET "/assets/libs/angular.js?body=1" for 127.0.0.1 at 2013-07-17 15:10:15 -0500
+
+
+Started GET "/assets/libs/foundation.min.js?body=1" for 127.0.0.1 at 2013-07-17 15:10:15 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-07-17 15:10:15 -0500
+
+
+Started GET "/assets/vendor/custom.modernizr.js?body=1" for 127.0.0.1 at 2013-07-17 15:10:15 -0500
+
+
+Started GET "/assets/vendor/jquery.js?body=1" for 127.0.0.1 at 2013-07-17 15:10:15 -0500
+
+
+Started GET "/assets/vendor/zepto.js?body=1" for 127.0.0.1 at 2013-07-17 15:10:15 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-17 15:10:15 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-17 15:10:15 -0500
+Processing by UsersController#index as HTML
+  Rendered users/index.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 41ms (Views: 37.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-17 15:10:15 -0500
+
+
+Started GET "/assets/foundation.css?body=1" for 127.0.0.1 at 2013-07-17 15:10:15 -0500
+
+
+Started GET "/assets/foundation.min.css?body=1" for 127.0.0.1 at 2013-07-17 15:10:15 -0500
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-07-17 15:10:15 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-17 15:10:15 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-17 15:10:15 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-17 15:10:15 -0500
+
+
+Started GET "/assets/angular/controllers/loginUserController.js?body=1" for 127.0.0.1 at 2013-07-17 15:10:15 -0500
+
+
+Started GET "/assets/foundation/foundation.alerts.js?body=1" for 127.0.0.1 at 2013-07-17 15:10:15 -0500
+
+
+Started GET "/assets/foundation/foundation.clearing.js?body=1" for 127.0.0.1 at 2013-07-17 15:10:15 -0500
+
+
+Started GET "/assets/foundation/foundation.cookie.js?body=1" for 127.0.0.1 at 2013-07-17 15:10:15 -0500
+
+
+Started GET "/assets/foundation/foundation.dropdown.js?body=1" for 127.0.0.1 at 2013-07-17 15:10:15 -0500
+
+
+Started GET "/assets/foundation/foundation.forms.js?body=1" for 127.0.0.1 at 2013-07-17 15:10:15 -0500
+
+
+Started GET "/assets/foundation/foundation.interchange.js?body=1" for 127.0.0.1 at 2013-07-17 15:10:15 -0500
+
+
+Started GET "/assets/foundation/foundation.joyride.js?body=1" for 127.0.0.1 at 2013-07-17 15:10:15 -0500
+
+
+Started GET "/assets/foundation/foundation.js?body=1" for 127.0.0.1 at 2013-07-17 15:10:16 -0500
+
+
+Started GET "/assets/foundation/foundation.magellan.js?body=1" for 127.0.0.1 at 2013-07-17 15:10:16 -0500
+
+
+Started GET "/assets/foundation/foundation.orbit.js?body=1" for 127.0.0.1 at 2013-07-17 15:10:16 -0500
+
+
+Started GET "/assets/foundation/foundation.placeholder.js?body=1" for 127.0.0.1 at 2013-07-17 15:10:16 -0500
+
+
+Started GET "/assets/foundation/foundation.reveal.js?body=1" for 127.0.0.1 at 2013-07-17 15:10:16 -0500
+
+
+Started GET "/assets/foundation/foundation.tooltips.js?body=1" for 127.0.0.1 at 2013-07-17 15:10:16 -0500
+
+
+Started GET "/assets/foundation/foundation.section.js?body=1" for 127.0.0.1 at 2013-07-17 15:10:16 -0500
+
+
+Started GET "/assets/foundation/foundation.topbar.js?body=1" for 127.0.0.1 at 2013-07-17 15:10:16 -0500
+
+
+Started GET "/assets/libs/angular.js?body=1" for 127.0.0.1 at 2013-07-17 15:10:16 -0500
+
+
+Started GET "/assets/libs/foundation.min.js?body=1" for 127.0.0.1 at 2013-07-17 15:10:16 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-07-17 15:10:16 -0500
+
+
+Started GET "/assets/vendor/custom.modernizr.js?body=1" for 127.0.0.1 at 2013-07-17 15:10:16 -0500
+
+
+Started GET "/assets/vendor/jquery.js?body=1" for 127.0.0.1 at 2013-07-17 15:10:16 -0500
+
+
+Started GET "/assets/vendor/zepto.js?body=1" for 127.0.0.1 at 2013-07-17 15:10:16 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-17 15:10:16 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-17 15:10:38 -0500
+Processing by UsersController#index as HTML
+  Rendered users/index.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 23ms (Views: 22.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-17 15:10:38 -0500
+
+
+Started GET "/assets/foundation.css?body=1" for 127.0.0.1 at 2013-07-17 15:10:38 -0500
+
+
+Started GET "/assets/foundation.min.css?body=1" for 127.0.0.1 at 2013-07-17 15:10:38 -0500
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-07-17 15:10:38 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-17 15:10:38 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-17 15:10:38 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-17 15:10:38 -0500
+
+
+Started GET "/assets/angular/controllers/loginUserController.js?body=1" for 127.0.0.1 at 2013-07-17 15:10:38 -0500
+
+
+Started GET "/assets/foundation/foundation.alerts.js?body=1" for 127.0.0.1 at 2013-07-17 15:10:38 -0500
+
+
+Started GET "/assets/foundation/foundation.clearing.js?body=1" for 127.0.0.1 at 2013-07-17 15:10:38 -0500
+
+
+Started GET "/assets/foundation/foundation.cookie.js?body=1" for 127.0.0.1 at 2013-07-17 15:10:38 -0500
+
+
+Started GET "/assets/foundation/foundation.dropdown.js?body=1" for 127.0.0.1 at 2013-07-17 15:10:38 -0500
+
+
+Started GET "/assets/foundation/foundation.forms.js?body=1" for 127.0.0.1 at 2013-07-17 15:10:38 -0500
+
+
+Started GET "/assets/foundation/foundation.interchange.js?body=1" for 127.0.0.1 at 2013-07-17 15:10:38 -0500
+
+
+Started GET "/assets/foundation/foundation.joyride.js?body=1" for 127.0.0.1 at 2013-07-17 15:10:38 -0500
+
+
+Started GET "/assets/foundation/foundation.js?body=1" for 127.0.0.1 at 2013-07-17 15:10:38 -0500
+
+
+Started GET "/assets/foundation/foundation.magellan.js?body=1" for 127.0.0.1 at 2013-07-17 15:10:38 -0500
+
+
+Started GET "/assets/foundation/foundation.section.js?body=1" for 127.0.0.1 at 2013-07-17 15:10:38 -0500
+
+
+Started GET "/assets/foundation/foundation.reveal.js?body=1" for 127.0.0.1 at 2013-07-17 15:10:38 -0500
+
+
+Started GET "/assets/foundation/foundation.placeholder.js?body=1" for 127.0.0.1 at 2013-07-17 15:10:38 -0500
+
+
+Started GET "/assets/foundation/foundation.orbit.js?body=1" for 127.0.0.1 at 2013-07-17 15:10:38 -0500
+
+
+Started GET "/assets/foundation/foundation.tooltips.js?body=1" for 127.0.0.1 at 2013-07-17 15:10:38 -0500
+
+
+Started GET "/assets/foundation/foundation.topbar.js?body=1" for 127.0.0.1 at 2013-07-17 15:10:38 -0500
+
+
+Started GET "/assets/libs/foundation.min.js?body=1" for 127.0.0.1 at 2013-07-17 15:10:38 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-07-17 15:10:38 -0500
+
+
+Started GET "/assets/libs/angular.js?body=1" for 127.0.0.1 at 2013-07-17 15:10:38 -0500
+
+
+Started GET "/assets/vendor/jquery.js?body=1" for 127.0.0.1 at 2013-07-17 15:10:38 -0500
+
+
+Started GET "/assets/vendor/custom.modernizr.js?body=1" for 127.0.0.1 at 2013-07-17 15:10:38 -0500
+
+
+Started GET "/assets/vendor/zepto.js?body=1" for 127.0.0.1 at 2013-07-17 15:10:38 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-17 15:10:38 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-17 15:10:38 -0500
+Processing by UsersController#index as HTML
+  Rendered users/index.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 21ms (Views: 20.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-17 15:10:38 -0500
+
+
+Started GET "/assets/foundation.css?body=1" for 127.0.0.1 at 2013-07-17 15:10:38 -0500
+
+
+Started GET "/assets/foundation.min.css?body=1" for 127.0.0.1 at 2013-07-17 15:10:38 -0500
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-07-17 15:10:38 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-17 15:10:38 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-17 15:10:38 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-17 15:10:38 -0500
+
+
+Started GET "/assets/angular/controllers/loginUserController.js?body=1" for 127.0.0.1 at 2013-07-17 15:10:38 -0500
+
+
+Started GET "/assets/foundation/foundation.alerts.js?body=1" for 127.0.0.1 at 2013-07-17 15:10:38 -0500
+
+
+Started GET "/assets/foundation/foundation.clearing.js?body=1" for 127.0.0.1 at 2013-07-17 15:10:38 -0500
+
+
+Started GET "/assets/foundation/foundation.cookie.js?body=1" for 127.0.0.1 at 2013-07-17 15:10:38 -0500
+
+
+Started GET "/assets/foundation/foundation.dropdown.js?body=1" for 127.0.0.1 at 2013-07-17 15:10:38 -0500
+
+
+Started GET "/assets/foundation/foundation.forms.js?body=1" for 127.0.0.1 at 2013-07-17 15:10:38 -0500
+
+
+Started GET "/assets/foundation/foundation.interchange.js?body=1" for 127.0.0.1 at 2013-07-17 15:10:38 -0500
+
+
+Started GET "/assets/foundation/foundation.joyride.js?body=1" for 127.0.0.1 at 2013-07-17 15:10:38 -0500
+
+
+Started GET "/assets/foundation/foundation.js?body=1" for 127.0.0.1 at 2013-07-17 15:10:38 -0500
+
+
+Started GET "/assets/foundation/foundation.magellan.js?body=1" for 127.0.0.1 at 2013-07-17 15:10:38 -0500
+
+
+Started GET "/assets/foundation/foundation.orbit.js?body=1" for 127.0.0.1 at 2013-07-17 15:10:38 -0500
+
+
+Started GET "/assets/foundation/foundation.placeholder.js?body=1" for 127.0.0.1 at 2013-07-17 15:10:39 -0500
+
+
+Started GET "/assets/foundation/foundation.section.js?body=1" for 127.0.0.1 at 2013-07-17 15:10:39 -0500
+
+
+Started GET "/assets/foundation/foundation.tooltips.js?body=1" for 127.0.0.1 at 2013-07-17 15:10:39 -0500
+
+
+Started GET "/assets/foundation/foundation.reveal.js?body=1" for 127.0.0.1 at 2013-07-17 15:10:39 -0500
+
+
+Started GET "/assets/foundation/foundation.topbar.js?body=1" for 127.0.0.1 at 2013-07-17 15:10:39 -0500
+
+
+Started GET "/assets/libs/angular.js?body=1" for 127.0.0.1 at 2013-07-17 15:10:39 -0500
+
+
+Started GET "/assets/libs/foundation.min.js?body=1" for 127.0.0.1 at 2013-07-17 15:10:39 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-07-17 15:10:39 -0500
+
+
+Started GET "/assets/vendor/custom.modernizr.js?body=1" for 127.0.0.1 at 2013-07-17 15:10:39 -0500
+
+
+Started GET "/assets/vendor/jquery.js?body=1" for 127.0.0.1 at 2013-07-17 15:10:39 -0500
+
+
+Started GET "/assets/vendor/zepto.js?body=1" for 127.0.0.1 at 2013-07-17 15:10:39 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-17 15:10:39 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-17 15:10:39 -0500
+Processing by UsersController#index as HTML
+  Rendered users/index.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 22ms (Views: 20.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-17 15:10:39 -0500
+
+
+Started GET "/assets/foundation.css?body=1" for 127.0.0.1 at 2013-07-17 15:10:39 -0500
+
+
+Started GET "/assets/foundation.min.css?body=1" for 127.0.0.1 at 2013-07-17 15:10:39 -0500
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-07-17 15:10:39 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-17 15:10:39 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-17 15:10:39 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-17 15:10:39 -0500
+
+
+Started GET "/assets/angular/controllers/loginUserController.js?body=1" for 127.0.0.1 at 2013-07-17 15:10:39 -0500
+
+
+Started GET "/assets/foundation/foundation.alerts.js?body=1" for 127.0.0.1 at 2013-07-17 15:10:39 -0500
+
+
+Started GET "/assets/foundation/foundation.clearing.js?body=1" for 127.0.0.1 at 2013-07-17 15:10:39 -0500
+
+
+Started GET "/assets/foundation/foundation.cookie.js?body=1" for 127.0.0.1 at 2013-07-17 15:10:39 -0500
+
+
+Started GET "/assets/foundation/foundation.dropdown.js?body=1" for 127.0.0.1 at 2013-07-17 15:10:39 -0500
+
+
+Started GET "/assets/foundation/foundation.forms.js?body=1" for 127.0.0.1 at 2013-07-17 15:10:39 -0500
+
+
+Started GET "/assets/foundation/foundation.interchange.js?body=1" for 127.0.0.1 at 2013-07-17 15:10:39 -0500
+
+
+Started GET "/assets/foundation/foundation.joyride.js?body=1" for 127.0.0.1 at 2013-07-17 15:10:39 -0500
+
+
+Started GET "/assets/foundation/foundation.js?body=1" for 127.0.0.1 at 2013-07-17 15:10:39 -0500
+
+
+Started GET "/assets/foundation/foundation.magellan.js?body=1" for 127.0.0.1 at 2013-07-17 15:10:39 -0500
+
+
+Started GET "/assets/foundation/foundation.orbit.js?body=1" for 127.0.0.1 at 2013-07-17 15:10:39 -0500
+
+
+Started GET "/assets/foundation/foundation.placeholder.js?body=1" for 127.0.0.1 at 2013-07-17 15:10:39 -0500
+
+
+Started GET "/assets/foundation/foundation.reveal.js?body=1" for 127.0.0.1 at 2013-07-17 15:10:39 -0500
+
+
+Started GET "/assets/libs/angular.js?body=1" for 127.0.0.1 at 2013-07-17 15:10:39 -0500
+
+
+Started GET "/assets/foundation/foundation.topbar.js?body=1" for 127.0.0.1 at 2013-07-17 15:10:39 -0500
+
+
+Started GET "/assets/foundation/foundation.tooltips.js?body=1" for 127.0.0.1 at 2013-07-17 15:10:40 -0500
+
+
+Started GET "/assets/foundation/foundation.section.js?body=1" for 127.0.0.1 at 2013-07-17 15:10:40 -0500
+
+
+Started GET "/assets/libs/foundation.min.js?body=1" for 127.0.0.1 at 2013-07-17 15:10:40 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-07-17 15:10:40 -0500
+
+
+Started GET "/assets/vendor/custom.modernizr.js?body=1" for 127.0.0.1 at 2013-07-17 15:10:40 -0500
+
+
+Started GET "/assets/vendor/jquery.js?body=1" for 127.0.0.1 at 2013-07-17 15:10:40 -0500
+
+
+Started GET "/assets/vendor/zepto.js?body=1" for 127.0.0.1 at 2013-07-17 15:10:40 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-17 15:10:40 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-17 15:13:18 -0500
+Processing by UsersController#index as HTML
+  Rendered users/index.html.haml within layouts/application (9.4ms)
+Completed 200 OK in 353ms (Views: 304.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-17 15:13:18 -0500
+
+
+Started GET "/assets/foundation.css?body=1" for 127.0.0.1 at 2013-07-17 15:13:18 -0500
+
+
+Started GET "/assets/foundation.min.css?body=1" for 127.0.0.1 at 2013-07-17 15:13:18 -0500
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-07-17 15:13:18 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-17 15:13:18 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-17 15:13:18 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-17 15:13:18 -0500
+
+
+Started GET "/assets/angular/controllers/loginUserController.js?body=1" for 127.0.0.1 at 2013-07-17 15:13:18 -0500
+
+
+Started GET "/assets/foundation/foundation.alerts.js?body=1" for 127.0.0.1 at 2013-07-17 15:13:18 -0500
+
+
+Started GET "/assets/foundation/foundation.clearing.js?body=1" for 127.0.0.1 at 2013-07-17 15:13:18 -0500
+
+
+Started GET "/assets/foundation/foundation.cookie.js?body=1" for 127.0.0.1 at 2013-07-17 15:13:18 -0500
+
+
+Started GET "/assets/foundation/foundation.dropdown.js?body=1" for 127.0.0.1 at 2013-07-17 15:13:18 -0500
+
+
+Started GET "/assets/foundation/foundation.interchange.js?body=1" for 127.0.0.1 at 2013-07-17 15:13:18 -0500
+
+
+Started GET "/assets/foundation/foundation.forms.js?body=1" for 127.0.0.1 at 2013-07-17 15:13:18 -0500
+
+
+Started GET "/assets/foundation/foundation.joyride.js?body=1" for 127.0.0.1 at 2013-07-17 15:13:18 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-17 15:13:19 -0500
+Processing by UsersController#index as HTML
+  Rendered users/index.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 30ms (Views: 28.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-17 15:13:19 -0500
+
+
+Started GET "/assets/foundation.css?body=1" for 127.0.0.1 at 2013-07-17 15:13:19 -0500
+
+
+Started GET "/assets/foundation.min.css?body=1" for 127.0.0.1 at 2013-07-17 15:13:19 -0500
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-07-17 15:13:19 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-17 15:13:19 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-17 15:13:19 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-17 15:13:19 -0500
+
+
+Started GET "/assets/angular/controllers/loginUserController.js?body=1" for 127.0.0.1 at 2013-07-17 15:13:19 -0500
+
+
+Started GET "/assets/foundation/foundation.alerts.js?body=1" for 127.0.0.1 at 2013-07-17 15:13:19 -0500
+
+
+Started GET "/assets/foundation/foundation.clearing.js?body=1" for 127.0.0.1 at 2013-07-17 15:13:19 -0500
+
+
+Started GET "/assets/foundation/foundation.cookie.js?body=1" for 127.0.0.1 at 2013-07-17 15:13:19 -0500
+
+
+Started GET "/assets/foundation/foundation.dropdown.js?body=1" for 127.0.0.1 at 2013-07-17 15:13:19 -0500
+
+
+Started GET "/assets/foundation/foundation.forms.js?body=1" for 127.0.0.1 at 2013-07-17 15:13:19 -0500
+
+
+Started GET "/assets/foundation/foundation.interchange.js?body=1" for 127.0.0.1 at 2013-07-17 15:13:19 -0500
+
+
+Started GET "/assets/foundation/foundation.joyride.js?body=1" for 127.0.0.1 at 2013-07-17 15:13:19 -0500
+
+
+Started GET "/assets/foundation/foundation.js?body=1" for 127.0.0.1 at 2013-07-17 15:13:19 -0500
+
+
+Started GET "/assets/foundation/foundation.magellan.js?body=1" for 127.0.0.1 at 2013-07-17 15:13:19 -0500
+
+
+Started GET "/assets/foundation/foundation.orbit.js?body=1" for 127.0.0.1 at 2013-07-17 15:13:19 -0500
+
+
+Started GET "/assets/foundation/foundation.placeholder.js?body=1" for 127.0.0.1 at 2013-07-17 15:13:19 -0500
+
+
+Started GET "/assets/foundation/foundation.reveal.js?body=1" for 127.0.0.1 at 2013-07-17 15:13:19 -0500
+
+
+Started GET "/assets/foundation/foundation.section.js?body=1" for 127.0.0.1 at 2013-07-17 15:13:19 -0500
+
+
+Started GET "/assets/foundation/foundation.tooltips.js?body=1" for 127.0.0.1 at 2013-07-17 15:13:19 -0500
+
+
+Started GET "/assets/foundation/foundation.topbar.js?body=1" for 127.0.0.1 at 2013-07-17 15:13:19 -0500
+
+
+Started GET "/assets/libs/foundation.min.js?body=1" for 127.0.0.1 at 2013-07-17 15:13:19 -0500
+
+
+Started GET "/assets/libs/angular.js?body=1" for 127.0.0.1 at 2013-07-17 15:13:19 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-07-17 15:13:19 -0500
+
+
+Started GET "/assets/vendor/custom.modernizr.js?body=1" for 127.0.0.1 at 2013-07-17 15:13:19 -0500
+
+
+Started GET "/assets/vendor/jquery.js?body=1" for 127.0.0.1 at 2013-07-17 15:13:19 -0500
+
+
+Started GET "/assets/vendor/zepto.js?body=1" for 127.0.0.1 at 2013-07-17 15:13:19 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-17 15:13:19 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-17 15:15:10 -0500
+Processing by UsersController#index as HTML
+  Rendered users/index.html.haml within layouts/application (2.7ms)
+Completed 200 OK in 312ms (Views: 310.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-17 15:15:10 -0500
+
+
+Started GET "/assets/foundation.css?body=1" for 127.0.0.1 at 2013-07-17 15:15:10 -0500
+
+
+Started GET "/assets/foundation.min.css?body=1" for 127.0.0.1 at 2013-07-17 15:15:10 -0500
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-07-17 15:15:10 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-17 15:15:10 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-17 15:15:10 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-17 15:15:10 -0500
+
+
+Started GET "/assets/angular/controllers/loginUserController.js?body=1" for 127.0.0.1 at 2013-07-17 15:15:10 -0500
+
+
+Started GET "/assets/foundation/foundation.alerts.js?body=1" for 127.0.0.1 at 2013-07-17 15:15:10 -0500
+
+
+Started GET "/assets/foundation/foundation.clearing.js?body=1" for 127.0.0.1 at 2013-07-17 15:15:10 -0500
+
+
+Started GET "/assets/foundation/foundation.cookie.js?body=1" for 127.0.0.1 at 2013-07-17 15:15:10 -0500
+
+
+Started GET "/assets/foundation/foundation.dropdown.js?body=1" for 127.0.0.1 at 2013-07-17 15:15:10 -0500
+
+
+Started GET "/assets/foundation/foundation.forms.js?body=1" for 127.0.0.1 at 2013-07-17 15:15:10 -0500
+
+
+Started GET "/assets/foundation/foundation.interchange.js?body=1" for 127.0.0.1 at 2013-07-17 15:15:10 -0500
+
+
+Started GET "/assets/foundation/foundation.joyride.js?body=1" for 127.0.0.1 at 2013-07-17 15:15:10 -0500
+
+
+Started GET "/assets/foundation/foundation.js?body=1" for 127.0.0.1 at 2013-07-17 15:15:10 -0500
+
+
+Started GET "/assets/foundation/foundation.magellan.js?body=1" for 127.0.0.1 at 2013-07-17 15:15:10 -0500
+
+
+Started GET "/assets/foundation/foundation.orbit.js?body=1" for 127.0.0.1 at 2013-07-17 15:15:10 -0500
+
+
+Started GET "/assets/foundation/foundation.placeholder.js?body=1" for 127.0.0.1 at 2013-07-17 15:15:10 -0500
+
+
+Started GET "/assets/foundation/foundation.reveal.js?body=1" for 127.0.0.1 at 2013-07-17 15:15:10 -0500
+
+
+Started GET "/assets/foundation/foundation.section.js?body=1" for 127.0.0.1 at 2013-07-17 15:15:10 -0500
+
+
+Started GET "/assets/foundation/foundation.tooltips.js?body=1" for 127.0.0.1 at 2013-07-17 15:15:10 -0500
+
+
+Started GET "/assets/foundation/foundation.topbar.js?body=1" for 127.0.0.1 at 2013-07-17 15:15:10 -0500
+
+
+Started GET "/assets/libs/angular.js?body=1" for 127.0.0.1 at 2013-07-17 15:15:10 -0500
+
+
+Started GET "/assets/libs/foundation.min.js?body=1" for 127.0.0.1 at 2013-07-17 15:15:10 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-07-17 15:15:10 -0500
+
+
+Started GET "/assets/vendor/custom.modernizr.js?body=1" for 127.0.0.1 at 2013-07-17 15:15:10 -0500
+
+
+Started GET "/assets/vendor/jquery.js?body=1" for 127.0.0.1 at 2013-07-17 15:15:10 -0500
+
+
+Started GET "/assets/vendor/zepto.js?body=1" for 127.0.0.1 at 2013-07-17 15:15:11 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-17 15:15:11 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-17 15:16:25 -0500
+Processing by UsersController#index as HTML
+  Rendered users/index.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 146ms (Views: 145.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-17 15:16:25 -0500
+
+
+Started GET "/assets/foundation.css?body=1" for 127.0.0.1 at 2013-07-17 15:16:25 -0500
+
+
+Started GET "/assets/foundation.min.css?body=1" for 127.0.0.1 at 2013-07-17 15:16:25 -0500
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-07-17 15:16:25 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-17 15:16:25 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-17 15:16:25 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-17 15:16:25 -0500
+
+
+Started GET "/assets/foundation/foundation.alerts.js?body=1" for 127.0.0.1 at 2013-07-17 15:16:25 -0500
+
+
+Started GET "/assets/angular/controllers/loginUserController.js?body=1" for 127.0.0.1 at 2013-07-17 15:16:25 -0500
+
+
+Started GET "/assets/foundation/foundation.clearing.js?body=1" for 127.0.0.1 at 2013-07-17 15:16:25 -0500
+
+
+Started GET "/assets/foundation/foundation.cookie.js?body=1" for 127.0.0.1 at 2013-07-17 15:16:25 -0500
+
+
+Started GET "/assets/foundation/foundation.dropdown.js?body=1" for 127.0.0.1 at 2013-07-17 15:16:25 -0500
+
+
+Started GET "/assets/foundation/foundation.forms.js?body=1" for 127.0.0.1 at 2013-07-17 15:16:25 -0500
+
+
+Started GET "/assets/foundation/foundation.interchange.js?body=1" for 127.0.0.1 at 2013-07-17 15:16:25 -0500
+
+
+Started GET "/assets/foundation/foundation.joyride.js?body=1" for 127.0.0.1 at 2013-07-17 15:16:25 -0500
+
+
+Started GET "/assets/foundation/foundation.js?body=1" for 127.0.0.1 at 2013-07-17 15:16:25 -0500
+
+
+Started GET "/assets/foundation/foundation.magellan.js?body=1" for 127.0.0.1 at 2013-07-17 15:16:25 -0500
+
+
+Started GET "/assets/foundation/foundation.orbit.js?body=1" for 127.0.0.1 at 2013-07-17 15:16:25 -0500
+
+
+Started GET "/assets/foundation/foundation.placeholder.js?body=1" for 127.0.0.1 at 2013-07-17 15:16:25 -0500
+
+
+Started GET "/assets/foundation/foundation.reveal.js?body=1" for 127.0.0.1 at 2013-07-17 15:16:25 -0500
+
+
+Started GET "/assets/foundation/foundation.section.js?body=1" for 127.0.0.1 at 2013-07-17 15:16:25 -0500
+
+
+Started GET "/assets/foundation/foundation.tooltips.js?body=1" for 127.0.0.1 at 2013-07-17 15:16:25 -0500
+
+
+Started GET "/assets/foundation/foundation.topbar.js?body=1" for 127.0.0.1 at 2013-07-17 15:16:25 -0500
+
+
+Started GET "/assets/libs/angular.js?body=1" for 127.0.0.1 at 2013-07-17 15:16:25 -0500
+
+
+Started GET "/assets/libs/foundation.min.js?body=1" for 127.0.0.1 at 2013-07-17 15:16:25 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-07-17 15:16:25 -0500
+
+
+Started GET "/assets/vendor/custom.modernizr.js?body=1" for 127.0.0.1 at 2013-07-17 15:16:25 -0500
+
+
+Started GET "/assets/vendor/jquery.js?body=1" for 127.0.0.1 at 2013-07-17 15:16:25 -0500
+
+
+Started GET "/assets/vendor/zepto.js?body=1" for 127.0.0.1 at 2013-07-17 15:16:25 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-17 15:16:25 -0500
+
+
+Started GET "/assets/angular/controllers/loginUserController.js?body=1" for 127.0.0.1 at 2013-07-17 15:17:48 -0500
+
+
+Started GET "/assets/angular/controllers/loginUserController.js?body=1" for 127.0.0.1 at 2013-07-17 15:18:35 -0500
+
+
+Started GET "/assets/angular/controllers/loginUserController.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:04 -0500
+
+
+Started GET "/assets/angular/controllers/loginUserController.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:04 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-17 15:20:08 -0500
+Processing by UsersController#index as HTML
+  Rendered users/index.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 152ms (Views: 151.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-17 15:20:08 -0500
+
+
+Started GET "/assets/foundation.css?body=1" for 127.0.0.1 at 2013-07-17 15:20:08 -0500
+
+
+Started GET "/assets/foundation.min.css?body=1" for 127.0.0.1 at 2013-07-17 15:20:08 -0500
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-07-17 15:20:08 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:08 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:08 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:08 -0500
+
+
+Started GET "/assets/angular/controllers/loginUserController.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:08 -0500
+
+
+Started GET "/assets/foundation/foundation.alerts.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:08 -0500
+
+
+Started GET "/assets/foundation/foundation.clearing.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:08 -0500
+
+
+Started GET "/assets/foundation/foundation.cookie.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:08 -0500
+
+
+Started GET "/assets/foundation/foundation.dropdown.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:08 -0500
+
+
+Started GET "/assets/foundation/foundation.forms.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:08 -0500
+
+
+Started GET "/assets/foundation/foundation.joyride.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:08 -0500
+
+
+Started GET "/assets/foundation/foundation.interchange.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:08 -0500
+
+
+Started GET "/assets/foundation/foundation.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:08 -0500
+
+
+Started GET "/assets/foundation/foundation.magellan.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:08 -0500
+
+
+Started GET "/assets/foundation/foundation.orbit.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:08 -0500
+
+
+Started GET "/assets/foundation/foundation.placeholder.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:08 -0500
+
+
+Started GET "/assets/foundation/foundation.reveal.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:08 -0500
+
+
+Started GET "/assets/foundation/foundation.section.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:08 -0500
+
+
+Started GET "/assets/foundation/foundation.tooltips.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:08 -0500
+
+
+Started GET "/assets/foundation/foundation.topbar.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:08 -0500
+
+
+Started GET "/assets/libs/angular.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:08 -0500
+
+
+Started GET "/assets/libs/foundation.min.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:08 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:08 -0500
+
+
+Started GET "/assets/vendor/custom.modernizr.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:08 -0500
+
+
+Started GET "/assets/vendor/jquery.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:08 -0500
+
+
+Started GET "/assets/vendor/zepto.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:08 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:08 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-17 15:20:47 -0500
+Processing by UsersController#index as HTML
+  Rendered users/index.html.haml within layouts/application (5.9ms)
+Completed 200 OK in 37ms (Views: 34.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-17 15:20:47 -0500
+
+
+Started GET "/assets/foundation.css?body=1" for 127.0.0.1 at 2013-07-17 15:20:47 -0500
+
+
+Started GET "/assets/foundation.min.css?body=1" for 127.0.0.1 at 2013-07-17 15:20:47 -0500
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-07-17 15:20:47 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:47 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:47 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:47 -0500
+
+
+Started GET "/assets/angular/controllers/loginUserController.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:47 -0500
+
+
+Started GET "/assets/foundation/foundation.alerts.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:47 -0500
+
+
+Started GET "/assets/foundation/foundation.clearing.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:47 -0500
+
+
+Started GET "/assets/foundation/foundation.cookie.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:47 -0500
+
+
+Started GET "/assets/foundation/foundation.dropdown.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:47 -0500
+
+
+Started GET "/assets/foundation/foundation.forms.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:47 -0500
+
+
+Started GET "/assets/foundation/foundation.interchange.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:47 -0500
+
+
+Started GET "/assets/foundation/foundation.joyride.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:47 -0500
+
+
+Started GET "/assets/foundation/foundation.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:48 -0500
+
+
+Started GET "/assets/foundation/foundation.magellan.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:48 -0500
+
+
+Started GET "/assets/foundation/foundation.orbit.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:48 -0500
+
+
+Started GET "/assets/foundation/foundation.placeholder.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:48 -0500
+
+
+Started GET "/assets/foundation/foundation.reveal.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:48 -0500
+
+
+Started GET "/assets/foundation/foundation.section.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:48 -0500
+
+
+Started GET "/assets/foundation/foundation.tooltips.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:48 -0500
+
+
+Started GET "/assets/foundation/foundation.topbar.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:48 -0500
+
+
+Started GET "/assets/libs/angular.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:48 -0500
+
+
+Started GET "/assets/libs/foundation.min.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:48 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:48 -0500
+
+
+Started GET "/assets/vendor/custom.modernizr.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:48 -0500
+
+
+Started GET "/assets/vendor/jquery.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:48 -0500
+
+
+Started GET "/assets/vendor/zepto.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:48 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:48 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-17 15:20:49 -0500
+Processing by UsersController#index as HTML
+  Rendered users/index.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 25ms (Views: 23.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-17 15:20:49 -0500
+
+
+Started GET "/assets/foundation.css?body=1" for 127.0.0.1 at 2013-07-17 15:20:49 -0500
+
+
+Started GET "/assets/foundation.min.css?body=1" for 127.0.0.1 at 2013-07-17 15:20:49 -0500
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-07-17 15:20:49 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:49 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:49 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:49 -0500
+
+
+Started GET "/assets/angular/controllers/loginUserController.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:49 -0500
+
+
+Started GET "/assets/foundation/foundation.clearing.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:49 -0500
+
+
+Started GET "/assets/foundation/foundation.alerts.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:49 -0500
+
+
+Started GET "/assets/foundation/foundation.cookie.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:49 -0500
+
+
+Started GET "/assets/foundation/foundation.dropdown.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:49 -0500
+
+
+Started GET "/assets/foundation/foundation.forms.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:49 -0500
+
+
+Started GET "/assets/foundation/foundation.interchange.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:49 -0500
+
+
+Started GET "/assets/foundation/foundation.joyride.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:49 -0500
+
+
+Started GET "/assets/foundation/foundation.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:49 -0500
+
+
+Started GET "/assets/foundation/foundation.magellan.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:49 -0500
+
+
+Started GET "/assets/foundation/foundation.orbit.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:49 -0500
+
+
+Started GET "/assets/foundation/foundation.placeholder.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:49 -0500
+
+
+Started GET "/assets/foundation/foundation.reveal.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:49 -0500
+
+
+Started GET "/assets/foundation/foundation.section.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:49 -0500
+
+
+Started GET "/assets/foundation/foundation.tooltips.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:49 -0500
+
+
+Started GET "/assets/foundation/foundation.topbar.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:49 -0500
+
+
+Started GET "/assets/libs/angular.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:49 -0500
+
+
+Started GET "/assets/libs/foundation.min.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:49 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:49 -0500
+
+
+Started GET "/assets/vendor/custom.modernizr.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:49 -0500
+
+
+Started GET "/assets/vendor/zepto.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:49 -0500
+
+
+Started GET "/assets/vendor/jquery.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:49 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:49 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-17 15:20:50 -0500
+Processing by UsersController#index as HTML
+  Rendered users/index.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 23ms (Views: 22.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-17 15:20:50 -0500
+
+
+Started GET "/assets/foundation.css?body=1" for 127.0.0.1 at 2013-07-17 15:20:50 -0500
+
+
+Started GET "/assets/foundation.min.css?body=1" for 127.0.0.1 at 2013-07-17 15:20:50 -0500
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-07-17 15:20:50 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:50 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:50 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:50 -0500
+
+
+Started GET "/assets/angular/controllers/loginUserController.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:50 -0500
+
+
+Started GET "/assets/foundation/foundation.alerts.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:50 -0500
+
+
+Started GET "/assets/foundation/foundation.clearing.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:50 -0500
+
+
+Started GET "/assets/foundation/foundation.cookie.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:50 -0500
+
+
+Started GET "/assets/foundation/foundation.dropdown.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:50 -0500
+
+
+Started GET "/assets/foundation/foundation.forms.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:50 -0500
+
+
+Started GET "/assets/foundation/foundation.interchange.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:50 -0500
+
+
+Started GET "/assets/foundation/foundation.joyride.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:50 -0500
+
+
+Started GET "/assets/foundation/foundation.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:50 -0500
+
+
+Started GET "/assets/foundation/foundation.magellan.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:50 -0500
+
+
+Started GET "/assets/foundation/foundation.orbit.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:50 -0500
+
+
+Started GET "/assets/foundation/foundation.placeholder.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:50 -0500
+
+
+Started GET "/assets/foundation/foundation.reveal.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:50 -0500
+
+
+Started GET "/assets/foundation/foundation.section.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:50 -0500
+
+
+Started GET "/assets/foundation/foundation.tooltips.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:50 -0500
+
+
+Started GET "/assets/foundation/foundation.topbar.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:50 -0500
+
+
+Started GET "/assets/libs/angular.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:50 -0500
+
+
+Started GET "/assets/libs/foundation.min.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:50 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:50 -0500
+
+
+Started GET "/assets/vendor/custom.modernizr.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:50 -0500
+
+
+Started GET "/assets/vendor/jquery.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:51 -0500
+
+
+Started GET "/assets/vendor/zepto.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:51 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:51 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-17 15:20:51 -0500
+Processing by UsersController#index as HTML
+  Rendered users/index.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 24ms (Views: 22.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-17 15:20:51 -0500
+
+
+Started GET "/assets/foundation.css?body=1" for 127.0.0.1 at 2013-07-17 15:20:51 -0500
+
+
+Started GET "/assets/foundation.min.css?body=1" for 127.0.0.1 at 2013-07-17 15:20:51 -0500
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-07-17 15:20:51 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:51 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:51 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:51 -0500
+
+
+Started GET "/assets/angular/controllers/loginUserController.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:51 -0500
+
+
+Started GET "/assets/foundation/foundation.alerts.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:51 -0500
+
+
+Started GET "/assets/foundation/foundation.clearing.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:51 -0500
+
+
+Started GET "/assets/foundation/foundation.cookie.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:51 -0500
+
+
+Started GET "/assets/foundation/foundation.dropdown.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:51 -0500
+
+
+Started GET "/assets/foundation/foundation.forms.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:51 -0500
+
+
+Started GET "/assets/foundation/foundation.interchange.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:51 -0500
+
+
+Started GET "/assets/foundation/foundation.joyride.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:51 -0500
+
+
+Started GET "/assets/foundation/foundation.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:52 -0500
+
+
+Started GET "/assets/foundation/foundation.magellan.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:52 -0500
+
+
+Started GET "/assets/foundation/foundation.orbit.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:52 -0500
+
+
+Started GET "/assets/foundation/foundation.placeholder.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:52 -0500
+
+
+Started GET "/assets/foundation/foundation.reveal.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:52 -0500
+
+
+Started GET "/assets/foundation/foundation.section.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:52 -0500
+
+
+Started GET "/assets/foundation/foundation.tooltips.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:52 -0500
+
+
+Started GET "/assets/foundation/foundation.topbar.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:52 -0500
+
+
+Started GET "/assets/libs/angular.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:52 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:52 -0500
+
+
+Started GET "/assets/libs/foundation.min.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:52 -0500
+
+
+Started GET "/assets/vendor/custom.modernizr.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:52 -0500
+
+
+Started GET "/assets/vendor/jquery.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:52 -0500
+
+
+Started GET "/assets/vendor/zepto.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:52 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:52 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-17 15:20:52 -0500
+Processing by UsersController#index as HTML
+  Rendered users/index.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 20ms (Views: 19.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-17 15:20:53 -0500
+
+
+Started GET "/assets/foundation.css?body=1" for 127.0.0.1 at 2013-07-17 15:20:53 -0500
+
+
+Started GET "/assets/foundation.min.css?body=1" for 127.0.0.1 at 2013-07-17 15:20:53 -0500
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-07-17 15:20:53 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:53 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:53 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:53 -0500
+
+
+Started GET "/assets/angular/controllers/loginUserController.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:53 -0500
+
+
+Started GET "/assets/foundation/foundation.clearing.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:53 -0500
+
+
+Started GET "/assets/foundation/foundation.alerts.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:53 -0500
+
+
+Started GET "/assets/foundation/foundation.cookie.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:53 -0500
+
+
+Started GET "/assets/foundation/foundation.dropdown.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:53 -0500
+
+
+Started GET "/assets/foundation/foundation.forms.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:53 -0500
+
+
+Started GET "/assets/foundation/foundation.interchange.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:53 -0500
+
+
+Started GET "/assets/foundation/foundation.joyride.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:53 -0500
+
+
+Started GET "/assets/foundation/foundation.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:53 -0500
+
+
+Started GET "/assets/foundation/foundation.orbit.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:53 -0500
+
+
+Started GET "/assets/foundation/foundation.magellan.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:53 -0500
+
+
+Started GET "/assets/foundation/foundation.placeholder.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:53 -0500
+
+
+Started GET "/assets/foundation/foundation.reveal.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:53 -0500
+
+
+Started GET "/assets/foundation/foundation.section.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:53 -0500
+
+
+Started GET "/assets/foundation/foundation.topbar.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:53 -0500
+
+
+Started GET "/assets/foundation/foundation.tooltips.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:53 -0500
+
+
+Started GET "/assets/libs/angular.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:53 -0500
+
+
+Started GET "/assets/libs/foundation.min.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:53 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:53 -0500
+
+
+Started GET "/assets/vendor/custom.modernizr.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:53 -0500
+
+
+Started GET "/assets/vendor/jquery.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:53 -0500
+
+
+Started GET "/assets/vendor/zepto.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:53 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:53 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-17 15:20:54 -0500
+Processing by UsersController#index as HTML
+  Rendered users/index.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 24ms (Views: 22.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-17 15:20:54 -0500
+
+
+Started GET "/assets/foundation.css?body=1" for 127.0.0.1 at 2013-07-17 15:20:54 -0500
+
+
+Started GET "/assets/foundation.min.css?body=1" for 127.0.0.1 at 2013-07-17 15:20:54 -0500
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-07-17 15:20:54 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:54 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:54 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:54 -0500
+
+
+Started GET "/assets/angular/controllers/loginUserController.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:54 -0500
+
+
+Started GET "/assets/foundation/foundation.alerts.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:54 -0500
+
+
+Started GET "/assets/foundation/foundation.clearing.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:54 -0500
+
+
+Started GET "/assets/foundation/foundation.cookie.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:54 -0500
+
+
+Started GET "/assets/foundation/foundation.dropdown.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:54 -0500
+
+
+Started GET "/assets/foundation/foundation.forms.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:54 -0500
+
+
+Started GET "/assets/foundation/foundation.interchange.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:54 -0500
+
+
+Started GET "/assets/foundation/foundation.joyride.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:54 -0500
+
+
+Started GET "/assets/foundation/foundation.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:54 -0500
+
+
+Started GET "/assets/foundation/foundation.magellan.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:54 -0500
+
+
+Started GET "/assets/foundation/foundation.orbit.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:54 -0500
+
+
+Started GET "/assets/foundation/foundation.placeholder.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:54 -0500
+
+
+Started GET "/assets/foundation/foundation.reveal.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:54 -0500
+
+
+Started GET "/assets/foundation/foundation.section.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:54 -0500
+
+
+Started GET "/assets/foundation/foundation.tooltips.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:54 -0500
+
+
+Started GET "/assets/foundation/foundation.topbar.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:54 -0500
+
+
+Started GET "/assets/libs/angular.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:54 -0500
+
+
+Started GET "/assets/libs/foundation.min.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:54 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:54 -0500
+
+
+Started GET "/assets/vendor/custom.modernizr.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:54 -0500
+
+
+Started GET "/assets/vendor/jquery.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:54 -0500
+
+
+Started GET "/assets/vendor/zepto.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:54 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:54 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-17 15:20:55 -0500
+Processing by UsersController#index as HTML
+  Rendered users/index.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 21ms (Views: 19.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-17 15:20:55 -0500
+
+
+Started GET "/assets/foundation.css?body=1" for 127.0.0.1 at 2013-07-17 15:20:55 -0500
+
+
+Started GET "/assets/foundation.min.css?body=1" for 127.0.0.1 at 2013-07-17 15:20:55 -0500
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-07-17 15:20:55 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:55 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:55 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:55 -0500
+
+
+Started GET "/assets/angular/controllers/loginUserController.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:55 -0500
+
+
+Started GET "/assets/foundation/foundation.alerts.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:55 -0500
+
+
+Started GET "/assets/foundation/foundation.clearing.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:55 -0500
+
+
+Started GET "/assets/foundation/foundation.dropdown.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:55 -0500
+
+
+Started GET "/assets/foundation/foundation.forms.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:55 -0500
+
+
+Started GET "/assets/foundation/foundation.cookie.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:55 -0500
+
+
+Started GET "/assets/foundation/foundation.interchange.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:55 -0500
+
+
+Started GET "/assets/foundation/foundation.joyride.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:55 -0500
+
+
+Started GET "/assets/foundation/foundation.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:56 -0500
+
+
+Started GET "/assets/foundation/foundation.magellan.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:56 -0500
+
+
+Started GET "/assets/foundation/foundation.orbit.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:56 -0500
+
+
+Started GET "/assets/foundation/foundation.placeholder.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:56 -0500
+
+
+Started GET "/assets/foundation/foundation.reveal.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:56 -0500
+
+
+Started GET "/assets/foundation/foundation.section.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:56 -0500
+
+
+Started GET "/assets/foundation/foundation.tooltips.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:56 -0500
+
+
+Started GET "/assets/foundation/foundation.topbar.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:56 -0500
+
+
+Started GET "/assets/libs/angular.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:56 -0500
+
+
+Started GET "/assets/libs/foundation.min.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:56 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:56 -0500
+
+
+Started GET "/assets/vendor/custom.modernizr.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:56 -0500
+
+
+Started GET "/assets/vendor/jquery.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:56 -0500
+
+
+Started GET "/assets/vendor/zepto.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:56 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:56 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-17 15:20:56 -0500
+Processing by UsersController#index as HTML
+  Rendered users/index.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 21ms (Views: 20.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-17 15:20:56 -0500
+
+
+Started GET "/assets/foundation.css?body=1" for 127.0.0.1 at 2013-07-17 15:20:56 -0500
+
+
+Started GET "/assets/foundation.min.css?body=1" for 127.0.0.1 at 2013-07-17 15:20:56 -0500
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-07-17 15:20:56 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:56 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:56 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:56 -0500
+
+
+Started GET "/assets/angular/controllers/loginUserController.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:56 -0500
+
+
+Started GET "/assets/foundation/foundation.alerts.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:56 -0500
+
+
+Started GET "/assets/foundation/foundation.clearing.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:56 -0500
+
+
+Started GET "/assets/foundation/foundation.cookie.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:56 -0500
+
+
+Started GET "/assets/foundation/foundation.dropdown.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:56 -0500
+
+
+Started GET "/assets/foundation/foundation.forms.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:56 -0500
+
+
+Started GET "/assets/foundation/foundation.interchange.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:56 -0500
+
+
+Started GET "/assets/foundation/foundation.joyride.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:56 -0500
+
+
+Started GET "/assets/foundation/foundation.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:57 -0500
+
+
+Started GET "/assets/foundation/foundation.magellan.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:57 -0500
+
+
+Started GET "/assets/foundation/foundation.orbit.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:57 -0500
+
+
+Started GET "/assets/foundation/foundation.placeholder.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:57 -0500
+
+
+Started GET "/assets/foundation/foundation.reveal.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:57 -0500
+
+
+Started GET "/assets/foundation/foundation.section.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:57 -0500
+
+
+Started GET "/assets/foundation/foundation.tooltips.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:57 -0500
+
+
+Started GET "/assets/foundation/foundation.topbar.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:57 -0500
+
+
+Started GET "/assets/libs/angular.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:57 -0500
+
+
+Started GET "/assets/libs/foundation.min.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:57 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:57 -0500
+
+
+Started GET "/assets/vendor/custom.modernizr.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:57 -0500
+
+
+Started GET "/assets/vendor/jquery.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:57 -0500
+
+
+Started GET "/assets/vendor/zepto.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:57 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:57 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-17 15:20:57 -0500
+Processing by UsersController#index as HTML
+  Rendered users/index.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 24ms (Views: 23.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-17 15:20:57 -0500
+
+
+Started GET "/assets/foundation.css?body=1" for 127.0.0.1 at 2013-07-17 15:20:57 -0500
+
+
+Started GET "/assets/foundation.min.css?body=1" for 127.0.0.1 at 2013-07-17 15:20:57 -0500
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-07-17 15:20:58 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:58 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:58 -0500
+
+
+Started GET "/assets/angular/controllers/loginUserController.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:58 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:58 -0500
+
+
+Started GET "/assets/foundation/foundation.alerts.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:58 -0500
+
+
+Started GET "/assets/foundation/foundation.cookie.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:58 -0500
+
+
+Started GET "/assets/foundation/foundation.clearing.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:58 -0500
+
+
+Started GET "/assets/foundation/foundation.dropdown.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:58 -0500
+
+
+Started GET "/assets/foundation/foundation.forms.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:58 -0500
+
+
+Started GET "/assets/foundation/foundation.interchange.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:58 -0500
+
+
+Started GET "/assets/foundation/foundation.joyride.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:58 -0500
+
+
+Started GET "/assets/foundation/foundation.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:58 -0500
+
+
+Started GET "/assets/foundation/foundation.magellan.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:58 -0500
+
+
+Started GET "/assets/foundation/foundation.orbit.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:58 -0500
+
+
+Started GET "/assets/foundation/foundation.placeholder.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:58 -0500
+
+
+Started GET "/assets/foundation/foundation.reveal.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:58 -0500
+
+
+Started GET "/assets/foundation/foundation.tooltips.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:58 -0500
+
+
+Started GET "/assets/foundation/foundation.section.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:58 -0500
+
+
+Started GET "/assets/foundation/foundation.topbar.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:58 -0500
+
+
+Started GET "/assets/libs/angular.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:58 -0500
+
+
+Started GET "/assets/libs/foundation.min.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:58 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:58 -0500
+
+
+Started GET "/assets/vendor/custom.modernizr.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:58 -0500
+
+
+Started GET "/assets/vendor/jquery.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:58 -0500
+
+
+Started GET "/assets/vendor/zepto.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:58 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:58 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-17 15:20:58 -0500
+Processing by UsersController#index as HTML
+  Rendered users/index.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 23ms (Views: 22.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-17 15:20:58 -0500
+
+
+Started GET "/assets/foundation.css?body=1" for 127.0.0.1 at 2013-07-17 15:20:58 -0500
+
+
+Started GET "/assets/foundation.min.css?body=1" for 127.0.0.1 at 2013-07-17 15:20:59 -0500
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-07-17 15:20:59 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:59 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:59 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:59 -0500
+
+
+Started GET "/assets/angular/controllers/loginUserController.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:59 -0500
+
+
+Started GET "/assets/foundation/foundation.alerts.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:59 -0500
+
+
+Started GET "/assets/foundation/foundation.clearing.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:59 -0500
+
+
+Started GET "/assets/foundation/foundation.cookie.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:59 -0500
+
+
+Started GET "/assets/foundation/foundation.dropdown.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:59 -0500
+
+
+Started GET "/assets/foundation/foundation.forms.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:59 -0500
+
+
+Started GET "/assets/foundation/foundation.interchange.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:59 -0500
+
+
+Started GET "/assets/foundation/foundation.joyride.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:59 -0500
+
+
+Started GET "/assets/foundation/foundation.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:59 -0500
+
+
+Started GET "/assets/foundation/foundation.magellan.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:59 -0500
+
+
+Started GET "/assets/foundation/foundation.orbit.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:59 -0500
+
+
+Started GET "/assets/foundation/foundation.placeholder.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:59 -0500
+
+
+Started GET "/assets/foundation/foundation.reveal.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:59 -0500
+
+
+Started GET "/assets/foundation/foundation.tooltips.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:59 -0500
+
+
+Started GET "/assets/foundation/foundation.section.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:59 -0500
+
+
+Started GET "/assets/foundation/foundation.topbar.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:59 -0500
+
+
+Started GET "/assets/libs/angular.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:59 -0500
+
+
+Started GET "/assets/libs/foundation.min.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:59 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:59 -0500
+
+
+Started GET "/assets/vendor/custom.modernizr.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:59 -0500
+
+
+Started GET "/assets/vendor/jquery.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:59 -0500
+
+
+Started GET "/assets/vendor/zepto.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:59 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-17 15:20:59 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-17 15:21:00 -0500
+Processing by UsersController#index as HTML
+  Rendered users/index.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 23ms (Views: 21.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-17 15:21:00 -0500
+
+
+Started GET "/assets/foundation.css?body=1" for 127.0.0.1 at 2013-07-17 15:21:00 -0500
+
+
+Started GET "/assets/foundation.min.css?body=1" for 127.0.0.1 at 2013-07-17 15:21:00 -0500
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-07-17 15:21:00 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:00 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:00 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:00 -0500
+
+
+Started GET "/assets/angular/controllers/loginUserController.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:00 -0500
+
+
+Started GET "/assets/foundation/foundation.alerts.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:00 -0500
+
+
+Started GET "/assets/foundation/foundation.clearing.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:00 -0500
+
+
+Started GET "/assets/foundation/foundation.cookie.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:00 -0500
+
+
+Started GET "/assets/foundation/foundation.dropdown.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:00 -0500
+
+
+Started GET "/assets/foundation/foundation.forms.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:00 -0500
+
+
+Started GET "/assets/foundation/foundation.interchange.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:00 -0500
+
+
+Started GET "/assets/foundation/foundation.joyride.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:00 -0500
+
+
+Started GET "/assets/foundation/foundation.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:00 -0500
+
+
+Started GET "/assets/foundation/foundation.magellan.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:00 -0500
+
+
+Started GET "/assets/foundation/foundation.orbit.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:00 -0500
+
+
+Started GET "/assets/foundation/foundation.placeholder.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:00 -0500
+
+
+Started GET "/assets/foundation/foundation.section.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:00 -0500
+
+
+Started GET "/assets/foundation/foundation.reveal.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:00 -0500
+
+
+Started GET "/assets/foundation/foundation.tooltips.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:00 -0500
+
+
+Started GET "/assets/foundation/foundation.topbar.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:00 -0500
+
+
+Started GET "/assets/libs/angular.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:00 -0500
+
+
+Started GET "/assets/libs/foundation.min.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:00 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:00 -0500
+
+
+Started GET "/assets/vendor/custom.modernizr.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:00 -0500
+
+
+Started GET "/assets/vendor/jquery.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:00 -0500
+
+
+Started GET "/assets/vendor/zepto.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:00 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:00 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-17 15:21:01 -0500
+Processing by UsersController#index as HTML
+  Rendered users/index.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 23ms (Views: 21.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-17 15:21:01 -0500
+
+
+Started GET "/assets/foundation.css?body=1" for 127.0.0.1 at 2013-07-17 15:21:01 -0500
+
+
+Started GET "/assets/foundation.min.css?body=1" for 127.0.0.1 at 2013-07-17 15:21:01 -0500
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-07-17 15:21:01 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:01 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:01 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:01 -0500
+
+
+Started GET "/assets/angular/controllers/loginUserController.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:01 -0500
+
+
+Started GET "/assets/foundation/foundation.alerts.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:01 -0500
+
+
+Started GET "/assets/foundation/foundation.clearing.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:01 -0500
+
+
+Started GET "/assets/foundation/foundation.cookie.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:01 -0500
+
+
+Started GET "/assets/foundation/foundation.dropdown.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:01 -0500
+
+
+Started GET "/assets/foundation/foundation.forms.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:01 -0500
+
+
+Started GET "/assets/foundation/foundation.interchange.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:01 -0500
+
+
+Started GET "/assets/foundation/foundation.joyride.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:01 -0500
+
+
+Started GET "/assets/foundation/foundation.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:01 -0500
+
+
+Started GET "/assets/foundation/foundation.magellan.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:01 -0500
+
+
+Started GET "/assets/foundation/foundation.orbit.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:01 -0500
+
+
+Started GET "/assets/foundation/foundation.placeholder.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:01 -0500
+
+
+Started GET "/assets/foundation/foundation.reveal.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:01 -0500
+
+
+Started GET "/assets/foundation/foundation.section.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:01 -0500
+
+
+Started GET "/assets/foundation/foundation.tooltips.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:01 -0500
+
+
+Started GET "/assets/foundation/foundation.topbar.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:01 -0500
+
+
+Started GET "/assets/libs/angular.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:01 -0500
+
+
+Started GET "/assets/libs/foundation.min.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:01 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:02 -0500
+
+
+Started GET "/assets/vendor/custom.modernizr.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:02 -0500
+
+
+Started GET "/assets/vendor/jquery.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:02 -0500
+
+
+Started GET "/assets/vendor/zepto.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:02 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:02 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-17 15:21:02 -0500
+Processing by UsersController#index as HTML
+  Rendered users/index.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 55ms (Views: 54.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-17 15:21:02 -0500
+
+
+Started GET "/assets/foundation.css?body=1" for 127.0.0.1 at 2013-07-17 15:21:02 -0500
+
+
+Started GET "/assets/foundation.min.css?body=1" for 127.0.0.1 at 2013-07-17 15:21:02 -0500
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-07-17 15:21:02 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:02 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:02 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:02 -0500
+
+
+Started GET "/assets/angular/controllers/loginUserController.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:02 -0500
+
+
+Started GET "/assets/foundation/foundation.alerts.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:02 -0500
+
+
+Started GET "/assets/foundation/foundation.clearing.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:02 -0500
+
+
+Started GET "/assets/foundation/foundation.cookie.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:02 -0500
+
+
+Started GET "/assets/foundation/foundation.dropdown.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:02 -0500
+
+
+Started GET "/assets/foundation/foundation.forms.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:02 -0500
+
+
+Started GET "/assets/foundation/foundation.interchange.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:02 -0500
+
+
+Started GET "/assets/foundation/foundation.joyride.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:02 -0500
+
+
+Started GET "/assets/foundation/foundation.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:03 -0500
+
+
+Started GET "/assets/foundation/foundation.magellan.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:03 -0500
+
+
+Started GET "/assets/foundation/foundation.orbit.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:03 -0500
+
+
+Started GET "/assets/foundation/foundation.placeholder.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:03 -0500
+
+
+Started GET "/assets/foundation/foundation.reveal.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:03 -0500
+
+
+Started GET "/assets/foundation/foundation.section.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:03 -0500
+
+
+Started GET "/assets/foundation/foundation.topbar.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:03 -0500
+
+
+Started GET "/assets/foundation/foundation.tooltips.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:03 -0500
+
+
+Started GET "/assets/libs/angular.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:03 -0500
+
+
+Started GET "/assets/libs/foundation.min.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:03 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:03 -0500
+
+
+Started GET "/assets/vendor/custom.modernizr.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:03 -0500
+
+
+Started GET "/assets/vendor/jquery.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:03 -0500
+
+
+Started GET "/assets/vendor/zepto.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:03 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:03 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-17 15:21:03 -0500
+Processing by UsersController#index as HTML
+  Rendered users/index.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 37ms (Views: 35.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-17 15:21:04 -0500
+
+
+Started GET "/assets/foundation.css?body=1" for 127.0.0.1 at 2013-07-17 15:21:04 -0500
+
+
+Started GET "/assets/foundation.min.css?body=1" for 127.0.0.1 at 2013-07-17 15:21:04 -0500
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-07-17 15:21:04 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:04 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:04 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:04 -0500
+
+
+Started GET "/assets/angular/controllers/loginUserController.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:04 -0500
+
+
+Started GET "/assets/foundation/foundation.alerts.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:04 -0500
+
+
+Started GET "/assets/foundation/foundation.clearing.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:04 -0500
+
+
+Started GET "/assets/foundation/foundation.cookie.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:04 -0500
+
+
+Started GET "/assets/foundation/foundation.dropdown.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:04 -0500
+
+
+Started GET "/assets/foundation/foundation.forms.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:04 -0500
+
+
+Started GET "/assets/foundation/foundation.interchange.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:04 -0500
+
+
+Started GET "/assets/foundation/foundation.joyride.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:04 -0500
+
+
+Started GET "/assets/foundation/foundation.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:04 -0500
+
+
+Started GET "/assets/foundation/foundation.magellan.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:04 -0500
+
+
+Started GET "/assets/foundation/foundation.orbit.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:04 -0500
+
+
+Started GET "/assets/foundation/foundation.placeholder.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:04 -0500
+
+
+Started GET "/assets/foundation/foundation.reveal.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:04 -0500
+
+
+Started GET "/assets/foundation/foundation.tooltips.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:04 -0500
+
+
+Started GET "/assets/foundation/foundation.section.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:04 -0500
+
+
+Started GET "/assets/foundation/foundation.topbar.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:04 -0500
+
+
+Started GET "/assets/libs/angular.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:04 -0500
+
+
+Started GET "/assets/libs/foundation.min.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:04 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:04 -0500
+
+
+Started GET "/assets/vendor/custom.modernizr.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:04 -0500
+
+
+Started GET "/assets/vendor/jquery.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:04 -0500
+
+
+Started GET "/assets/vendor/zepto.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:04 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:04 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-17 15:21:05 -0500
+Processing by UsersController#index as HTML
+  Rendered users/index.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 22ms (Views: 20.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-17 15:21:05 -0500
+
+
+Started GET "/assets/foundation.css?body=1" for 127.0.0.1 at 2013-07-17 15:21:05 -0500
+
+
+Started GET "/assets/foundation.min.css?body=1" for 127.0.0.1 at 2013-07-17 15:21:05 -0500
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-07-17 15:21:05 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:05 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:05 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:05 -0500
+
+
+Started GET "/assets/angular/controllers/loginUserController.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:05 -0500
+
+
+Started GET "/assets/foundation/foundation.alerts.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:05 -0500
+
+
+Started GET "/assets/foundation/foundation.clearing.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:05 -0500
+
+
+Started GET "/assets/foundation/foundation.cookie.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:05 -0500
+
+
+Started GET "/assets/foundation/foundation.dropdown.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:05 -0500
+
+
+Started GET "/assets/foundation/foundation.forms.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:05 -0500
+
+
+Started GET "/assets/foundation/foundation.interchange.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:05 -0500
+
+
+Started GET "/assets/foundation/foundation.joyride.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:05 -0500
+
+
+Started GET "/assets/foundation/foundation.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:06 -0500
+
+
+Started GET "/assets/foundation/foundation.magellan.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:06 -0500
+
+
+Started GET "/assets/foundation/foundation.orbit.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:06 -0500
+
+
+Started GET "/assets/foundation/foundation.placeholder.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:06 -0500
+
+
+Started GET "/assets/foundation/foundation.reveal.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:06 -0500
+
+
+Started GET "/assets/foundation/foundation.section.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:06 -0500
+
+
+Started GET "/assets/foundation/foundation.tooltips.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:06 -0500
+
+
+Started GET "/assets/foundation/foundation.topbar.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:06 -0500
+
+
+Started GET "/assets/libs/angular.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:06 -0500
+
+
+Started GET "/assets/libs/foundation.min.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:06 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:06 -0500
+
+
+Started GET "/assets/vendor/custom.modernizr.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:06 -0500
+
+
+Started GET "/assets/vendor/jquery.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:06 -0500
+
+
+Started GET "/assets/vendor/zepto.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:06 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:06 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-17 15:21:06 -0500
+Processing by UsersController#index as HTML
+  Rendered users/index.html.haml within layouts/application (1.4ms)
+Completed 200 OK in 20ms (Views: 19.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-17 15:21:06 -0500
+
+
+Started GET "/assets/foundation.css?body=1" for 127.0.0.1 at 2013-07-17 15:21:07 -0500
+
+
+Started GET "/assets/foundation.min.css?body=1" for 127.0.0.1 at 2013-07-17 15:21:07 -0500
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-07-17 15:21:07 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:07 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:07 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:07 -0500
+
+
+Started GET "/assets/angular/controllers/loginUserController.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:07 -0500
+
+
+Started GET "/assets/foundation/foundation.alerts.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:07 -0500
+
+
+Started GET "/assets/foundation/foundation.clearing.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:07 -0500
+
+
+Started GET "/assets/foundation/foundation.cookie.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:07 -0500
+
+
+Started GET "/assets/foundation/foundation.dropdown.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:07 -0500
+
+
+Started GET "/assets/foundation/foundation.forms.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:07 -0500
+
+
+Started GET "/assets/foundation/foundation.interchange.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:07 -0500
+
+
+Started GET "/assets/foundation/foundation.joyride.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:07 -0500
+
+
+Started GET "/assets/foundation/foundation.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:07 -0500
+
+
+Started GET "/assets/foundation/foundation.magellan.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:07 -0500
+
+
+Started GET "/assets/foundation/foundation.orbit.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:07 -0500
+
+
+Started GET "/assets/foundation/foundation.placeholder.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:07 -0500
+
+
+Started GET "/assets/foundation/foundation.reveal.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:07 -0500
+
+
+Started GET "/assets/foundation/foundation.section.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:07 -0500
+
+
+Started GET "/assets/foundation/foundation.tooltips.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:07 -0500
+
+
+Started GET "/assets/foundation/foundation.topbar.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:07 -0500
+
+
+Started GET "/assets/libs/angular.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:07 -0500
+
+
+Started GET "/assets/libs/foundation.min.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:07 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:07 -0500
+
+
+Started GET "/assets/vendor/custom.modernizr.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:07 -0500
+
+
+Started GET "/assets/vendor/zepto.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:07 -0500
+
+
+Started GET "/assets/vendor/jquery.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:07 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-17 15:21:07 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-17 15:23:01 -0500
+Processing by UsersController#index as HTML
+  Rendered users/index.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 45ms (Views: 43.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-17 15:23:01 -0500
+
+
+Started GET "/assets/foundation.css?body=1" for 127.0.0.1 at 2013-07-17 15:23:01 -0500
+
+
+Started GET "/assets/foundation.min.css?body=1" for 127.0.0.1 at 2013-07-17 15:23:01 -0500
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-07-17 15:23:01 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-17 15:23:01 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-17 15:23:01 -0500
+
+
+Started GET "/assets/angular/controllers/loginUserController.js?body=1" for 127.0.0.1 at 2013-07-17 15:23:01 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-17 15:23:01 -0500
+
+
+Started GET "/assets/foundation/foundation.alerts.js?body=1" for 127.0.0.1 at 2013-07-17 15:23:01 -0500
+
+
+Started GET "/assets/foundation/foundation.clearing.js?body=1" for 127.0.0.1 at 2013-07-17 15:23:01 -0500
+
+
+Started GET "/assets/foundation/foundation.cookie.js?body=1" for 127.0.0.1 at 2013-07-17 15:23:01 -0500
+
+
+Started GET "/assets/foundation/foundation.dropdown.js?body=1" for 127.0.0.1 at 2013-07-17 15:23:01 -0500
+
+
+Started GET "/assets/foundation/foundation.forms.js?body=1" for 127.0.0.1 at 2013-07-17 15:23:01 -0500
+
+
+Started GET "/assets/foundation/foundation.interchange.js?body=1" for 127.0.0.1 at 2013-07-17 15:23:01 -0500
+
+
+Started GET "/assets/foundation/foundation.joyride.js?body=1" for 127.0.0.1 at 2013-07-17 15:23:01 -0500
+
+
+Started GET "/assets/foundation/foundation.js?body=1" for 127.0.0.1 at 2013-07-17 15:23:01 -0500
+
+
+Started GET "/assets/foundation/foundation.magellan.js?body=1" for 127.0.0.1 at 2013-07-17 15:23:02 -0500
+
+
+Started GET "/assets/foundation/foundation.orbit.js?body=1" for 127.0.0.1 at 2013-07-17 15:23:02 -0500
+
+
+Started GET "/assets/foundation/foundation.placeholder.js?body=1" for 127.0.0.1 at 2013-07-17 15:23:02 -0500
+
+
+Started GET "/assets/foundation/foundation.reveal.js?body=1" for 127.0.0.1 at 2013-07-17 15:23:02 -0500
+
+
+Started GET "/assets/foundation/foundation.section.js?body=1" for 127.0.0.1 at 2013-07-17 15:23:02 -0500
+
+
+Started GET "/assets/foundation/foundation.tooltips.js?body=1" for 127.0.0.1 at 2013-07-17 15:23:02 -0500
+
+
+Started GET "/assets/foundation/foundation.topbar.js?body=1" for 127.0.0.1 at 2013-07-17 15:23:02 -0500
+
+
+Started GET "/assets/libs/angular.js?body=1" for 127.0.0.1 at 2013-07-17 15:23:02 -0500
+
+
+Started GET "/assets/libs/foundation.min.js?body=1" for 127.0.0.1 at 2013-07-17 15:23:02 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-07-17 15:23:02 -0500
+
+
+Started GET "/assets/vendor/jquery.js?body=1" for 127.0.0.1 at 2013-07-17 15:23:02 -0500
+
+
+Started GET "/assets/vendor/custom.modernizr.js?body=1" for 127.0.0.1 at 2013-07-17 15:23:02 -0500
+
+
+Started GET "/assets/vendor/zepto.js?body=1" for 127.0.0.1 at 2013-07-17 15:23:02 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-17 15:23:02 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-17 15:23:03 -0500
+Processing by UsersController#index as HTML
+  Rendered users/index.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 23ms (Views: 21.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-17 15:23:03 -0500
+
+
+Started GET "/assets/foundation.css?body=1" for 127.0.0.1 at 2013-07-17 15:23:03 -0500
+
+
+Started GET "/assets/foundation.min.css?body=1" for 127.0.0.1 at 2013-07-17 15:23:03 -0500
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-07-17 15:23:03 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-17 15:23:03 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-17 15:23:03 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-17 15:23:03 -0500
+
+
+Started GET "/assets/angular/controllers/loginUserController.js?body=1" for 127.0.0.1 at 2013-07-17 15:23:03 -0500
+
+
+Started GET "/assets/foundation/foundation.alerts.js?body=1" for 127.0.0.1 at 2013-07-17 15:23:03 -0500
+
+
+Started GET "/assets/foundation/foundation.clearing.js?body=1" for 127.0.0.1 at 2013-07-17 15:23:03 -0500
+
+
+Started GET "/assets/foundation/foundation.cookie.js?body=1" for 127.0.0.1 at 2013-07-17 15:23:03 -0500
+
+
+Started GET "/assets/foundation/foundation.dropdown.js?body=1" for 127.0.0.1 at 2013-07-17 15:23:03 -0500
+
+
+Started GET "/assets/foundation/foundation.interchange.js?body=1" for 127.0.0.1 at 2013-07-17 15:23:03 -0500
+
+
+Started GET "/assets/foundation/foundation.forms.js?body=1" for 127.0.0.1 at 2013-07-17 15:23:03 -0500
+
+
+Started GET "/assets/foundation/foundation.joyride.js?body=1" for 127.0.0.1 at 2013-07-17 15:23:03 -0500
+
+
+Started GET "/assets/foundation/foundation.js?body=1" for 127.0.0.1 at 2013-07-17 15:23:03 -0500
+
+
+Started GET "/assets/foundation/foundation.magellan.js?body=1" for 127.0.0.1 at 2013-07-17 15:23:03 -0500
+
+
+Started GET "/assets/foundation/foundation.orbit.js?body=1" for 127.0.0.1 at 2013-07-17 15:23:03 -0500
+
+
+Started GET "/assets/foundation/foundation.placeholder.js?body=1" for 127.0.0.1 at 2013-07-17 15:23:03 -0500
+
+
+Started GET "/assets/foundation/foundation.reveal.js?body=1" for 127.0.0.1 at 2013-07-17 15:23:04 -0500
+
+
+Started GET "/assets/foundation/foundation.section.js?body=1" for 127.0.0.1 at 2013-07-17 15:23:04 -0500
+
+
+Started GET "/assets/foundation/foundation.tooltips.js?body=1" for 127.0.0.1 at 2013-07-17 15:23:04 -0500
+
+
+Started GET "/assets/foundation/foundation.topbar.js?body=1" for 127.0.0.1 at 2013-07-17 15:23:04 -0500
+
+
+Started GET "/assets/libs/foundation.min.js?body=1" for 127.0.0.1 at 2013-07-17 15:23:04 -0500
+
+
+Started GET "/assets/libs/angular.js?body=1" for 127.0.0.1 at 2013-07-17 15:23:04 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-07-17 15:23:04 -0500
+
+
+Started GET "/assets/vendor/custom.modernizr.js?body=1" for 127.0.0.1 at 2013-07-17 15:23:04 -0500
+
+
+Started GET "/assets/vendor/jquery.js?body=1" for 127.0.0.1 at 2013-07-17 15:23:04 -0500
+
+
+Started GET "/assets/vendor/zepto.js?body=1" for 127.0.0.1 at 2013-07-17 15:23:04 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-17 15:23:04 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-07-17 15:25:24 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-17 15:26:02 -0500
+Processing by UsersController#index as HTML
+  Rendered users/index.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 146ms (Views: 144.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-17 15:26:02 -0500
+
+
+Started GET "/assets/foundation.css?body=1" for 127.0.0.1 at 2013-07-17 15:26:02 -0500
+
+
+Started GET "/assets/foundation.min.css?body=1" for 127.0.0.1 at 2013-07-17 15:26:02 -0500
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-07-17 15:26:02 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-17 15:26:02 -0500
+
+
+Started GET "/assets/libs/angular.js?body=1" for 127.0.0.1 at 2013-07-17 15:26:02 -0500
+
+
+Started GET "/assets/libs/foundation.min.js?body=1" for 127.0.0.1 at 2013-07-17 15:26:02 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-17 15:26:02 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-17 15:26:02 -0500
+
+
+Started GET "/assets/angular/controllers/loginUserController.js?body=1" for 127.0.0.1 at 2013-07-17 15:26:02 -0500
+
+
+Started GET "/assets/foundation/foundation.alerts.js?body=1" for 127.0.0.1 at 2013-07-17 15:26:02 -0500
+
+
+Started GET "/assets/foundation/foundation.clearing.js?body=1" for 127.0.0.1 at 2013-07-17 15:26:02 -0500
+
+
+Started GET "/assets/foundation/foundation.cookie.js?body=1" for 127.0.0.1 at 2013-07-17 15:26:02 -0500
+
+
+Started GET "/assets/foundation/foundation.dropdown.js?body=1" for 127.0.0.1 at 2013-07-17 15:26:02 -0500
+
+
+Started GET "/assets/foundation/foundation.forms.js?body=1" for 127.0.0.1 at 2013-07-17 15:26:02 -0500
+
+
+Started GET "/assets/foundation/foundation.alerts.js?body=1" for 127.0.0.1 at 2013-07-17 15:26:02 -0500
+
+
+Started GET "/assets/foundation/foundation.interchange.js?body=1" for 127.0.0.1 at 2013-07-17 15:26:02 -0500
+
+
+Started GET "/assets/foundation/foundation.joyride.js?body=1" for 127.0.0.1 at 2013-07-17 15:26:02 -0500
+
+
+Started GET "/assets/foundation/foundation.js?body=1" for 127.0.0.1 at 2013-07-17 15:26:02 -0500
+
+
+Started GET "/assets/foundation/foundation.magellan.js?body=1" for 127.0.0.1 at 2013-07-17 15:26:02 -0500
+
+
+Started GET "/assets/foundation/foundation.orbit.js?body=1" for 127.0.0.1 at 2013-07-17 15:26:02 -0500
+
+
+Started GET "/assets/foundation/foundation.placeholder.js?body=1" for 127.0.0.1 at 2013-07-17 15:26:02 -0500
+
+
+Started GET "/assets/foundation/foundation.cookie.js?body=1" for 127.0.0.1 at 2013-07-17 15:26:02 -0500
+
+
+Started GET "/assets/foundation/foundation.reveal.js?body=1" for 127.0.0.1 at 2013-07-17 15:26:02 -0500
+
+
+Started GET "/assets/foundation/foundation.section.js?body=1" for 127.0.0.1 at 2013-07-17 15:26:02 -0500
+
+
+Started GET "/assets/foundation/foundation.dropdown.js?body=1" for 127.0.0.1 at 2013-07-17 15:26:02 -0500
+
+
+Started GET "/assets/foundation/foundation.tooltips.js?body=1" for 127.0.0.1 at 2013-07-17 15:26:02 -0500
+
+
+Started GET "/assets/foundation/foundation.topbar.js?body=1" for 127.0.0.1 at 2013-07-17 15:26:02 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-07-17 15:26:02 -0500
+
+
+Started GET "/assets/vendor/custom.modernizr.js?body=1" for 127.0.0.1 at 2013-07-17 15:26:02 -0500
+
+
+Started GET "/assets/vendor/jquery.js?body=1" for 127.0.0.1 at 2013-07-17 15:26:02 -0500
+
+
+Started GET "/assets/vendor/zepto.js?body=1" for 127.0.0.1 at 2013-07-17 15:26:03 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-17 15:26:03 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-17 15:27:25 -0500
+Processing by UsersController#index as HTML
+  Rendered users/index.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 191ms (Views: 190.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-17 15:29:30 -0500
+Processing by UsersController#index as HTML
+  Rendered users/index.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 131ms (Views: 127.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-17 15:29:59 -0500
+Processing by UsersController#index as HTML
+  Rendered users/index.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 89ms (Views: 88.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-17 15:30:04 -0500
+Processing by UsersController#index as HTML
+  Rendered users/index.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 20ms (Views: 19.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-17 15:30:04 -0500
+
+
+Started GET "/assets/foundation.css?body=1" for 127.0.0.1 at 2013-07-17 15:30:04 -0500
+
+
+Started GET "/assets/foundation.min.css?body=1" for 127.0.0.1 at 2013-07-17 15:30:04 -0500
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-07-17 15:30:04 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-07-17 15:30:04 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-17 15:30:04 -0500
+
+
+Started GET "/assets/libs/angular.js?body=1" for 127.0.0.1 at 2013-07-17 15:30:04 -0500
+
+
+Started GET "/assets/libs/foundation.min.js?body=1" for 127.0.0.1 at 2013-07-17 15:30:04 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-17 15:30:04 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-17 15:30:04 -0500
+
+
+Started GET "/assets/angular/controllers/loginUserController.js?body=1" for 127.0.0.1 at 2013-07-17 15:30:04 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-17 15:30:04 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-17 15:30:38 -0500
+Processing by UsersController#index as HTML
+  Rendered users/index.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 49ms (Views: 48.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-17 15:30:45 -0500
+Processing by UsersController#index as HTML
+  Rendered users/index.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 22ms (Views: 18.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-17 15:30:45 -0500
+
+
+Started GET "/assets/foundation.css?body=1" for 127.0.0.1 at 2013-07-17 15:30:45 -0500
+
+
+Started GET "/assets/foundation.min.css?body=1" for 127.0.0.1 at 2013-07-17 15:30:45 -0500
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-07-17 15:30:46 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-17 15:30:46 -0500
+
+
+Started GET "/assets/libs/foundation.min.js?body=1" for 127.0.0.1 at 2013-07-17 15:30:46 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-17 15:30:46 -0500
+
+
+Started GET "/assets/libs/angular.js?body=1" for 127.0.0.1 at 2013-07-17 15:30:46 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-07-17 15:30:46 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-17 15:30:46 -0500
+
+
+Started GET "/assets/angular/controllers/loginUserController.js?body=1" for 127.0.0.1 at 2013-07-17 15:30:46 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-17 15:30:46 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-17 15:30:47 -0500
+Processing by UsersController#index as HTML
+  Rendered users/index.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 12ms (Views: 10.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-17 15:30:47 -0500
+
+
+Started GET "/assets/foundation.css?body=1" for 127.0.0.1 at 2013-07-17 15:30:47 -0500
+
+
+Started GET "/assets/foundation.min.css?body=1" for 127.0.0.1 at 2013-07-17 15:30:47 -0500
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-07-17 15:30:47 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-17 15:30:47 -0500
+
+
+Started GET "/assets/libs/angular.js?body=1" for 127.0.0.1 at 2013-07-17 15:30:47 -0500
+
+
+Started GET "/assets/libs/foundation.min.js?body=1" for 127.0.0.1 at 2013-07-17 15:30:47 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-17 15:30:47 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-07-17 15:30:47 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-17 15:30:47 -0500
+
+
+Started GET "/assets/angular/controllers/loginUserController.js?body=1" for 127.0.0.1 at 2013-07-17 15:30:47 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-17 15:30:47 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-17 15:30:48 -0500
+Processing by UsersController#index as HTML
+  Rendered users/index.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 12ms (Views: 11.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-17 15:30:48 -0500
+
+
+Started GET "/assets/foundation.css?body=1" for 127.0.0.1 at 2013-07-17 15:30:48 -0500
+
+
+Started GET "/assets/foundation.min.css?body=1" for 127.0.0.1 at 2013-07-17 15:30:48 -0500
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-07-17 15:30:48 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-17 15:30:48 -0500
+
+
+Started GET "/assets/libs/angular.js?body=1" for 127.0.0.1 at 2013-07-17 15:30:48 -0500
+
+
+Started GET "/assets/libs/foundation.min.js?body=1" for 127.0.0.1 at 2013-07-17 15:30:48 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-17 15:30:48 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-07-17 15:30:48 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-17 15:30:48 -0500
+
+
+Started GET "/assets/angular/controllers/loginUserController.js?body=1" for 127.0.0.1 at 2013-07-17 15:30:48 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-17 15:30:48 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-17 15:32:19 -0500
+Processing by UsersController#index as HTML
+  Rendered users/index.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 105ms (Views: 102.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-17 15:32:19 -0500
+
+
+Started GET "/assets/foundation.css?body=1" for 127.0.0.1 at 2013-07-17 15:32:19 -0500
+
+
+Started GET "/assets/foundation.min.css?body=1" for 127.0.0.1 at 2013-07-17 15:32:19 -0500
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-07-17 15:32:19 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-17 15:32:19 -0500
+
+
+Started GET "/assets/libs/foundation.min.js?body=1" for 127.0.0.1 at 2013-07-17 15:32:19 -0500
+
+
+Started GET "/assets/libs/angular.js?body=1" for 127.0.0.1 at 2013-07-17 15:32:19 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-17 15:32:19 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-07-17 15:32:19 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-17 15:32:19 -0500
+
+
+Started GET "/assets/angular/controllers/loginUserController.js?body=1" for 127.0.0.1 at 2013-07-17 15:32:19 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-17 15:32:19 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-17 16:15:24 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  Rendered users/index.html.haml within layouts/application (16.7ms)
+Completed 200 OK in 535ms (Views: 476.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-17 16:15:25 -0500
+
+
+Started GET "/assets/libs/foundation.min.js?body=1" for 127.0.0.1 at 2013-07-17 16:15:25 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-17 16:15:25 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-17 16:15:25 -0500
+
+
+Started GET "/assets/foundation.css?body=1" for 127.0.0.1 at 2013-07-17 16:15:25 -0500
+
+
+Started GET "/assets/foundation.min.css?body=1" for 127.0.0.1 at 2013-07-17 16:15:25 -0500
+
+
+Started GET "/assets/libs/angular.js?body=1" for 127.0.0.1 at 2013-07-17 16:15:25 -0500
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2013-07-17 16:15:25 -0500
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-07-17 16:15:25 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-17 16:15:25 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-17 16:15:25 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-07-17 16:15:25 -0500
+
+
+Started GET "/assets/angular/controllers/loginUserController.js?body=1" for 127.0.0.1 at 2013-07-17 16:15:25 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-17 16:15:58 -0500
+Processing by UsersController#index as HTML
+  Rendered users/index.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 32ms (Views: 30.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-17 16:15:58 -0500
+
+
+Started GET "/assets/foundation.css?body=1" for 127.0.0.1 at 2013-07-17 16:15:58 -0500
+
+
+Started GET "/assets/foundation.min.css?body=1" for 127.0.0.1 at 2013-07-17 16:15:58 -0500
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-07-17 16:15:58 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-17 16:15:58 -0500
+
+
+Started GET "/assets/libs/angular.js?body=1" for 127.0.0.1 at 2013-07-17 16:15:58 -0500
+
+
+Started GET "/assets/libs/foundation.min.js?body=1" for 127.0.0.1 at 2013-07-17 16:15:58 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-17 16:15:58 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-07-17 16:15:58 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-17 16:15:58 -0500
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2013-07-17 16:15:58 -0500
+
+
+Started GET "/assets/angular/controllers/loginUserController.js?body=1" for 127.0.0.1 at 2013-07-17 16:15:58 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-17 16:15:58 -0500
+
+
+Started GET "/assets/libs/foundation.min.js?body=1" for 127.0.0.1 at 2013-07-17 16:15:58 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-17 16:15:58 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-07-17 16:15:58 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-17 16:15:58 -0500
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2013-07-17 16:15:58 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-17 16:16:21 -0500
+Processing by UsersController#index as HTML
+  Rendered users/index.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 36ms (Views: 34.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-17 16:16:21 -0500
+
+
+Started GET "/assets/foundation.css?body=1" for 127.0.0.1 at 2013-07-17 16:16:21 -0500
+
+
+Started GET "/assets/foundation.min.css?body=1" for 127.0.0.1 at 2013-07-17 16:16:21 -0500
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-07-17 16:16:21 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-17 16:16:21 -0500
+
+
+Started GET "/assets/libs/angular.js?body=1" for 127.0.0.1 at 2013-07-17 16:16:21 -0500
+
+
+Started GET "/assets/libs/foundation.min.js?body=1" for 127.0.0.1 at 2013-07-17 16:16:21 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-17 16:16:21 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-07-17 16:16:21 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-17 16:16:21 -0500
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2013-07-17 16:16:21 -0500
+
+
+Started GET "/assets/angular/controllers/loginUserController.js?body=1" for 127.0.0.1 at 2013-07-17 16:16:21 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-17 16:16:21 -0500
+
+
+Started GET "/assets/angular/controllers/loginUserController.js?body=1" for 127.0.0.1 at 2013-07-17 16:16:21 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-17 16:24:34 -0500
+Processing by UsersController#index as HTML
+  Rendered users/index.html.haml within layouts/application (0.1ms)
+  Rendered layouts/_head.html.haml (1.3ms)
+Completed 200 OK in 87ms (Views: 86.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-17 16:24:34 -0500
+
+
+Started GET "/assets/foundation.css?body=1" for 127.0.0.1 at 2013-07-17 16:24:34 -0500
+
+
+Started GET "/assets/foundation.min.css?body=1" for 127.0.0.1 at 2013-07-17 16:24:34 -0500
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-07-17 16:24:34 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-17 16:24:34 -0500
+
+
+Started GET "/assets/libs/angular.js?body=1" for 127.0.0.1 at 2013-07-17 16:24:34 -0500
+
+
+Started GET "/assets/libs/foundation.min.js?body=1" for 127.0.0.1 at 2013-07-17 16:24:34 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-17 16:24:34 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-07-17 16:24:34 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-17 16:24:34 -0500
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2013-07-17 16:24:34 -0500
+
+
+Started GET "/assets/angular/controllers/loginUserController.js?body=1" for 127.0.0.1 at 2013-07-17 16:24:34 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-17 16:24:34 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-17 16:25:22 -0500
+Processing by UsersController#index as HTML
+  Rendered users/index.html.haml within layouts/application (0.1ms)
+  Rendered layouts/_head.html.haml (0.1ms)
+Completed 200 OK in 27ms (Views: 25.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-17 16:25:22 -0500
+
+
+Started GET "/assets/foundation.css?body=1" for 127.0.0.1 at 2013-07-17 16:25:22 -0500
+
+
+Started GET "/assets/foundation.min.css?body=1" for 127.0.0.1 at 2013-07-17 16:25:22 -0500
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-07-17 16:25:22 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-17 16:25:22 -0500
+
+
+Started GET "/assets/libs/angular.js?body=1" for 127.0.0.1 at 2013-07-17 16:25:22 -0500
+
+
+Started GET "/assets/libs/foundation.min.js?body=1" for 127.0.0.1 at 2013-07-17 16:25:22 -0500
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2013-07-17 16:25:22 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-17 16:25:22 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-07-17 16:25:22 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-17 16:25:22 -0500
+
+
+Started GET "/assets/angular/controllers/loginUserController.js?body=1" for 127.0.0.1 at 2013-07-17 16:25:22 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-17 16:25:22 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-17 16:25:36 -0500
+Processing by UsersController#index as HTML
+  Rendered users/index.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 34ms (Views: 33.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-17 16:25:36 -0500
+
+
+Started GET "/assets/foundation.css?body=1" for 127.0.0.1 at 2013-07-17 16:25:36 -0500
+
+
+Started GET "/assets/foundation.min.css?body=1" for 127.0.0.1 at 2013-07-17 16:25:36 -0500
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-07-17 16:25:36 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-17 16:25:36 -0500
+
+
+Started GET "/assets/libs/angular.js?body=1" for 127.0.0.1 at 2013-07-17 16:25:36 -0500
+
+
+Started GET "/assets/libs/foundation.min.js?body=1" for 127.0.0.1 at 2013-07-17 16:25:36 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-17 16:25:36 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-07-17 16:25:36 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-17 16:25:36 -0500
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2013-07-17 16:25:36 -0500
+
+
+Started GET "/assets/angular/controllers/loginUserController.js?body=1" for 127.0.0.1 at 2013-07-17 16:25:36 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-17 16:25:36 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-17 16:25:37 -0500
+Processing by UsersController#index as HTML
+  Rendered users/index.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 23ms (Views: 22.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-17 16:25:37 -0500
+
+
+Started GET "/assets/foundation.css?body=1" for 127.0.0.1 at 2013-07-17 16:25:37 -0500
+
+
+Started GET "/assets/foundation.min.css?body=1" for 127.0.0.1 at 2013-07-17 16:25:37 -0500
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-07-17 16:25:37 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-17 16:25:37 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-07-17 16:25:37 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-17 16:25:37 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-17 16:25:37 -0500
+
+
+Started GET "/assets/libs/foundation.min.js?body=1" for 127.0.0.1 at 2013-07-17 16:25:37 -0500
+
+
+Started GET "/assets/libs/angular.js?body=1" for 127.0.0.1 at 2013-07-17 16:25:37 -0500
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2013-07-17 16:25:37 -0500
+
+
+Started GET "/assets/angular/controllers/loginUserController.js?body=1" for 127.0.0.1 at 2013-07-17 16:25:37 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-17 16:25:37 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-17 16:25:37 -0500
+Processing by UsersController#index as HTML
+  Rendered users/index.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 31ms (Views: 30.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-17 16:25:38 -0500
+
+
+Started GET "/assets/foundation.css?body=1" for 127.0.0.1 at 2013-07-17 16:25:38 -0500
+
+
+Started GET "/assets/foundation.min.css?body=1" for 127.0.0.1 at 2013-07-17 16:25:38 -0500
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-07-17 16:25:38 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-17 16:25:38 -0500
+
+
+Started GET "/assets/libs/angular.js?body=1" for 127.0.0.1 at 2013-07-17 16:25:38 -0500
+
+
+Started GET "/assets/libs/foundation.min.js?body=1" for 127.0.0.1 at 2013-07-17 16:25:38 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-17 16:25:38 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-07-17 16:25:38 -0500
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2013-07-17 16:25:38 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-17 16:25:38 -0500
+
+
+Started GET "/assets/angular/controllers/loginUserController.js?body=1" for 127.0.0.1 at 2013-07-17 16:25:38 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-17 16:25:38 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-17 16:29:02 -0500
+Processing by UsersController#index as HTML
+  Rendered users/index.html.haml within layouts/application (0.1ms)
+  Rendered layouts/_head.html.haml (0.1ms)
+Completed 200 OK in 107ms (Views: 106.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-17 16:29:02 -0500
+
+
+Started GET "/assets/foundation.css?body=1" for 127.0.0.1 at 2013-07-17 16:29:02 -0500
+
+
+Started GET "/assets/foundation.min.css?body=1" for 127.0.0.1 at 2013-07-17 16:29:02 -0500
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-07-17 16:29:02 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-17 16:29:02 -0500
+
+
+Started GET "/assets/libs/foundation.min.js?body=1" for 127.0.0.1 at 2013-07-17 16:29:02 -0500
+
+
+Started GET "/assets/libs/angular.js?body=1" for 127.0.0.1 at 2013-07-17 16:29:02 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-17 16:29:02 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-17 16:29:02 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-07-17 16:29:02 -0500
+
+
+Started GET "/assets/angular/controllers/loginUserController.js?body=1" for 127.0.0.1 at 2013-07-17 16:29:02 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-17 16:29:02 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-17 16:48:12 -0500
+Processing by UsersController#index as HTML
+  Rendered users/index.html.haml within layouts/application (0.1ms)
+  Rendered layouts/_head.html.haml (0.1ms)
+Completed 200 OK in 36ms (Views: 35.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-17 16:48:12 -0500
+
+
+Started GET "/assets/foundation.css?body=1" for 127.0.0.1 at 2013-07-17 16:48:12 -0500
+
+
+Started GET "/assets/foundation.min.css?body=1" for 127.0.0.1 at 2013-07-17 16:48:12 -0500
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-07-17 16:48:12 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-17 16:48:12 -0500
+
+
+Started GET "/assets/libs/angular.js?body=1" for 127.0.0.1 at 2013-07-17 16:48:12 -0500
+
+
+Started GET "/assets/libs/foundation.min.js?body=1" for 127.0.0.1 at 2013-07-17 16:48:12 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-17 16:48:12 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-07-17 16:48:12 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-17 16:48:12 -0500
+
+
+Started GET "/assets/angular/controllers/loginUserController.js?body=1" for 127.0.0.1 at 2013-07-17 16:48:12 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-17 16:48:12 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-17 16:58:35 -0500
+Processing by UsersController#index as HTML
+  Rendered users/index.html.haml within layouts/application (0.1ms)
+  Rendered layouts/_head.html.haml (0.1ms)
+Completed 200 OK in 23ms (Views: 22.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-17 16:58:35 -0500
+
+
+Started GET "/assets/foundation.css?body=1" for 127.0.0.1 at 2013-07-17 16:58:35 -0500
+
+
+Started GET "/assets/foundation.min.css?body=1" for 127.0.0.1 at 2013-07-17 16:58:35 -0500
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-07-17 16:58:35 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-17 16:58:35 -0500
+
+
+Started GET "/assets/libs/angular.js?body=1" for 127.0.0.1 at 2013-07-17 16:58:35 -0500
+
+
+Started GET "/assets/libs/foundation.min.js?body=1" for 127.0.0.1 at 2013-07-17 16:58:35 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-17 16:58:35 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-07-17 16:58:35 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-17 16:58:35 -0500
+
+
+Started GET "/assets/angular/controllers/loginUserController.js?body=1" for 127.0.0.1 at 2013-07-17 16:58:35 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-17 16:58:35 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-17 18:14:29 -0500
+
+RuntimeError (Circular dependency detected while autoloading constant UsersHelper):
+  app/controllers/application_controller.rb:1:in `<top (required)>'
+  app/controllers/users_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /home/oscar/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.1ms)
+  Rendered /home/oscar/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.6ms)
+  Rendered /home/oscar/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.9ms)
+  Rendered /home/oscar/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (55.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-17 18:17:55 -0500
+Processing by UsersController#index as HTML
+  Rendered users/index.html.haml within layouts/application (7.0ms)
+  Rendered layouts/_head.html.haml (0.1ms)
+Completed 200 OK in 44ms (Views: 42.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-17 18:17:55 -0500
+
+
+Started GET "/assets/foundation.css?body=1" for 127.0.0.1 at 2013-07-17 18:17:55 -0500
+
+
+Started GET "/assets/foundation.min.css?body=1" for 127.0.0.1 at 2013-07-17 18:17:55 -0500
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-07-17 18:17:55 -0500
+
+
+Started GET "/assets/libs/angular.js?body=1" for 127.0.0.1 at 2013-07-17 18:17:55 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-17 18:17:55 -0500
+
+
+Started GET "/assets/libs/foundation.min.js?body=1" for 127.0.0.1 at 2013-07-17 18:17:55 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-17 18:17:55 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-07-17 18:17:55 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-17 18:17:55 -0500
+
+
+Started GET "/assets/angular/controllers/loginUserController.js?body=1" for 127.0.0.1 at 2013-07-17 18:17:55 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-17 18:17:55 -0500
+>>>>>>> 6bed13c7dba8abc4ab85394bffa9fbd114c3d5d6

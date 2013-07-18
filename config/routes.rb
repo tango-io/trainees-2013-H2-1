@@ -6,8 +6,13 @@ Star::Application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
+<<<<<<< HEAD
   # root 'welcome#index'
 root 'users#index'
+=======
+  resource :users 
+  root to: 'users#index'
+>>>>>>> 6bed13c7dba8abc4ab85394bffa9fbd114c3d5d6
 
 resources :users
   # Example of regular route:

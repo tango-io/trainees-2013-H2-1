@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 !!!
 %html
   %head
@@ -107,3 +108,17 @@
         %ul.button
           %li Facebook
           %li Twitter
+=======
+%h1 hola mundo
+%table(ng-controller="loginUserController" ng-init="showUsers")
+  %thead
+    %tr
+      %th Usuario
+      %th Password
+      %tbody(ng-repeat="user in users")
+        %tr
+          %td {{user.name}} 
+          %td {{user.password}} 
+          %td
+            = test(8)
+>>>>>>> 6bed13c7dba8abc4ab85394bffa9fbd114c3d5d6
