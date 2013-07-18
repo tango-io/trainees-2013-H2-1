@@ -1,25 +1,35 @@
 class ProjectsController < ApplicationController
+  before_filter :authenticate_user!
+  def index
+    @project = Project.all
+  end
 
-def index
-end
+  def new
+    @project = Project.new
+  end
 
-def new
+  def create
+    @project = Project.create(project_params)
+    redirect_to projects_path
+  end
 
-end
+  def edit
+    @project = Project.find(params[:id])
+  end
 
-def create
-end
+  def update
+    @project = Project.find(params[:id])
+    @project.update_attributes(project_params)
+    redirect_to projects_path
+  end
 
-def edit
-end
+  def destroy
+    @project =Project.destroy(params[:id])
+    redirect_to projects_path
+  end
 
-def update
-end
-
-def destroy
-end
-
-private
-def project_params
-end
+  private
+  def project_params
+    params.require(:project).permit(:project_name,:project_content)
+  end
 end

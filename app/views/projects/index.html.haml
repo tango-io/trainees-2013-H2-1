@@ -1,0 +1,15 @@
+%section#principal
+  %h1 Listing projects
+  %table
+    %tr
+      %td ID
+      %td Name
+      %td Content
+    %tr
+      - @project.each do |f|
+        %td= f.id
+        %td= f.project_name
+        %td= f.project_content
+        %td= link_to 'Edit', edit_project_path(f)
+        %td= link_to 'Delete', project_path(f), method: :delete
+  = link_to 'New', new_project_path

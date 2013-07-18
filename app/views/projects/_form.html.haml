@@ -1,9 +1,12 @@
-= form_for @projects do |f|
-  - if @projects.errors.any?
+= form_for @project do |f|
+  - if @project.errors.any?
     .error_explanation
       %h2
-        = pluralize(@projects.errors.count, "error")
+        = pluralize(@project.errors.count, "error")
         Error!
       %ul
-        - @projects.errors.full_messages.each do |msg|
+        - @project.errors.full_messages.each do |msg|
           %li.error_explanation= msg
+  %p Name:#{f.text_field :project_name}
+  %p Content: #{f.text_area :project_content, :size => "80x20"}
+  %p= f.submit
