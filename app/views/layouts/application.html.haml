@@ -10,7 +10,9 @@
       .container
         .row
           .span3.paddingtop
-            %img.brand{:href => "#"} KICKSTARTER 
+            .kickstarterlogoup
+              %a{:href => root_path }
+                = image_tag ("logo2.png") 
           .span4.paddingtop
             - if user_signed_in?
               \#{link_to "My Projects", destroy_user_session_path, :method => :delete}
