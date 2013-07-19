@@ -28,8 +28,36 @@
               = link_to "Sign up", new_user_registration_path
               or #{link_to "sign in", new_user_session_path}
 
-    .container.main-container.hero-unit
+    .central.hero-unit
       - flash.each do |name, msg|
         = content_tag :div, msg, :id => "flash_#{name}"
       = yield
+    .mega-footer.row  
+      .footer.container
+        .right.span7.footerliststyle
+          %ul.footerliststyle
+            %li Art
+            %li Comics
+            %li Dance
+            %li Design
+            %li Fashion
+            %li Film and Video
+            %li Food
+          %ul.footerliststyle
+            %li Games
+            %li Music
+            %li Photography
+            %li Publishing
+            %li Technology
+            %li Theater
+          %ul.footerliststyle
+            %li Puerto Vallarta, Mexico
+            %li Staff Picks
+            %li Popular
+            %li Recently Launched
+            %li Small Projects
+            %li Most Funded
+            %li Curated Pages
+        .center.span2
+        .left.span3
 

@@ -27,3 +27,21 @@
 width: 160px;
 height: 20px;
 }
+.mega-footer{
+    background: none repeat rgb(11, 25, 2);
+    border-top: 2px dashed rgb(117, 187, 52);
+}
+.footerliststyle{
+  list-style: none;
+  color: #F2F2F2;
+}
+.same{
+height: 350px;
+width: 100%;
+}
+.hero , .city , .friends{
+background-color:#F2F2F2; 
+}
+.hero{
+
+}
