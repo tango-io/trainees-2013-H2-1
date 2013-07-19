@@ -9,6 +9,8 @@ gem 'haml'
 
 gem 'compass'
 
+gem "paperclip"
+
 gem 'pry'
 
 # Use postgresql as the database for Active Record
