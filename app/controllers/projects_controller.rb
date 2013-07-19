@@ -1,7 +1,8 @@
 class ProjectsController < ApplicationController
   before_filter :authenticate_user!
   def index
-    @project = Project.all
+    #@project = Project.all
+    @project = Project.where(user_id: current_user.id)
   end
 
   def new
@@ -9,7 +10,9 @@ class ProjectsController < ApplicationController
   end
 
   def create
+    @user = current_user
     @project = Project.create(project_params)
+    #binding.pry
     redirect_to projects_path
   end
 
@@ -30,6 +33,6 @@ class ProjectsController < ApplicationController
 
   private
   def project_params
-   params.require(:project).permit(:project_name,:project_content,:duration,:city,:goal,:img_src,:tags)
+   params.require(:project).permit(:project_name,:project_content,:duration,:city,:goal,:tags, :user_id)
   end
 end
