@@ -519,3 +519,63 @@ Migrating to AddFieldsToProjects (20130719161549)
   [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
   [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
   [1m[35mActiveRecord::SchemaMigration Load (0.4ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/projects" for 127.0.0.1 at 2013-07-19 12:43:53 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ProjectsController#index as HTML
+  [1m[35mUser Load (1.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mProject Load (0.8ms)[0m  [1mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.haml within layouts/application (55.7ms)
+Completed 200 OK in 124995ms (Views: 245.1ms | ActiveRecord: 7.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-19 12:45:58 -0500
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-07-19 12:45:58 -0500
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-07-19 12:45:58 -0500
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-07-19 12:45:58 -0500
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-07-19 12:45:58 -0500
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2013-07-19 12:45:58 -0500
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-07-19 12:45:58 -0500
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-07-19 12:45:58 -0500
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2013-07-19 12:45:58 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-19 12:45:58 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-19 12:45:58 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-19 12:45:58 -0500
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-19 12:45:58 -0500
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2013-07-19 12:45:58 -0500
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-07-19 12:45:58 -0500
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-07-19 12:45:58 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-19 12:45:58 -0500
