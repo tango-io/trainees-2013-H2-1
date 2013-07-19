@@ -232,3 +232,263 @@ Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-18 17:46:46
 
 
 Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-07-18 17:46:46 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-19 10:40:51 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (7.4ms)
+Completed 200 OK in 1479ms (Views: 1407.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-19 10:40:52 -0500
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-07-19 10:40:52 -0500
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-07-19 10:40:52 -0500
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-07-19 10:40:52 -0500
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2013-07-19 10:40:52 -0500
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-07-19 10:40:52 -0500
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-07-19 10:40:52 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-19 10:40:52 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-19 10:40:53 -0500
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2013-07-19 10:40:53 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-19 10:40:53 -0500
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-19 10:40:53 -0500
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-07-19 10:40:53 -0500
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-07-19 10:40:53 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-19 10:40:53 -0500
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2013-07-19 10:40:57 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (3.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (170.9ms)
+Completed 200 OK in 284ms (Views: 194.8ms | ActiveRecord: 5.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2013-07-19 10:41:10 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5YXRSY5oW2jO9I2rZ8+45GYD4iTwkRIJDvH1YOKZskw=", "user"=>{"email"=>"stial08@stial08.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (6.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'stial08@stial08.com' LIMIT 1
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (53.1ms)[0m  UPDATE "users" SET "last_sign_in_at" = $1, "current_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "users"."id" = 1  [["last_sign_in_at", Fri, 19 Jul 2013 14:32:26 UTC +00:00], ["current_sign_in_at", Fri, 19 Jul 2013 15:41:11 UTC +00:00], ["sign_in_count", 10], ["updated_at", Fri, 19 Jul 2013 15:41:11 UTC +00:00]]
+  [1m[36m (14.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 309ms (ActiveRecord: 74.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-19 10:41:11 -0500
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (1.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+Redirected to http://localhost:3000/dashboard
+Completed 302 Found in 9ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2013-07-19 10:41:11 -0500
+Processing by DashboardController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered dashboard/index.html.haml within layouts/application (2.1ms)
+Completed 200 OK in 29ms (Views: 23.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-19 10:41:11 -0500
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-07-19 10:41:11 -0500
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-07-19 10:41:11 -0500
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2013-07-19 10:41:11 -0500
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-07-19 10:41:11 -0500
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-07-19 10:41:11 -0500
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-07-19 10:41:11 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-19 10:41:11 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-19 10:41:11 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-19 10:41:11 -0500
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-07-19 10:41:11 -0500
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2013-07-19 10:41:11 -0500
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-07-19 10:41:11 -0500
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-19 10:41:11 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-19 10:41:11 -0500
+
+
+Started GET "/projects/" for 127.0.0.1 at 2013-07-19 10:41:27 -0500
+Processing by ProjectsController#index as HTML
+  [1m[35mUser Load (1.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mProject Load (13.7ms)[0m  [1mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.haml within layouts/application (57.1ms)
+Completed 200 OK in 84ms (Views: 53.0ms | ActiveRecord: 22.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-19 10:41:27 -0500
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-07-19 10:41:27 -0500
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-07-19 10:41:27 -0500
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-07-19 10:41:27 -0500
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-07-19 10:41:27 -0500
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-07-19 10:41:27 -0500
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2013-07-19 10:41:27 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-19 10:41:27 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-19 10:41:27 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-19 10:41:27 -0500
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-19 10:41:27 -0500
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2013-07-19 10:41:27 -0500
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-07-19 10:41:27 -0500
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-07-19 10:41:27 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-19 10:41:27 -0500
+
+
+Started GET "/projects/4/edit" for 127.0.0.1 at 2013-07-19 10:41:34 -0500
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mUser Load (1.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mProject Load (36.7ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT 1[0m  [["id", "4"]]
+  Rendered projects/_form.html.haml (13.9ms)
+  Rendered projects/edit.html.haml within layouts/application (22.5ms)
+Completed 200 OK in 84ms (Views: 40.5ms | ActiveRecord: 37.7ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2013-07-19 10:41:47 -0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"5YXRSY5oW2jO9I2rZ8+45GYD4iTwkRIJDvH1YOKZskw="}
+  [1m[35mUser Load (1.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 20ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-19 10:41:47 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 28ms (Views: 24.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-19 10:41:47 -0500
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-07-19 10:41:47 -0500
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2013-07-19 10:41:47 -0500
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-07-19 10:41:47 -0500
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-07-19 10:41:47 -0500
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-07-19 10:41:47 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-19 10:41:47 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-19 10:41:47 -0500
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-07-19 10:41:47 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-19 10:41:47 -0500
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2013-07-19 10:41:47 -0500
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-19 10:41:47 -0500
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-07-19 10:41:47 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-19 10:41:47 -0500
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-07-19 10:41:47 -0500
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2013-07-19 10:41:48 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (1.4ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 41ms (Views: 37.6ms | ActiveRecord: 0.0ms)
