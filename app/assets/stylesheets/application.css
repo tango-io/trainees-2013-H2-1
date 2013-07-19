@@ -42,6 +42,8 @@ width: 100%;
 .hero , .city , .friends{
 background-color:#F2F2F2; 
 }
-.hero{
-
+.border-bottom{
+border-bottom-style: dashed;
+border-bottom-color: #c9c9c9;
+border-bottom-width: 2px; 
 }
