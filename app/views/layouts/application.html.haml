@@ -16,6 +16,7 @@
           .span4.paddingtop
             - if user_signed_in?
               \#{link_to "My Projects", projects_path}
+              \#{link_to "Dashboard", dashboard_index_path}
             - else
               %p What is Kickstarter?
           .span3.paddingtop
@@ -34,7 +35,7 @@
       = yield
     .mega-footer.row  
       .footer.container
-        .right.span7.footerliststyle
+        .right.span1.footerliststyle
           %ul.footerliststyle
             %li Art
             %li Comics
@@ -43,6 +44,7 @@
             %li Fashion
             %li Film and Video
             %li Food
+        .right.span2.footerliststyle
           %ul.footerliststyle
             %li Games
             %li Music
@@ -50,6 +52,7 @@
             %li Publishing
             %li Technology
             %li Theater
+        .right.span1.footerliststyle
           %ul.footerliststyle
             %li Puerto Vallarta, Mexico
             %li Staff Picks
