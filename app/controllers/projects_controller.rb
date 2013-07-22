@@ -11,9 +11,13 @@ class ProjectsController < ApplicationController
 
   def create
     @user = current_user
-    @project = Project.create(project_params)
+    @project = Project.new(project_params)
     #binding.pry
-    redirect_to projects_path
+    if @project.save
+      redirect_to projects_path
+    else
+      render 'new'
+    end
   end
 
   def edit
@@ -22,8 +26,11 @@ class ProjectsController < ApplicationController
 
   def update
     @project = Project.find(params[:id])
-    @project.update_attributes(project_params)
-    redirect_to projects_path
+    if @project.update_attributes(project_params)
+      redirect_to projects_path
+    else
+      render 'edit'
+    end
   end
 
   def destroy
