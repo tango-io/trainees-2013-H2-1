@@ -6340,3 +6340,1154 @@ Started GET "/assets/logo2.png" for 127.0.0.1 at 2013-07-22 16:07:43 -0500
 
 
 Started GET "/assets/missing_little.png" for 127.0.0.1 at 2013-07-22 16:07:43 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20130718174247)
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36m (4025.2ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "email" character varying(255) DEFAULT '' NOT NULL, "encrypted_password" character varying(255) DEFAULT '' NOT NULL, "reset_password_token" character varying(255), "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" character varying(255), "last_sign_in_ip" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+PG::Error: ERROR:  relation "users" already exists
+: CREATE TABLE "users" ("id" serial primary key, "email" character varying(255) DEFAULT '' NOT NULL, "encrypted_password" character varying(255) DEFAULT '' NOT NULL, "reset_password_token" character varying(255), "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" character varying(255), "last_sign_in_ip" character varying(255), "created_at" timestamp, "updated_at" timestamp) 
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddAdmins (20130722232901)
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36m (1.4ms)[0m  [1mALTER TABLE "users" ADD COLUMN "name" character varying(255)[0m
+  [1m[35m (0.8ms)[0m  ALTER TABLE "users" ADD COLUMN "location" character varying(255)
+  [1m[36m (0.7ms)[0m  [1mALTER TABLE "users" ADD COLUMN "time_zone" character varying(255)[0m
+  [1m[35m (0.7ms)[0m  ALTER TABLE "users" ADD COLUMN "biography" text
+  [1m[36mSQL (58.6ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20130722232901"]]
+  [1m[35m (15.8ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.7ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to AddAdmins (20130722232901)
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35m (42.3ms)[0m  ALTER TABLE "users" DROP "biography"
+  [1m[36m (0.9ms)[0m  [1mALTER TABLE "users" DROP "time_zone"[0m
+  [1m[35m (0.9ms)[0m  ALTER TABLE "users" DROP "location"
+  [1m[36m (0.7ms)[0m  [1mALTER TABLE "users" DROP "name"[0m
+  [1m[35mSQL (1.6ms)[0m  DELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '20130722232901'
+  [1m[36m (12.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.6ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddAdmins (20130722232901)
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36m (1.4ms)[0m  [1mALTER TABLE "users" ADD COLUMN "name" character varying(255)[0m
+  [1m[35m (0.7ms)[0m  ALTER TABLE "users" ADD COLUMN "location" character varying(255)
+  [1m[36m (0.6ms)[0m  [1mALTER TABLE "users" ADD COLUMN "time_zone" character varying(255)[0m
+  [1m[35m (0.7ms)[0m  ALTER TABLE "users" ADD COLUMN "biography" text
+  [1m[36m (0.6ms)[0m  [1mALTER TABLE "users" ADD COLUMN "admin" boolean[0m
+  [1m[35mSQL (1.6ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20130722232901"]]
+  [1m[36m (12.7ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.6ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (2.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to AddAdmins (20130722232901)
+  [1m[36m (1.8ms)[0m  [1mBEGIN[0m
+  [1m[35m (1.8ms)[0m  ALTER TABLE "users" DROP "admin"
+  [1m[36m (0.7ms)[0m  [1mALTER TABLE "users" DROP "biography"[0m
+  [1m[35m (0.6ms)[0m  ALTER TABLE "users" DROP "time_zone"
+  [1m[36m (0.6ms)[0m  [1mALTER TABLE "users" DROP "location"[0m
+  [1m[35m (0.7ms)[0m  ALTER TABLE "users" DROP "name"
+  [1m[36mSQL (1.5ms)[0m  [1mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '20130722232901'[0m
+  [1m[35m (14.5ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddAdmins (20130722232901)
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36m (1.4ms)[0m  [1mALTER TABLE "users" ADD COLUMN "name" character varying(255)[0m
+  [1m[35m (0.7ms)[0m  ALTER TABLE "users" ADD COLUMN "location" character varying(255)
+  [1m[36m (0.7ms)[0m  [1mALTER TABLE "users" ADD COLUMN "time_zone" character varying(255)[0m
+  [1m[35m (0.7ms)[0m  ALTER TABLE "users" ADD COLUMN "biography" text
+  [1m[36m (344.8ms)[0m  [1mALTER TABLE "users" ADD COLUMN "admin" boolean DEFAULT 'f'[0m
+  [1m[35mSQL (1.7ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20130722232901"]]
+  [1m[36m (23.5ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.7ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-22 23:35:20 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (15.7ms)
+Completed 200 OK in 445ms (Views: 325.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-22 23:35:21 -0500
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2013-07-22 23:35:21 -0500
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-07-22 23:35:21 -0500
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-07-22 23:35:21 -0500
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-07-22 23:35:21 -0500
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-07-22 23:35:21 -0500
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-07-22 23:35:21 -0500
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-07-22 23:35:21 -0500
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2013-07-22 23:35:21 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-22 23:35:21 -0500
+
+
+Started GET "/assets/libs/angular.js?body=1" for 127.0.0.1 at 2013-07-22 23:35:21 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-22 23:35:21 -0500
+
+
+Started GET "/assets/libs/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-22 23:35:21 -0500
+
+
+Started GET "/assets/libs/resource.js?body=1" for 127.0.0.1 at 2013-07-22 23:35:21 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-07-22 23:35:21 -0500
+
+
+Started GET "/assets/ng-rails-csrf.js?body=1" for 127.0.0.1 at 2013-07-22 23:35:21 -0500
+
+
+Started GET "/assets/angular/validateProductController.js?body=1" for 127.0.0.1 at 2013-07-22 23:35:21 -0500
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-22 23:35:21 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-22 23:35:21 -0500
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2013-07-22 23:35:21 -0500
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-07-22 23:35:21 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-22 23:35:21 -0500
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-07-22 23:35:21 -0500
+
+
+Started GET "/assets/logo2.png" for 127.0.0.1 at 2013-07-22 23:35:21 -0500
+
+
+Started GET "/assets/hero-04.jpg" for 127.0.0.1 at 2013-07-22 23:35:21 -0500
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2013-07-22 23:35:23 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (3.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (198.7ms)
+Completed 200 OK in 370ms (Views: 229.7ms | ActiveRecord: 5.6ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2013-07-22 23:35:37 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zKBDU+RA51ADMWlXPMB6sAlbrNDBxUQd8yE2362uxYc=", "user"=>{"email"=>"stial08@stial08.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (2.9ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'stial08@stial08.com' LIMIT 1
+  [1m[36m (0.7ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (65.0ms)[0m  UPDATE "users" SET "last_sign_in_at" = $1, "current_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "users"."id" = 1  [["last_sign_in_at", Mon, 22 Jul 2013 20:46:39 UTC +00:00], ["current_sign_in_at", Tue, 23 Jul 2013 04:35:37 UTC +00:00], ["sign_in_count", 24], ["updated_at", Tue, 23 Jul 2013 04:35:37 UTC +00:00]]
+  [1m[36m (12.3ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 373ms (ActiveRecord: 81.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-22 23:35:37 -0500
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (1.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  Rendered home/index.html.haml within layouts/application (1.9ms)
+Completed 200 OK in 35ms (Views: 28.3ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-22 23:35:37 -0500
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-07-22 23:35:37 -0500
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2013-07-22 23:35:37 -0500
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-07-22 23:35:37 -0500
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-07-22 23:35:37 -0500
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-07-22 23:35:37 -0500
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-07-22 23:35:37 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-22 23:35:38 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-22 23:35:38 -0500
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-07-22 23:35:38 -0500
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2013-07-22 23:35:38 -0500
+
+
+Started GET "/assets/libs/angular.js?body=1" for 127.0.0.1 at 2013-07-22 23:35:38 -0500
+
+
+Started GET "/assets/angular/validateProductController.js?body=1" for 127.0.0.1 at 2013-07-22 23:35:38 -0500
+
+
+Started GET "/assets/ng-rails-csrf.js?body=1" for 127.0.0.1 at 2013-07-22 23:35:38 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-07-22 23:35:38 -0500
+
+
+Started GET "/assets/libs/resource.js?body=1" for 127.0.0.1 at 2013-07-22 23:35:38 -0500
+
+
+Started GET "/assets/libs/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-22 23:35:38 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-22 23:35:38 -0500
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-07-22 23:35:38 -0500
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-22 23:35:38 -0500
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2013-07-22 23:35:38 -0500
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-07-22 23:35:38 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-22 23:35:38 -0500
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2013-07-22 23:35:53 -0500
+Processing by DashboardController#index as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+Completed 500 Internal Server Error in 13ms
+
+ActionView::MissingTemplate (Missing template dashboard/user_dashboard, application/user_dashboard with {:locale=>[:en], :formats=>[:html, :xml], :handlers=>[:erb, :builder, :raw, :ruby, :jbuilder, :coffee, :haml]}. Searched in:
+  * "/home/manstike/Project/trainees-2013-H2-1/app/views"
+  * "/home/manstike/.rvm/gems/ruby-1.9.3-p448/gems/devise-3.0.0/app/views"
+):
+  app/controllers/dashboard_controller.rb:8:in `index'
+
+
+  Rendered /home/manstike/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.9ms)
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2013-07-22 23:35:53 -0500
+Processing by DashboardController#index as HTML
+  [1m[35mUser Load (1.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+Completed 500 Internal Server Error in 10ms
+
+ActionView::MissingTemplate (Missing template dashboard/user_dashboard, application/user_dashboard with {:locale=>[:en], :formats=>[:html], :handlers=>[:erb, :builder, :raw, :ruby, :jbuilder, :coffee, :haml]}. Searched in:
+  * "/home/manstike/Project/trainees-2013-H2-1/app/views"
+  * "/home/manstike/.rvm/gems/ruby-1.9.3-p448/gems/devise-3.0.0/app/views"
+):
+  app/controllers/dashboard_controller.rb:8:in `index'
+
+
+  Rendered /home/manstike/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (1.0ms)
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2013-07-22 23:37:34 -0500
+Processing by DashboardController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+Completed 500 Internal Server Error in 9ms
+
+ActionView::MissingTemplate (Missing template dashboard/user_dashboard, application/user_dashboard with {:locale=>[:en], :formats=>[:html], :handlers=>[:erb, :builder, :raw, :ruby, :jbuilder, :coffee, :haml]}. Searched in:
+  * "/home/manstike/Project/trainees-2013-H2-1/app/views"
+  * "/home/manstike/.rvm/gems/ruby-1.9.3-p448/gems/devise-3.0.0/app/views"
+):
+  app/controllers/dashboard_controller.rb:8:in `index'
+
+
+  Rendered /home/manstike/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (1.0ms)
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2013-07-22 23:38:47 -0500
+Processing by DashboardController#index as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+Completed 500 Internal Server Error in 182ms
+
+ActionView::MissingTemplate (Missing template dashboard/userdashboard, application/userdashboard with {:locale=>[:en], :formats=>[:html], :handlers=>[:erb, :builder, :raw, :ruby, :jbuilder, :coffee, :haml]}. Searched in:
+  * "/home/manstike/Project/trainees-2013-H2-1/app/views"
+  * "/home/manstike/.rvm/gems/ruby-1.9.3-p448/gems/devise-3.0.0/app/views"
+):
+  app/controllers/dashboard_controller.rb:8:in `index'
+
+
+  Rendered /home/manstike/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-22 23:42:53 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (2.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  Rendered home/index.html.haml within layouts/application (60.0ms)
+Completed 200 OK in 567ms (Views: 390.9ms | ActiveRecord: 7.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-22 23:42:54 -0500
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-07-22 23:42:54 -0500
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-07-22 23:42:54 -0500
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-07-22 23:42:54 -0500
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2013-07-22 23:42:54 -0500
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-07-22 23:42:54 -0500
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-07-22 23:42:54 -0500
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2013-07-22 23:42:54 -0500
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-07-22 23:42:54 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-22 23:42:54 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-22 23:42:54 -0500
+
+
+Started GET "/assets/libs/angular.js?body=1" for 127.0.0.1 at 2013-07-22 23:42:54 -0500
+
+
+Started GET "/assets/libs/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-22 23:42:54 -0500
+
+
+Started GET "/assets/libs/resource.js?body=1" for 127.0.0.1 at 2013-07-22 23:42:54 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-07-22 23:42:54 -0500
+
+
+Started GET "/assets/ng-rails-csrf.js?body=1" for 127.0.0.1 at 2013-07-22 23:42:54 -0500
+
+
+Started GET "/assets/angular/validateProductController.js?body=1" for 127.0.0.1 at 2013-07-22 23:42:54 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-22 23:42:54 -0500
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-22 23:42:54 -0500
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2013-07-22 23:42:54 -0500
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-07-22 23:42:54 -0500
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-07-22 23:42:54 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-22 23:42:54 -0500
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2013-07-22 23:42:57 -0500
+Processing by DashboardController#index as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+Completed 500 Internal Server Error in 25ms
+
+NameError (undefined local variable or method `userdashboard_dashboard_path' for #<DashboardController:0xb1f529c>):
+  app/controllers/dashboard_controller.rb:8:in `index'
+
+
+  Rendered /home/manstike/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.8ms)
+  Rendered /home/manstike/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.7ms)
+  Rendered /home/manstike/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.4ms)
+  Rendered /home/manstike/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (54.0ms)
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2013-07-22 23:42:57 -0500
+Processing by DashboardController#index as HTML
+  [1m[35mUser Load (1.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+Completed 500 Internal Server Error in 11ms
+
+NameError (undefined local variable or method `userdashboard_dashboard_path' for #<DashboardController:0xa952838>):
+  app/controllers/dashboard_controller.rb:8:in `index'
+
+
+  Rendered /home/manstike/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.7ms)
+  Rendered /home/manstike/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (5.6ms)
+  Rendered /home/manstike/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.2ms)
+  Rendered /home/manstike/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (50.3ms)
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2013-07-22 23:46:47 -0500
+Processing by DashboardController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+Redirected to http://localhost:3000user
+Completed 302 Found in 168ms (ActiveRecord: 5.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-22 23:47:38 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (2.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  Rendered home/index.html.haml within layouts/application (60.7ms)
+Completed 200 OK in 539ms (Views: 322.4ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-22 23:47:39 -0500
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-07-22 23:47:39 -0500
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-07-22 23:47:39 -0500
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-07-22 23:47:39 -0500
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-07-22 23:47:39 -0500
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2013-07-22 23:47:39 -0500
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-07-22 23:47:39 -0500
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-07-22 23:47:39 -0500
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2013-07-22 23:47:39 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-22 23:47:39 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-22 23:47:39 -0500
+
+
+Started GET "/assets/libs/angular.js?body=1" for 127.0.0.1 at 2013-07-22 23:47:39 -0500
+
+
+Started GET "/assets/libs/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-22 23:47:39 -0500
+
+
+Started GET "/assets/libs/resource.js?body=1" for 127.0.0.1 at 2013-07-22 23:47:39 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-07-22 23:47:39 -0500
+
+
+Started GET "/assets/angular/validateProductController.js?body=1" for 127.0.0.1 at 2013-07-22 23:47:39 -0500
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-22 23:47:39 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-22 23:47:39 -0500
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2013-07-22 23:47:39 -0500
+
+
+Started GET "/assets/ng-rails-csrf.js?body=1" for 127.0.0.1 at 2013-07-22 23:47:39 -0500
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-07-22 23:47:39 -0500
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-07-22 23:47:39 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-22 23:47:39 -0500
+
+
+Started GET "/assets/logo2.png" for 127.0.0.1 at 2013-07-22 23:47:40 -0500
+
+
+Started GET "/assets/hero-04.jpg" for 127.0.0.1 at 2013-07-22 23:47:40 -0500
+
+
+Started GET "/assets/hero-04.jpg" for 127.0.0.1 at 2013-07-22 23:47:40 -0500
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2013-07-22 23:47:42 -0500
+Processing by DashboardController#index as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+Redirected to http://localhost:3000user
+Completed 500 Internal Server Error in 18ms
+
+URI::InvalidURIError (the scheme http does not accept registry part: localhost:3000user (or bad hostname?)):
+  /home/manstike/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/uri/generic.rb:213:in `initialize'
+  /home/manstike/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/uri/http.rb:84:in `initialize'
+  /home/manstike/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/uri/common.rb:214:in `new'
+  /home/manstike/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/uri/common.rb:214:in `parse'
+  /home/manstike/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/uri/common.rb:747:in `parse'
+  turbolinks (1.3.0) lib/turbolinks.rb:37:in `same_origin?'
+  turbolinks (1.3.0) lib/turbolinks.rb:44:in `abort_xdomain_redirect'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:416:in `_run__519360846__process_action__callbacks'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.0) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (4.0.0) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.0.0) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.0.0) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.0) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.0) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.0) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.0.0) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+  activerecord (4.0.0) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.0.0) lib/abstract_controller/base.rb:136:in `process'
+  actionpack (4.0.0) lib/abstract_controller/rendering.rb:44:in `process'
+  actionpack (4.0.0) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.0.0) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.0.0) lib/action_controller/metal.rb:231:in `block in action'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:80:in `call'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:48:in `call'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:655:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.0) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.0) lib/active_record/migration.rb:369:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:373:in `_run__797024510__call__callbacks'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/manstike/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/manstike/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/manstike/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/manstike/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.5ms)
+  Rendered /home/manstike/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.8ms)
+  Rendered /home/manstike/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.2ms)
+  Rendered /home/manstike/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (43.9ms)
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2013-07-22 23:47:42 -0500
+Processing by DashboardController#index as HTML
+  [1m[35mUser Load (1.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+Redirected to http://localhost:3000user
+Completed 302 Found in 6ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2013-07-22 23:47:42 -0500
+Processing by DashboardController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+Redirected to http://localhost:3000user
+Completed 302 Found in 4ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/logo2.png" for 127.0.0.1 at 2013-07-22 23:47:52 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-22 23:47:52 -0500
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (1.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  Rendered home/index.html.haml within layouts/application (8.7ms)
+Completed 200 OK in 40ms (Views: 35.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/logo2.png" for 127.0.0.1 at 2013-07-22 23:47:52 -0500
+
+
+Started GET "/assets/hero-04.jpg" for 127.0.0.1 at 2013-07-22 23:47:52 -0500
+
+
+Started GET "/assets/hero-04.jpg" for 127.0.0.1 at 2013-07-22 23:47:52 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-22 23:47:53 -0500
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered home/index.html.haml within layouts/application (1.8ms)
+Completed 200 OK in 33ms (Views: 27.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/logo2.png" for 127.0.0.1 at 2013-07-22 23:47:53 -0500
+
+
+Started GET "/assets/hero-04.jpg" for 127.0.0.1 at 2013-07-22 23:47:53 -0500
+
+
+Started GET "/projects" for 127.0.0.1 at 2013-07-22 23:47:54 -0500
+Processing by ProjectsController#index as HTML
+  [1m[35mUser Load (1.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mProject Load (1.3ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = 1[0m
+  Rendered projects/index.html.haml within layouts/application (68.2ms)
+Completed 200 OK in 104ms (Views: 85.7ms | ActiveRecord: 7.9ms)
+
+
+Started GET "/assets/logo2.png" for 127.0.0.1 at 2013-07-22 23:47:54 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-22 23:47:56 -0500
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (1.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  Rendered home/index.html.haml within layouts/application (8.8ms)
+Completed 200 OK in 44ms (Views: 36.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/logo2.png" for 127.0.0.1 at 2013-07-22 23:47:56 -0500
+
+
+Started GET "/assets/logo2.png" for 127.0.0.1 at 2013-07-22 23:47:56 -0500
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2013-07-22 23:47:57 -0500
+Processing by DashboardController#index as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+Redirected to http://localhost:3000user
+Completed 500 Internal Server Error in 6ms
+
+URI::InvalidURIError (the scheme http does not accept registry part: localhost:3000user (or bad hostname?)):
+  /home/manstike/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/uri/generic.rb:213:in `initialize'
+  /home/manstike/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/uri/http.rb:84:in `initialize'
+  /home/manstike/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/uri/common.rb:214:in `new'
+  /home/manstike/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/uri/common.rb:214:in `parse'
+  /home/manstike/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/uri/common.rb:747:in `parse'
+  turbolinks (1.3.0) lib/turbolinks.rb:37:in `same_origin?'
+  turbolinks (1.3.0) lib/turbolinks.rb:44:in `abort_xdomain_redirect'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:416:in `_run__519360846__process_action__callbacks'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.0) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (4.0.0) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.0.0) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.0.0) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.0) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.0) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.0) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.0.0) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+  activerecord (4.0.0) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.0.0) lib/abstract_controller/base.rb:136:in `process'
+  actionpack (4.0.0) lib/abstract_controller/rendering.rb:44:in `process'
+  actionpack (4.0.0) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.0.0) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.0.0) lib/action_controller/metal.rb:231:in `block in action'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:80:in `call'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:48:in `call'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:655:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.0) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.0) lib/active_record/migration.rb:369:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:373:in `_run__797024510__call__callbacks'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/manstike/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/manstike/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/manstike/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/manstike/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.3ms)
+  Rendered /home/manstike/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.9ms)
+  Rendered /home/manstike/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.4ms)
+  Rendered /home/manstike/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (40.1ms)
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2013-07-22 23:47:57 -0500
+Processing by DashboardController#index as HTML
+  [1m[35mUser Load (1.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+Redirected to http://localhost:3000user
+Completed 302 Found in 5ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2013-07-22 23:47:57 -0500
+Processing by DashboardController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+Redirected to http://localhost:3000user
+Completed 302 Found in 4ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2013-07-22 23:49:23 -0500
+Processing by DashboardController#index as HTML
+  [1m[35mUser Load (1.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+Redirected to http://localhost:3000user
+Completed 500 Internal Server Error in 121ms
+
+URI::InvalidURIError (the scheme http does not accept registry part: localhost:3000user (or bad hostname?)):
+  /home/manstike/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/uri/generic.rb:213:in `initialize'
+  /home/manstike/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/uri/http.rb:84:in `initialize'
+  /home/manstike/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/uri/common.rb:214:in `new'
+  /home/manstike/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/uri/common.rb:214:in `parse'
+  /home/manstike/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/uri/common.rb:747:in `parse'
+  turbolinks (1.3.0) lib/turbolinks.rb:37:in `same_origin?'
+  turbolinks (1.3.0) lib/turbolinks.rb:44:in `abort_xdomain_redirect'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:416:in `_run__519360846__process_action__callbacks'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.0) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (4.0.0) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.0.0) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.0.0) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.0) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.0) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.0) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.0.0) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+  activerecord (4.0.0) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.0.0) lib/abstract_controller/base.rb:136:in `process'
+  actionpack (4.0.0) lib/abstract_controller/rendering.rb:44:in `process'
+  actionpack (4.0.0) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.0.0) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.0.0) lib/action_controller/metal.rb:231:in `block in action'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:80:in `call'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:48:in `call'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:655:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.0) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.0) lib/active_record/migration.rb:369:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:373:in `_run__797024510__call__callbacks'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/manstike/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/manstike/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/manstike/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/manstike/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.3ms)
+  Rendered /home/manstike/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.7ms)
+  Rendered /home/manstike/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.3ms)
+  Rendered /home/manstike/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (39.7ms)
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2013-07-22 23:49:23 -0500
+Processing by DashboardController#index as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+Redirected to http://localhost:3000user
+Completed 302 Found in 6ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2013-07-22 23:49:23 -0500
+Processing by DashboardController#index as HTML
+  [1m[35mUser Load (1.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+Redirected to http://localhost:3000user
+Completed 302 Found in 5ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2013-07-22 23:49:26 -0500
+Processing by DashboardController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+Redirected to http://localhost:3000user
+Completed 500 Internal Server Error in 4ms
+
+URI::InvalidURIError (the scheme http does not accept registry part: localhost:3000user (or bad hostname?)):
+  /home/manstike/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/uri/generic.rb:213:in `initialize'
+  /home/manstike/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/uri/http.rb:84:in `initialize'
+  /home/manstike/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/uri/common.rb:214:in `new'
+  /home/manstike/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/uri/common.rb:214:in `parse'
+  /home/manstike/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/uri/common.rb:747:in `parse'
+  turbolinks (1.3.0) lib/turbolinks.rb:37:in `same_origin?'
+  turbolinks (1.3.0) lib/turbolinks.rb:44:in `abort_xdomain_redirect'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:416:in `_run__519360846__process_action__callbacks'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.0) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (4.0.0) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.0.0) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.0.0) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.0) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.0) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.0) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.0.0) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+  activerecord (4.0.0) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.0.0) lib/abstract_controller/base.rb:136:in `process'
+  actionpack (4.0.0) lib/abstract_controller/rendering.rb:44:in `process'
+  actionpack (4.0.0) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.0.0) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.0.0) lib/action_controller/metal.rb:231:in `block in action'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:80:in `call'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:48:in `call'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:655:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.0) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.0) lib/active_record/migration.rb:369:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:373:in `_run__797024510__call__callbacks'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/manstike/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/manstike/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/manstike/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/manstike/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.4ms)
+  Rendered /home/manstike/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.3ms)
+  Rendered /home/manstike/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.3ms)
+  Rendered /home/manstike/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (44.1ms)
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2013-07-22 23:49:26 -0500
+Processing by DashboardController#index as HTML
+  [1m[35mUser Load (2.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+Redirected to http://localhost:3000user
+Completed 302 Found in 7ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2013-07-22 23:49:26 -0500
+Processing by DashboardController#index as HTML
+  [1m[36mUser Load (4.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+Redirected to http://localhost:3000user
+Completed 302 Found in 7ms (ActiveRecord: 4.2ms)
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2013-07-22 23:49:45 -0500
+Processing by DashboardController#index as HTML
+  [1m[35mUser Load (1.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+Completed 500 Internal Server Error in 130ms
+
+NameError (undefined local variable or method `users_path' for #<DashboardController:0xb567c180>):
+  app/controllers/dashboard_controller.rb:8:in `index'
+
+
+  Rendered /home/manstike/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.7ms)
+  Rendered /home/manstike/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.9ms)
+  Rendered /home/manstike/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.2ms)
+  Rendered /home/manstike/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (48.9ms)
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2013-07-22 23:50:01 -0500
+Processing by DashboardController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 120ms (ActiveRecord: 5.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-22 23:50:02 -0500
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (1.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  Rendered home/index.html.haml within layouts/application (1.9ms)
+Completed 200 OK in 31ms (Views: 25.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-22 23:50:02 -0500
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-07-22 23:50:02 -0500
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-07-22 23:50:02 -0500
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-07-22 23:50:02 -0500
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-07-22 23:50:02 -0500
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2013-07-22 23:50:02 -0500
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-07-22 23:50:02 -0500
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2013-07-22 23:50:02 -0500
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-07-22 23:50:02 -0500
+
+
+Started GET "/assets/libs/angular.js?body=1" for 127.0.0.1 at 2013-07-22 23:50:02 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-22 23:50:02 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-22 23:50:02 -0500
+
+
+Started GET "/assets/libs/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-22 23:50:02 -0500
+
+
+Started GET "/assets/libs/resource.js?body=1" for 127.0.0.1 at 2013-07-22 23:50:02 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-07-22 23:50:02 -0500
+
+
+Started GET "/assets/angular/validateProductController.js?body=1" for 127.0.0.1 at 2013-07-22 23:50:02 -0500
+
+
+Started GET "/assets/ng-rails-csrf.js?body=1" for 127.0.0.1 at 2013-07-22 23:50:02 -0500
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-22 23:50:02 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-22 23:50:02 -0500
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-07-22 23:50:02 -0500
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2013-07-22 23:50:02 -0500
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-07-22 23:50:02 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-22 23:50:02 -0500
+
+
+Started GET "/assets/logo2.png" for 127.0.0.1 at 2013-07-22 23:50:02 -0500
+
+
+Started GET "/assets/hero-04.jpg" for 127.0.0.1 at 2013-07-22 23:50:02 -0500
+
+
+Started GET "/assets/hero-04.jpg" for 127.0.0.1 at 2013-07-22 23:50:03 -0500
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2013-07-22 23:50:04 -0500
+Processing by DashboardController#index as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-22 23:50:04 -0500
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (1.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  Rendered home/index.html.haml within layouts/application (2.0ms)
+Completed 200 OK in 30ms (Views: 25.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/hero-04.jpg" for 127.0.0.1 at 2013-07-22 23:50:04 -0500
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2013-07-22 23:50:05 -0500
+Processing by DashboardController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-22 23:50:05 -0500
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (1.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  Rendered home/index.html.haml within layouts/application (1.8ms)
+Completed 200 OK in 33ms (Views: 28.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2013-07-22 23:50:07 -0500
+Processing by ProjectsController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mProject Load (0.7ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."user_id" = 1
+  Rendered projects/index.html.haml within layouts/application (58.7ms)
+Completed 200 OK in 93ms (Views: 78.0ms | ActiveRecord: 5.9ms)
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2013-07-22 23:50:08 -0500
+Processing by DashboardController#index as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 8ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-22 23:50:08 -0500
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (1.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  Rendered home/index.html.haml within layouts/application (1.7ms)
+Completed 200 OK in 35ms (Views: 29.7ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/hero-04.jpg" for 127.0.0.1 at 2013-07-22 23:50:53 -0500
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2013-07-22 23:50:53 -0500
+Processing by DashboardController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+Completed 500 Internal Server Error in 194ms
+
+NameError (undefined local variable or method `user_dashboard_path' for #<DashboardController:0xb56789b8>):
+  app/controllers/dashboard_controller.rb:8:in `index'
+
+
+  Rendered /home/manstike/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.7ms)
+  Rendered /home/manstike/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.6ms)
+  Rendered /home/manstike/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.1ms)
+  Rendered /home/manstike/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (47.4ms)
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2013-07-22 23:50:54 -0500
+Processing by DashboardController#index as HTML
+  [1m[35mUser Load (1.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+Completed 500 Internal Server Error in 13ms
+
+NameError (undefined local variable or method `user_dashboard_path' for #<DashboardController:0xae01154>):
+  app/controllers/dashboard_controller.rb:8:in `index'
+
+
+  Rendered /home/manstike/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.8ms)
+  Rendered /home/manstike/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.8ms)
+  Rendered /home/manstike/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.1ms)
+  Rendered /home/manstike/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (49.4ms)
