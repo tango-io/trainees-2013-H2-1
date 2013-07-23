@@ -1,6 +1,6 @@
 Star::Application.routes.draw do
   devise_for :users
-  resources :dashboard , :projects
+  resources :dashboard , :projects , :category , :categories
 
   root to: "home#index"
   # The priority is based upon order of creation: first created -> highest priority.

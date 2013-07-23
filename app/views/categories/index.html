@@ -1,0 +1,10 @@
+<h3>All categories </h1>
+<table>
+<% @categories.each do |f| %>
+<tr>
+  <td><% f.parent_id %></td>
+  <td><%= link_to f.categories, categories_path(f) %></td>
+</tr>
+<% end %>
+</table>
+
