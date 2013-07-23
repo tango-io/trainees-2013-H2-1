@@ -5,7 +5,7 @@ gem 'rails', '4.0.0'
 
 gem 'ng-rails-csrf'
 
-gem 'devise'
+gem 'devise', github: 'plataformatec/devise', branch: 'rails4'
 
 gem 'haml'
 

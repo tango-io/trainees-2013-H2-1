@@ -1,3 +1,14 @@
+GIT
+  remote: git://github.com/plataformatec/devise.git
+  revision: 6b5988d756d780903bf8c9ccb3e2b3b724ccebe8
+  branch: rails4
+  specs:
+    devise (2.2.4)
+      bcrypt-ruby (~> 3.0)
+      orm_adapter (~> 0.1)
+      railties (>= 3.2.6, < 5)
+      warden (~> 1.2.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -46,11 +57,6 @@ GEM
       chunky_png (~> 1.2)
       fssm (>= 0.2.7)
       sass (~> 3.1)
-    devise (3.0.0)
-      bcrypt-ruby (~> 3.0)
-      orm_adapter (~> 0.1)
-      railties (>= 3.2.6, < 5)
-      warden (~> 1.2.3)
     erubis (2.7.0)
     execjs (1.4.0)
       multi_json (~> 1.0)
@@ -145,7 +151,7 @@ PLATFORMS
 DEPENDENCIES
   coffee-rails (~> 4.0.0)
   compass
-  devise
+  devise!
   haml
   jbuilder (~> 1.2)
   jquery-rails

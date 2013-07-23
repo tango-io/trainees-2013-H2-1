@@ -1,5 +1,6 @@
 class ImagesController < ApplicationController
   def new
+    @user = User.all
   end
 
   def create 
@@ -11,7 +12,7 @@ class ImagesController < ApplicationController
     end
   end
 
-   def show
+  def show
     @id = params[:id]
     @image = Image.find(@id)
   end
