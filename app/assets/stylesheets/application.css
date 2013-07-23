@@ -12,7 +12,9 @@
  *= require_tree .
  */
 
-
+h2{
+  padding: 0.5em;
+}
 .navbar{
   height: 60px;
 }
@@ -46,4 +48,10 @@ background-color:#F2F2F2;
 border-bottom-style: dashed;
 border-bottom-color: #c9c9c9;
 border-bottom-width: 2px; 
+}
+.row.usercontainer{
+padding: 2em;
+}
+.userinfo{
+  height: 543px;
 }

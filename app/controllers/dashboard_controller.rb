@@ -3,10 +3,9 @@ class DashboardController < ApplicationController
 
   def index
     if current_user.admin?
-      redirect_to admin_dashboard_path
+      render 'admin'
     else
-      redirect_to user_dashboard_path
+      render 'user'
     end
-  end
-
+ end
 end

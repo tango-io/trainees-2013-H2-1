@@ -7491,3 +7491,2306 @@ NameError (undefined local variable or method `user_dashboard_path' for #<Dashbo
   Rendered /home/manstike/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.8ms)
   Rendered /home/manstike/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.1ms)
   Rendered /home/manstike/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (49.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-23 00:01:58 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (3.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+Redirected to http://localhost:3000/dashboard
+Completed 302 Found in 226ms (ActiveRecord: 8.3ms)
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2013-07-23 00:01:59 -0500
+Processing by DashboardController#index as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered dashboard/user.html.haml within layouts/application (51.2ms)
+Completed 200 OK in 410ms (Views: 340.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-23 00:01:59 -0500
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-07-23 00:01:59 -0500
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-07-23 00:01:59 -0500
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2013-07-23 00:01:59 -0500
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-07-23 00:01:59 -0500
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-07-23 00:01:59 -0500
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-07-23 00:01:59 -0500
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-07-23 00:01:59 -0500
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2013-07-23 00:01:59 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-23 00:01:59 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-23 00:01:59 -0500
+
+
+Started GET "/assets/libs/angular.js?body=1" for 127.0.0.1 at 2013-07-23 00:01:59 -0500
+
+
+Started GET "/assets/libs/resource.js?body=1" for 127.0.0.1 at 2013-07-23 00:01:59 -0500
+
+
+Started GET "/assets/libs/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-23 00:01:59 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-07-23 00:01:59 -0500
+
+
+Started GET "/assets/angular/validateProductController.js?body=1" for 127.0.0.1 at 2013-07-23 00:01:59 -0500
+
+
+Started GET "/assets/ng-rails-csrf.js?body=1" for 127.0.0.1 at 2013-07-23 00:01:59 -0500
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-23 00:01:59 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-23 00:01:59 -0500
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2013-07-23 00:01:59 -0500
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-07-23 00:01:59 -0500
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-07-23 00:01:59 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-23 00:01:59 -0500
+
+
+Started GET "/assets/logo2.png" for 127.0.0.1 at 2013-07-23 00:02:00 -0500
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2013-07-23 00:02:02 -0500
+Processing by DashboardController#index as HTML
+  [1m[35mUser Load (1.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  Rendered dashboard/user.html.haml within layouts/application (1.9ms)
+Completed 200 OK in 36ms (Views: 30.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2013-07-23 00:02:04 -0500
+Processing by DashboardController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered dashboard/user.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 31ms (Views: 26.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2013-07-23 00:02:06 -0500
+Processing by DashboardController#index as HTML
+  [1m[35mUser Load (1.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  Rendered dashboard/user.html.haml within layouts/application (0.3ms)
+Completed 200 OK in 31ms (Views: 26.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2013-07-23 00:16:21 -0500
+Processing by DashboardController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered dashboard/user.html.haml within layouts/application (4.1ms)
+Completed 200 OK in 219ms (Views: 29.9ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2013-07-23 00:18:14 -0500
+Processing by DashboardController#index as HTML
+  [1m[35mUser Load (1.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  Rendered dashboard/user.html.haml within layouts/application (8.2ms)
+Completed 200 OK in 39ms (Views: 34.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/missing_little.png" for 127.0.0.1 at 2013-07-23 00:18:15 -0500
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2013-07-23 00:19:41 -0500
+Processing by DashboardController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered dashboard/user.html.haml within layouts/application (6.1ms)
+Completed 200 OK in 77ms (Views: 72.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-23 00:19:42 -0500
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-07-23 00:19:42 -0500
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-07-23 00:19:42 -0500
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-07-23 00:19:42 -0500
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2013-07-23 00:19:42 -0500
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-07-23 00:19:42 -0500
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-07-23 00:19:42 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-23 00:19:42 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-23 00:19:42 -0500
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2013-07-23 00:19:42 -0500
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-07-23 00:19:42 -0500
+
+
+Started GET "/assets/libs/angular.js?body=1" for 127.0.0.1 at 2013-07-23 00:19:42 -0500
+
+
+Started GET "/assets/libs/resource.js?body=1" for 127.0.0.1 at 2013-07-23 00:19:42 -0500
+
+
+Started GET "/assets/libs/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-23 00:19:42 -0500
+
+
+Started GET "/assets/angular/validateProductController.js?body=1" for 127.0.0.1 at 2013-07-23 00:19:42 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-07-23 00:19:42 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-23 00:19:42 -0500
+
+
+Started GET "/assets/ng-rails-csrf.js?body=1" for 127.0.0.1 at 2013-07-23 00:19:42 -0500
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2013-07-23 00:19:42 -0500
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-07-23 00:19:42 -0500
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-23 00:19:42 -0500
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-07-23 00:19:42 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-23 00:19:42 -0500
+
+
+Started GET "/assets/logo2.png" for 127.0.0.1 at 2013-07-23 00:19:42 -0500
+
+
+Started GET "/assets/missing_little.png" for 127.0.0.1 at 2013-07-23 00:19:42 -0500
+
+
+Started GET "/assets/missing_little.png" for 127.0.0.1 at 2013-07-23 00:19:46 -0500
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2013-07-23 00:20:26 -0500
+Processing by DashboardController#index as HTML
+  [1m[35mUser Load (1.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  Rendered dashboard/user.html.haml within layouts/application (0.8ms)
+Completed 200 OK in 69ms (Views: 63.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-23 00:20:27 -0500
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-07-23 00:20:27 -0500
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-07-23 00:20:27 -0500
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-07-23 00:20:27 -0500
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2013-07-23 00:20:27 -0500
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-07-23 00:20:27 -0500
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-07-23 00:20:27 -0500
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-07-23 00:20:27 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-23 00:20:27 -0500
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2013-07-23 00:20:27 -0500
+
+
+Started GET "/assets/libs/angular.js?body=1" for 127.0.0.1 at 2013-07-23 00:20:27 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-23 00:20:27 -0500
+
+
+Started GET "/assets/libs/resource.js?body=1" for 127.0.0.1 at 2013-07-23 00:20:27 -0500
+
+
+Started GET "/assets/libs/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-23 00:20:27 -0500
+
+
+Started GET "/assets/angular/validateProductController.js?body=1" for 127.0.0.1 at 2013-07-23 00:20:27 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-07-23 00:20:27 -0500
+
+
+Started GET "/assets/ng-rails-csrf.js?body=1" for 127.0.0.1 at 2013-07-23 00:20:27 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-23 00:20:27 -0500
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-23 00:20:27 -0500
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2013-07-23 00:20:27 -0500
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-07-23 00:20:27 -0500
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-07-23 00:20:27 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-23 00:20:27 -0500
+
+
+Started GET "/assets/logo2.png" for 127.0.0.1 at 2013-07-23 00:20:27 -0500
+
+
+Started GET "/assets/missing_little.png" for 127.0.0.1 at 2013-07-23 00:20:27 -0500
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2013-07-23 00:21:02 -0500
+Processing by DashboardController#index as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered dashboard/user.html.haml within layouts/application (10.0ms)
+Completed 200 OK in 38ms (Views: 32.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-23 00:21:02 -0500
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2013-07-23 00:21:02 -0500
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-07-23 00:21:02 -0500
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-07-23 00:21:02 -0500
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-07-23 00:21:02 -0500
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-07-23 00:21:02 -0500
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-07-23 00:21:02 -0500
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-07-23 00:21:02 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-23 00:21:02 -0500
+
+
+Started GET "/assets/libs/angular.js?body=1" for 127.0.0.1 at 2013-07-23 00:21:02 -0500
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2013-07-23 00:21:02 -0500
+
+
+Started GET "/assets/libs/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-23 00:21:02 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-23 00:21:02 -0500
+
+
+Started GET "/assets/libs/resource.js?body=1" for 127.0.0.1 at 2013-07-23 00:21:02 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-07-23 00:21:02 -0500
+
+
+Started GET "/assets/ng-rails-csrf.js?body=1" for 127.0.0.1 at 2013-07-23 00:21:02 -0500
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-23 00:21:02 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-23 00:21:02 -0500
+
+
+Started GET "/assets/angular/validateProductController.js?body=1" for 127.0.0.1 at 2013-07-23 00:21:02 -0500
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-07-23 00:21:02 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-23 00:21:02 -0500
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-07-23 00:21:02 -0500
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2013-07-23 00:21:02 -0500
+
+
+Started GET "/assets/logo2.png" for 127.0.0.1 at 2013-07-23 00:21:03 -0500
+
+
+Started GET "/assets/missing_little.png" for 127.0.0.1 at 2013-07-23 00:21:03 -0500
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2013-07-23 00:21:03 -0500
+Processing by DashboardController#index as HTML
+  [1m[35mUser Load (1.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  Rendered dashboard/user.html.haml within layouts/application (0.9ms)
+Completed 200 OK in 31ms (Views: 25.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-23 00:21:03 -0500
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-07-23 00:21:03 -0500
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-07-23 00:21:03 -0500
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-07-23 00:21:03 -0500
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2013-07-23 00:21:03 -0500
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-07-23 00:21:03 -0500
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-07-23 00:21:03 -0500
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-07-23 00:21:03 -0500
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2013-07-23 00:21:03 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-23 00:21:03 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-23 00:21:03 -0500
+
+
+Started GET "/assets/libs/angular.js?body=1" for 127.0.0.1 at 2013-07-23 00:21:03 -0500
+
+
+Started GET "/assets/libs/resource.js?body=1" for 127.0.0.1 at 2013-07-23 00:21:03 -0500
+
+
+Started GET "/assets/libs/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-23 00:21:03 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-07-23 00:21:03 -0500
+
+
+Started GET "/assets/ng-rails-csrf.js?body=1" for 127.0.0.1 at 2013-07-23 00:21:03 -0500
+
+
+Started GET "/assets/angular/validateProductController.js?body=1" for 127.0.0.1 at 2013-07-23 00:21:03 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-23 00:21:03 -0500
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2013-07-23 00:21:03 -0500
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-23 00:21:03 -0500
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-07-23 00:21:03 -0500
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-07-23 00:21:03 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-23 00:21:03 -0500
+
+
+Started GET "/assets/logo2.png" for 127.0.0.1 at 2013-07-23 00:21:04 -0500
+
+
+Started GET "/assets/missing_little.png" for 127.0.0.1 at 2013-07-23 00:21:04 -0500
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2013-07-23 00:31:36 -0500
+Processing by DashboardController#index as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered dashboard/user.html.haml within layouts/application (84.8ms)
+Completed 500 Internal Server Error in 95ms
+
+ActionView::Template::Error (Inconsistent indentation: 6 spaces used for indentation, but the rest of the document was indented using 4 spaces.):
+    1: %center You are in the User Dashboard!
+    2: .navbar-inner
+    3:     %ul.nav.nav-tabs
+    4:       %li.active
+    5:         - if current_user.user_id?
+    6:           %a {href="#"} Perfil
+    7:           %a {href="#"} Account
+  app/views/dashboard/user.html.haml:4
+  app/controllers/dashboard_controller.rb:8:in `index'
+
+
+  Rendered /home/manstike/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.4ms)
+  Rendered /home/manstike/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.4ms)
+  Rendered /home/manstike/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (31.0ms)
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2013-07-23 00:31:37 -0500
+Processing by DashboardController#index as HTML
+  [1m[35mUser Load (1.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  Rendered dashboard/user.html.haml within layouts/application (1.8ms)
+Completed 500 Internal Server Error in 14ms
+
+ActionView::Template::Error (Inconsistent indentation: 6 spaces used for indentation, but the rest of the document was indented using 4 spaces.):
+    1: %center You are in the User Dashboard!
+    2: .navbar-inner
+    3:     %ul.nav.nav-tabs
+    4:       %li.active
+    5:         - if current_user.user_id?
+    6:           %a {href="#"} Perfil
+    7:           %a {href="#"} Account
+  app/views/dashboard/user.html.haml:4
+  app/controllers/dashboard_controller.rb:8:in `index'
+
+
+  Rendered /home/manstike/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.2ms)
+  Rendered /home/manstike/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.3ms)
+  Rendered /home/manstike/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (29.9ms)
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2013-07-23 00:32:26 -0500
+Processing by DashboardController#index as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered dashboard/user.html.haml within layouts/application (2.1ms)
+Completed 500 Internal Server Error in 12ms
+
+ActionView::Template::Error (Inconsistent indentation: 7 spaces used for indentation, but the rest of the document was indented using 2 spaces.):
+    3:   %ul.nav.nav-tabs
+    4:     %li.active
+    5:       - if current_user.user_id?
+    6:        %a {href="#"} Perfil
+    7:        %a {href="#"} Account
+    8:        %a {href="#"} Settings
+    9:       - else
+  app/views/dashboard/user.html.haml:6
+  app/controllers/dashboard_controller.rb:8:in `index'
+
+
+  Rendered /home/manstike/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.3ms)
+  Rendered /home/manstike/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.2ms)
+  Rendered /home/manstike/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (31.8ms)
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2013-07-23 00:32:38 -0500
+Processing by DashboardController#index as HTML
+  [1m[35mUser Load (1.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  Rendered dashboard/user.html.haml within layouts/application (14.0ms)
+Completed 500 Internal Server Error in 27ms
+
+ActionView::Template::Error (undefined method `user_id?' for #<User:0xa523b54>):
+    2: .navbar-inner
+    3:   %ul.nav.nav-tabs
+    4:     %li.active
+    5:       - if current_user.user_id?
+    6:         %a {href="#"} Perfil
+    7:         %a {href="#"} Account
+    8:         %a {href="#"} Settings
+  app/views/dashboard/user.html.haml:5:in `_app_views_dashboard_user_html_haml___465552_86577220'
+  app/controllers/dashboard_controller.rb:8:in `index'
+
+
+  Rendered /home/manstike/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+  Rendered /home/manstike/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.2ms)
+  Rendered /home/manstike/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (29.2ms)
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2013-07-23 00:33:05 -0500
+Processing by DashboardController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered dashboard/user.html.haml within layouts/application (7.5ms)
+Completed 200 OK in 36ms (Views: 31.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-23 00:33:05 -0500
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-07-23 00:33:06 -0500
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-07-23 00:33:06 -0500
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-07-23 00:33:06 -0500
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-07-23 00:33:06 -0500
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2013-07-23 00:33:06 -0500
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-07-23 00:33:06 -0500
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-07-23 00:33:06 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-23 00:33:06 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-23 00:33:06 -0500
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2013-07-23 00:33:06 -0500
+
+
+Started GET "/assets/libs/angular.js?body=1" for 127.0.0.1 at 2013-07-23 00:33:06 -0500
+
+
+Started GET "/assets/libs/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-23 00:33:06 -0500
+
+
+Started GET "/assets/libs/resource.js?body=1" for 127.0.0.1 at 2013-07-23 00:33:06 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-07-23 00:33:06 -0500
+
+
+Started GET "/assets/angular/validateProductController.js?body=1" for 127.0.0.1 at 2013-07-23 00:33:06 -0500
+
+
+Started GET "/assets/ng-rails-csrf.js?body=1" for 127.0.0.1 at 2013-07-23 00:33:06 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-23 00:33:06 -0500
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2013-07-23 00:33:06 -0500
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-23 00:33:06 -0500
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-07-23 00:33:06 -0500
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-07-23 00:33:06 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-23 00:33:06 -0500
+
+
+Started GET "/assets/logo2.png" for 127.0.0.1 at 2013-07-23 00:33:06 -0500
+
+
+Started GET "/assets/missing_little.png" for 127.0.0.1 at 2013-07-23 00:33:06 -0500
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2013-07-23 00:33:18 -0500
+Processing by DashboardController#index as HTML
+  [1m[35mUser Load (1.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  Rendered dashboard/user.html.haml within layouts/application (75.3ms)
+Completed 500 Internal Server Error in 88ms
+
+ActionView::Template::Error (undefined method `map' for "#":String):
+    2: .navbar-inner
+    3:   %ul.nav.nav-tabs
+    4:     %li.active
+    5:       %a{href="#"} Perfil
+    6:     
+    7: 
+    8:   .row.usercontainer
+  app/views/dashboard/user.html.haml:5:in `_app_views_dashboard_user_html_haml___465552__637404048'
+  app/controllers/dashboard_controller.rb:8:in `index'
+
+
+  Rendered /home/manstike/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.2ms)
+  Rendered /home/manstike/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.3ms)
+  Rendered /home/manstike/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (30.1ms)
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2013-07-23 00:33:38 -0500
+Processing by DashboardController#index as HTML
+  [1m[36mUser Load (1.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered dashboard/user.html.haml within layouts/application (7.5ms)
+Completed 200 OK in 37ms (Views: 31.1ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-23 00:33:38 -0500
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-07-23 00:33:38 -0500
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-07-23 00:33:38 -0500
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-07-23 00:33:38 -0500
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2013-07-23 00:33:38 -0500
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-07-23 00:33:38 -0500
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-07-23 00:33:38 -0500
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-07-23 00:33:38 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-23 00:33:38 -0500
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2013-07-23 00:33:38 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-23 00:33:38 -0500
+
+
+Started GET "/assets/libs/angular.js?body=1" for 127.0.0.1 at 2013-07-23 00:33:38 -0500
+
+
+Started GET "/assets/libs/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-23 00:33:38 -0500
+
+
+Started GET "/assets/libs/resource.js?body=1" for 127.0.0.1 at 2013-07-23 00:33:38 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-07-23 00:33:38 -0500
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-23 00:33:38 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-23 00:33:38 -0500
+
+
+Started GET "/assets/ng-rails-csrf.js?body=1" for 127.0.0.1 at 2013-07-23 00:33:38 -0500
+
+
+Started GET "/assets/angular/validateProductController.js?body=1" for 127.0.0.1 at 2013-07-23 00:33:38 -0500
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2013-07-23 00:33:38 -0500
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-07-23 00:33:38 -0500
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-07-23 00:33:38 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-23 00:33:38 -0500
+
+
+Started GET "/assets/logo2.png" for 127.0.0.1 at 2013-07-23 00:33:39 -0500
+
+
+Started GET "/assets/missing_little.png" for 127.0.0.1 at 2013-07-23 00:33:39 -0500
+
+
+Started GET "/assets/missing_little.png" for 127.0.0.1 at 2013-07-23 00:33:40 -0500
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2013-07-23 00:34:10 -0500
+Processing by DashboardController#index as HTML
+  [1m[35mUser Load (1.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  Rendered dashboard/user.html.haml within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 11ms
+
+ActionView::Template::Error (Illegal nesting: content can't be both given on the same line as %center and nested within it.):
+    1: %center You are in the User Dashboard!
+    2: 
+    3:  %ul.nav.nav-tabs
+    4:     %li.active
+    5:       %a  Perfil
+    6: .navbar-inner
+  app/views/dashboard/user.html.haml:3
+  app/controllers/dashboard_controller.rb:8:in `index'
+
+
+  Rendered /home/manstike/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.7ms)
+  Rendered /home/manstike/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.4ms)
+  Rendered /home/manstike/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (30.5ms)
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2013-07-23 00:34:25 -0500
+Processing by DashboardController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered dashboard/user.html.haml within layouts/application (7.2ms)
+Completed 200 OK in 37ms (Views: 32.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-23 00:34:26 -0500
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-07-23 00:34:26 -0500
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-07-23 00:34:26 -0500
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-07-23 00:34:26 -0500
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2013-07-23 00:34:26 -0500
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-07-23 00:34:26 -0500
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-07-23 00:34:26 -0500
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2013-07-23 00:34:26 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-23 00:34:26 -0500
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-07-23 00:34:26 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-23 00:34:26 -0500
+
+
+Started GET "/assets/libs/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-23 00:34:26 -0500
+
+
+Started GET "/assets/libs/angular.js?body=1" for 127.0.0.1 at 2013-07-23 00:34:26 -0500
+
+
+Started GET "/assets/libs/resource.js?body=1" for 127.0.0.1 at 2013-07-23 00:34:26 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-07-23 00:34:26 -0500
+
+
+Started GET "/assets/angular/validateProductController.js?body=1" for 127.0.0.1 at 2013-07-23 00:34:26 -0500
+
+
+Started GET "/assets/ng-rails-csrf.js?body=1" for 127.0.0.1 at 2013-07-23 00:34:26 -0500
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2013-07-23 00:34:26 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-23 00:34:26 -0500
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-23 00:34:26 -0500
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-07-23 00:34:26 -0500
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-07-23 00:34:26 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-23 00:34:26 -0500
+
+
+Started GET "/assets/logo2.png" for 127.0.0.1 at 2013-07-23 00:34:26 -0500
+
+
+Started GET "/assets/missing_little.png" for 127.0.0.1 at 2013-07-23 00:34:26 -0500
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2013-07-23 00:35:03 -0500
+Processing by DashboardController#index as HTML
+  [1m[35mUser Load (1.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  Rendered dashboard/user.html.haml within layouts/application (7.3ms)
+Completed 200 OK in 38ms (Views: 32.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-23 00:35:04 -0500
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-07-23 00:35:04 -0500
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-07-23 00:35:04 -0500
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-07-23 00:35:04 -0500
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-07-23 00:35:04 -0500
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-07-23 00:35:04 -0500
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2013-07-23 00:35:04 -0500
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-07-23 00:35:04 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-23 00:35:04 -0500
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2013-07-23 00:35:04 -0500
+
+
+Started GET "/assets/libs/angular.js?body=1" for 127.0.0.1 at 2013-07-23 00:35:04 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-23 00:35:04 -0500
+
+
+Started GET "/assets/libs/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-23 00:35:04 -0500
+
+
+Started GET "/assets/libs/resource.js?body=1" for 127.0.0.1 at 2013-07-23 00:35:04 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-07-23 00:35:04 -0500
+
+
+Started GET "/assets/angular/validateProductController.js?body=1" for 127.0.0.1 at 2013-07-23 00:35:04 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-23 00:35:04 -0500
+
+
+Started GET "/assets/ng-rails-csrf.js?body=1" for 127.0.0.1 at 2013-07-23 00:35:04 -0500
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-07-23 00:35:04 -0500
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2013-07-23 00:35:04 -0500
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-23 00:35:04 -0500
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-07-23 00:35:04 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-23 00:35:04 -0500
+
+
+Started GET "/assets/logo2.png" for 127.0.0.1 at 2013-07-23 00:35:04 -0500
+
+
+Started GET "/assets/missing_little.png" for 127.0.0.1 at 2013-07-23 00:35:04 -0500
+
+
+Started GET "/assets/missing_little.png" for 127.0.0.1 at 2013-07-23 00:35:13 -0500
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2013-07-23 00:36:50 -0500
+Processing by DashboardController#index as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered dashboard/user.html.haml within layouts/application (4.0ms)
+Completed 500 Internal Server Error in 14ms
+
+ActionView::Template::Error (Illegal element: classes and ids must have values.):
+    17:           %p User Contact
+    18:       .projects.hero-unit 
+    19:         Here go the users Projects
+    20:     .span5.
+    21:       %p Info User
+  app/views/dashboard/user.html.haml:20
+  app/controllers/dashboard_controller.rb:8:in `index'
+
+
+  Rendered /home/manstike/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.1ms)
+  Rendered /home/manstike/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.1ms)
+  Rendered /home/manstike/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (30.1ms)
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2013-07-23 00:37:51 -0500
+Processing by DashboardController#index as HTML
+  [1m[35mUser Load (1.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  Rendered dashboard/user.html.haml within layouts/application (7.5ms)
+Completed 200 OK in 37ms (Views: 31.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-23 00:37:51 -0500
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-07-23 00:37:52 -0500
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-07-23 00:37:52 -0500
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-07-23 00:37:52 -0500
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-07-23 00:37:52 -0500
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2013-07-23 00:37:52 -0500
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-07-23 00:37:52 -0500
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-07-23 00:37:52 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-23 00:37:52 -0500
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2013-07-23 00:37:52 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-23 00:37:52 -0500
+
+
+Started GET "/assets/libs/angular.js?body=1" for 127.0.0.1 at 2013-07-23 00:37:52 -0500
+
+
+Started GET "/assets/libs/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-23 00:37:52 -0500
+
+
+Started GET "/assets/libs/resource.js?body=1" for 127.0.0.1 at 2013-07-23 00:37:52 -0500
+
+
+Started GET "/assets/ng-rails-csrf.js?body=1" for 127.0.0.1 at 2013-07-23 00:37:52 -0500
+
+
+Started GET "/assets/angular/validateProductController.js?body=1" for 127.0.0.1 at 2013-07-23 00:37:52 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-07-23 00:37:52 -0500
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2013-07-23 00:37:52 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-23 00:37:52 -0500
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-23 00:37:52 -0500
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-07-23 00:37:52 -0500
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-07-23 00:37:52 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-23 00:37:52 -0500
+
+
+Started GET "/assets/logo2.png" for 127.0.0.1 at 2013-07-23 00:37:52 -0500
+
+
+Started GET "/assets/missing_little.png" for 127.0.0.1 at 2013-07-23 00:37:52 -0500
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2013-07-23 00:38:28 -0500
+Processing by DashboardController#index as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered dashboard/user.html.haml within layouts/application (9.6ms)
+Completed 200 OK in 42ms (Views: 36.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-23 00:38:28 -0500
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-07-23 00:38:28 -0500
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-07-23 00:38:28 -0500
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-07-23 00:38:28 -0500
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-07-23 00:38:28 -0500
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-07-23 00:38:28 -0500
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2013-07-23 00:38:28 -0500
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-07-23 00:38:28 -0500
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2013-07-23 00:38:28 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-23 00:38:28 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-23 00:38:28 -0500
+
+
+Started GET "/assets/libs/resource.js?body=1" for 127.0.0.1 at 2013-07-23 00:38:28 -0500
+
+
+Started GET "/assets/libs/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-23 00:38:28 -0500
+
+
+Started GET "/assets/libs/angular.js?body=1" for 127.0.0.1 at 2013-07-23 00:38:28 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-07-23 00:38:28 -0500
+
+
+Started GET "/assets/ng-rails-csrf.js?body=1" for 127.0.0.1 at 2013-07-23 00:38:28 -0500
+
+
+Started GET "/assets/angular/validateProductController.js?body=1" for 127.0.0.1 at 2013-07-23 00:38:28 -0500
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2013-07-23 00:38:29 -0500
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-23 00:38:29 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-23 00:38:29 -0500
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-07-23 00:38:29 -0500
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-07-23 00:38:29 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-23 00:38:29 -0500
+
+
+Started GET "/assets/logo2.png" for 127.0.0.1 at 2013-07-23 00:38:29 -0500
+
+
+Started GET "/assets/missing_little.png" for 127.0.0.1 at 2013-07-23 00:38:29 -0500
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2013-07-23 00:39:27 -0500
+Processing by DashboardController#index as HTML
+  [1m[35mUser Load (1.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  Rendered dashboard/user.html.haml within layouts/application (93.4ms)
+Completed 200 OK in 173ms (Views: 168.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-23 00:39:27 -0500
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-07-23 00:39:27 -0500
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-07-23 00:39:27 -0500
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-07-23 00:39:27 -0500
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-07-23 00:39:27 -0500
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2013-07-23 00:39:27 -0500
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-07-23 00:39:28 -0500
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-07-23 00:39:28 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-23 00:39:28 -0500
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2013-07-23 00:39:28 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-23 00:39:28 -0500
+
+
+Started GET "/assets/libs/angular.js?body=1" for 127.0.0.1 at 2013-07-23 00:39:28 -0500
+
+
+Started GET "/assets/libs/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-23 00:39:28 -0500
+
+
+Started GET "/assets/libs/resource.js?body=1" for 127.0.0.1 at 2013-07-23 00:39:28 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-07-23 00:39:28 -0500
+
+
+Started GET "/assets/angular/validateProductController.js?body=1" for 127.0.0.1 at 2013-07-23 00:39:28 -0500
+
+
+Started GET "/assets/ng-rails-csrf.js?body=1" for 127.0.0.1 at 2013-07-23 00:39:28 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-23 00:39:28 -0500
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-23 00:39:28 -0500
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-07-23 00:39:28 -0500
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-07-23 00:39:28 -0500
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2013-07-23 00:39:28 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-23 00:39:28 -0500
+
+
+Started GET "/assets/logo2.png" for 127.0.0.1 at 2013-07-23 00:39:28 -0500
+
+
+Started GET "/assets/missing_little.png" for 127.0.0.1 at 2013-07-23 00:39:28 -0500
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2013-07-23 00:39:30 -0500
+Processing by DashboardController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered dashboard/user.html.haml within layouts/application (0.8ms)
+Completed 200 OK in 33ms (Views: 24.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-23 00:39:30 -0500
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-07-23 00:39:30 -0500
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-07-23 00:39:30 -0500
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-07-23 00:39:30 -0500
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2013-07-23 00:39:30 -0500
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-07-23 00:39:30 -0500
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-07-23 00:39:30 -0500
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2013-07-23 00:39:30 -0500
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-07-23 00:39:30 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-23 00:39:30 -0500
+
+
+Started GET "/assets/libs/angular.js?body=1" for 127.0.0.1 at 2013-07-23 00:39:30 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-23 00:39:30 -0500
+
+
+Started GET "/assets/libs/resource.js?body=1" for 127.0.0.1 at 2013-07-23 00:39:30 -0500
+
+
+Started GET "/assets/libs/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-23 00:39:30 -0500
+
+
+Started GET "/assets/angular/validateProductController.js?body=1" for 127.0.0.1 at 2013-07-23 00:39:30 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-07-23 00:39:30 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-23 00:39:30 -0500
+
+
+Started GET "/assets/ng-rails-csrf.js?body=1" for 127.0.0.1 at 2013-07-23 00:39:30 -0500
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2013-07-23 00:39:30 -0500
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-23 00:39:30 -0500
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-07-23 00:39:31 -0500
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-07-23 00:39:31 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-23 00:39:31 -0500
+
+
+Started GET "/assets/logo2.png" for 127.0.0.1 at 2013-07-23 00:39:31 -0500
+
+
+Started GET "/assets/missing_little.png" for 127.0.0.1 at 2013-07-23 00:39:31 -0500
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2013-07-23 00:39:52 -0500
+Processing by DashboardController#index as HTML
+  [1m[35mUser Load (1.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  Rendered dashboard/user.html.haml within layouts/application (0.8ms)
+Completed 200 OK in 144ms (Views: 139.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-23 00:39:53 -0500
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2013-07-23 00:39:53 -0500
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-07-23 00:39:53 -0500
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-07-23 00:39:53 -0500
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-07-23 00:39:53 -0500
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-07-23 00:39:53 -0500
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-07-23 00:39:53 -0500
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-07-23 00:39:53 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-23 00:39:53 -0500
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2013-07-23 00:39:53 -0500
+
+
+Started GET "/assets/libs/angular.js?body=1" for 127.0.0.1 at 2013-07-23 00:39:53 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-23 00:39:53 -0500
+
+
+Started GET "/assets/libs/resource.js?body=1" for 127.0.0.1 at 2013-07-23 00:39:53 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-07-23 00:39:53 -0500
+
+
+Started GET "/assets/libs/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-23 00:39:53 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-23 00:39:53 -0500
+
+
+Started GET "/assets/ng-rails-csrf.js?body=1" for 127.0.0.1 at 2013-07-23 00:39:53 -0500
+
+
+Started GET "/assets/angular/validateProductController.js?body=1" for 127.0.0.1 at 2013-07-23 00:39:53 -0500
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2013-07-23 00:39:53 -0500
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-07-23 00:39:53 -0500
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-23 00:39:53 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-23 00:39:53 -0500
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-07-23 00:39:53 -0500
+
+
+Started GET "/assets/logo2.png" for 127.0.0.1 at 2013-07-23 00:39:53 -0500
+
+
+Started GET "/assets/missing_little.png" for 127.0.0.1 at 2013-07-23 00:39:53 -0500
+
+
+Started GET "/projects" for 127.0.0.1 at 2013-07-23 00:40:07 -0500
+Processing by ProjectsController#index as HTML
+  [1m[36mUser Load (4.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mProject Load (1.4ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."user_id" = 1
+  Rendered projects/index.html.haml within layouts/application (70.6ms)
+Completed 200 OK in 113ms (Views: 91.5ms | ActiveRecord: 11.1ms)
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2013-07-23 00:40:08 -0500
+Processing by DashboardController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered dashboard/user.html.haml within layouts/application (7.2ms)
+Completed 200 OK in 102ms (Views: 97.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2013-07-23 00:40:09 -0500
+Processing by ProjectsController#index as HTML
+  [1m[35mUser Load (1.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mProject Load (1.0ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = 1[0m
+  Rendered projects/index.html.haml within layouts/application (4.0ms)
+Completed 200 OK in 34ms (Views: 27.1ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2013-07-23 00:40:10 -0500
+Processing by DashboardController#index as HTML
+  [1m[35mUser Load (1.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  Rendered dashboard/user.html.haml within layouts/application (0.8ms)
+Completed 200 OK in 32ms (Views: 24.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2013-07-23 00:40:11 -0500
+Processing by ProjectsController#index as HTML
+  [1m[36mUser Load (2.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mProject Load (1.0ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."user_id" = 1
+  Rendered projects/index.html.haml within layouts/application (4.0ms)
+Completed 200 OK in 34ms (Views: 26.2ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2013-07-23 00:40:34 -0500
+Processing by ProjectsController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mProject Load (1.0ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."user_id" = 1
+  Rendered projects/index.html.haml within layouts/application (9.9ms)
+Completed 200 OK in 38ms (Views: 32.7ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-23 00:40:34 -0500
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-07-23 00:40:34 -0500
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2013-07-23 00:40:34 -0500
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-07-23 00:40:34 -0500
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-07-23 00:40:34 -0500
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-07-23 00:40:34 -0500
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-07-23 00:40:34 -0500
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-07-23 00:40:34 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-23 00:40:34 -0500
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2013-07-23 00:40:34 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-23 00:40:34 -0500
+
+
+Started GET "/assets/libs/angular.js?body=1" for 127.0.0.1 at 2013-07-23 00:40:34 -0500
+
+
+Started GET "/assets/libs/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-23 00:40:34 -0500
+
+
+Started GET "/assets/libs/resource.js?body=1" for 127.0.0.1 at 2013-07-23 00:40:34 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-07-23 00:40:34 -0500
+
+
+Started GET "/assets/angular/validateProductController.js?body=1" for 127.0.0.1 at 2013-07-23 00:40:34 -0500
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-23 00:40:34 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-23 00:40:34 -0500
+
+
+Started GET "/assets/ng-rails-csrf.js?body=1" for 127.0.0.1 at 2013-07-23 00:40:34 -0500
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2013-07-23 00:40:34 -0500
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-07-23 00:40:34 -0500
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-07-23 00:40:34 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-23 00:40:34 -0500
+
+
+Started GET "/assets/logo2.png" for 127.0.0.1 at 2013-07-23 00:40:34 -0500
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2013-07-23 00:40:35 -0500
+Processing by DashboardController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered dashboard/user.html.haml within layouts/application (7.8ms)
+Completed 200 OK in 37ms (Views: 32.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/missing_little.png" for 127.0.0.1 at 2013-07-23 00:40:35 -0500
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2013-07-23 00:41:26 -0500
+Processing by DashboardController#index as HTML
+  [1m[35mUser Load (1.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  Rendered dashboard/user.html.haml within layouts/application (7.9ms)
+Completed 200 OK in 85ms (Views: 80.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-23 00:41:26 -0500
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-07-23 00:41:26 -0500
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-07-23 00:41:26 -0500
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-07-23 00:41:26 -0500
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2013-07-23 00:41:26 -0500
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-07-23 00:41:26 -0500
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-07-23 00:41:26 -0500
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-07-23 00:41:26 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-23 00:41:26 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-23 00:41:26 -0500
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2013-07-23 00:41:26 -0500
+
+
+Started GET "/assets/libs/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-23 00:41:26 -0500
+
+
+Started GET "/assets/libs/resource.js?body=1" for 127.0.0.1 at 2013-07-23 00:41:26 -0500
+
+
+Started GET "/assets/libs/angular.js?body=1" for 127.0.0.1 at 2013-07-23 00:41:26 -0500
+
+
+Started GET "/assets/angular/validateProductController.js?body=1" for 127.0.0.1 at 2013-07-23 00:41:26 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-07-23 00:41:26 -0500
+
+
+Started GET "/assets/ng-rails-csrf.js?body=1" for 127.0.0.1 at 2013-07-23 00:41:26 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-23 00:41:26 -0500
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2013-07-23 00:41:26 -0500
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-23 00:41:26 -0500
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-07-23 00:41:26 -0500
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-07-23 00:41:26 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-23 00:41:26 -0500
+
+
+Started GET "/assets/logo2.png" for 127.0.0.1 at 2013-07-23 00:41:27 -0500
+
+
+Started GET "/assets/missing_little.png" for 127.0.0.1 at 2013-07-23 00:41:27 -0500
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2013-07-23 00:41:40 -0500
+Processing by DashboardController#index as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered dashboard/user.html.haml within layouts/application (0.8ms)
+Completed 200 OK in 75ms (Views: 68.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-23 00:41:41 -0500
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-07-23 00:41:41 -0500
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-07-23 00:41:41 -0500
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-07-23 00:41:41 -0500
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-07-23 00:41:41 -0500
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2013-07-23 00:41:41 -0500
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-07-23 00:41:41 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-23 00:41:41 -0500
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2013-07-23 00:41:41 -0500
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-07-23 00:41:41 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-23 00:41:41 -0500
+
+
+Started GET "/assets/libs/angular.js?body=1" for 127.0.0.1 at 2013-07-23 00:41:41 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-23 00:41:41 -0500
+
+
+Started GET "/assets/ng-rails-csrf.js?body=1" for 127.0.0.1 at 2013-07-23 00:41:41 -0500
+
+
+Started GET "/assets/angular/validateProductController.js?body=1" for 127.0.0.1 at 2013-07-23 00:41:41 -0500
+
+
+Started GET "/assets/libs/resource.js?body=1" for 127.0.0.1 at 2013-07-23 00:41:41 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-07-23 00:41:41 -0500
+
+
+Started GET "/assets/libs/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-23 00:41:41 -0500
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-23 00:41:41 -0500
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-07-23 00:41:41 -0500
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-07-23 00:41:41 -0500
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2013-07-23 00:41:41 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-23 00:41:41 -0500
+
+
+Started GET "/assets/logo2.png" for 127.0.0.1 at 2013-07-23 00:41:41 -0500
+
+
+Started GET "/assets/missing_little.png" for 127.0.0.1 at 2013-07-23 00:41:41 -0500
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2013-07-23 00:41:51 -0500
+Processing by DashboardController#index as HTML
+  [1m[35mUser Load (1.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  Rendered dashboard/user.html.haml within layouts/application (0.9ms)
+Completed 200 OK in 150ms (Views: 138.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-23 00:41:51 -0500
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-07-23 00:41:51 -0500
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2013-07-23 00:41:51 -0500
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-07-23 00:41:51 -0500
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-07-23 00:41:51 -0500
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-07-23 00:41:51 -0500
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-07-23 00:41:51 -0500
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-07-23 00:41:51 -0500
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2013-07-23 00:41:51 -0500
+
+
+Started GET "/assets/libs/angular.js?body=1" for 127.0.0.1 at 2013-07-23 00:41:51 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-23 00:41:51 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-23 00:41:51 -0500
+
+
+Started GET "/assets/libs/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-23 00:41:51 -0500
+
+
+Started GET "/assets/libs/resource.js?body=1" for 127.0.0.1 at 2013-07-23 00:41:51 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-07-23 00:41:51 -0500
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-23 00:41:51 -0500
+
+
+Started GET "/assets/ng-rails-csrf.js?body=1" for 127.0.0.1 at 2013-07-23 00:41:51 -0500
+
+
+Started GET "/assets/angular/validateProductController.js?body=1" for 127.0.0.1 at 2013-07-23 00:41:51 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-23 00:41:51 -0500
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2013-07-23 00:41:51 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-23 00:41:51 -0500
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-07-23 00:41:51 -0500
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-07-23 00:41:51 -0500
+
+
+Started GET "/assets/logo2.png" for 127.0.0.1 at 2013-07-23 00:41:52 -0500
+
+
+Started GET "/assets/missing_little.png" for 127.0.0.1 at 2013-07-23 00:41:52 -0500
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2013-07-23 00:42:04 -0500
+Processing by DashboardController#index as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered dashboard/user.html.haml within layouts/application (0.9ms)
+Completed 200 OK in 114ms (Views: 107.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-23 00:42:04 -0500
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-07-23 00:42:04 -0500
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-07-23 00:42:04 -0500
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-07-23 00:42:04 -0500
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-07-23 00:42:04 -0500
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2013-07-23 00:42:04 -0500
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2013-07-23 00:42:04 -0500
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-07-23 00:42:04 -0500
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-07-23 00:42:04 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-23 00:42:04 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-23 00:42:04 -0500
+
+
+Started GET "/assets/libs/angular.js?body=1" for 127.0.0.1 at 2013-07-23 00:42:04 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-07-23 00:42:04 -0500
+
+
+Started GET "/assets/libs/resource.js?body=1" for 127.0.0.1 at 2013-07-23 00:42:04 -0500
+
+
+Started GET "/assets/libs/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-23 00:42:04 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-23 00:42:04 -0500
+
+
+Started GET "/assets/angular/validateProductController.js?body=1" for 127.0.0.1 at 2013-07-23 00:42:04 -0500
+
+
+Started GET "/assets/ng-rails-csrf.js?body=1" for 127.0.0.1 at 2013-07-23 00:42:04 -0500
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-23 00:42:04 -0500
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-07-23 00:42:04 -0500
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2013-07-23 00:42:04 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-23 00:42:04 -0500
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-07-23 00:42:04 -0500
+
+
+Started GET "/assets/logo2.png" for 127.0.0.1 at 2013-07-23 00:42:05 -0500
+
+
+Started GET "/assets/missing_little.png" for 127.0.0.1 at 2013-07-23 00:42:05 -0500
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2013-07-23 00:42:13 -0500
+Processing by DashboardController#index as HTML
+  [1m[35mUser Load (1.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  Rendered dashboard/user.html.haml within layouts/application (1.0ms)
+Completed 200 OK in 74ms (Views: 66.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-23 00:42:14 -0500
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-07-23 00:42:14 -0500
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-07-23 00:42:14 -0500
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-07-23 00:42:14 -0500
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2013-07-23 00:42:14 -0500
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-07-23 00:42:14 -0500
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-07-23 00:42:14 -0500
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-07-23 00:42:14 -0500
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2013-07-23 00:42:14 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-23 00:42:14 -0500
+
+
+Started GET "/assets/libs/resource.js?body=1" for 127.0.0.1 at 2013-07-23 00:42:14 -0500
+
+
+Started GET "/assets/libs/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-23 00:42:14 -0500
+
+
+Started GET "/assets/libs/angular.js?body=1" for 127.0.0.1 at 2013-07-23 00:42:14 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-23 00:42:14 -0500
+
+
+Started GET "/assets/angular/validateProductController.js?body=1" for 127.0.0.1 at 2013-07-23 00:42:14 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-07-23 00:42:14 -0500
+
+
+Started GET "/assets/ng-rails-csrf.js?body=1" for 127.0.0.1 at 2013-07-23 00:42:14 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-23 00:42:14 -0500
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-23 00:42:14 -0500
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2013-07-23 00:42:14 -0500
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-07-23 00:42:14 -0500
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-07-23 00:42:14 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-23 00:42:14 -0500
+
+
+Started GET "/assets/logo2.png" for 127.0.0.1 at 2013-07-23 00:42:14 -0500
+
+
+Started GET "/assets/missing_little.png" for 127.0.0.1 at 2013-07-23 00:42:14 -0500
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2013-07-23 00:42:25 -0500
+Processing by DashboardController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered dashboard/user.html.haml within layouts/application (0.9ms)
+Completed 200 OK in 139ms (Views: 134.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-23 00:42:25 -0500
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-07-23 00:42:25 -0500
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-07-23 00:42:25 -0500
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-07-23 00:42:25 -0500
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2013-07-23 00:42:25 -0500
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-07-23 00:42:25 -0500
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-07-23 00:42:25 -0500
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-07-23 00:42:25 -0500
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2013-07-23 00:42:25 -0500
+
+
+Started GET "/assets/libs/angular.js?body=1" for 127.0.0.1 at 2013-07-23 00:42:25 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-23 00:42:25 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-23 00:42:25 -0500
+
+
+Started GET "/assets/libs/resource.js?body=1" for 127.0.0.1 at 2013-07-23 00:42:25 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-07-23 00:42:25 -0500
+
+
+Started GET "/assets/libs/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-23 00:42:25 -0500
+
+
+Started GET "/assets/ng-rails-csrf.js?body=1" for 127.0.0.1 at 2013-07-23 00:42:25 -0500
+
+
+Started GET "/assets/angular/validateProductController.js?body=1" for 127.0.0.1 at 2013-07-23 00:42:25 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-23 00:42:25 -0500
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-23 00:42:25 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-23 00:42:25 -0500
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2013-07-23 00:42:25 -0500
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-07-23 00:42:25 -0500
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-07-23 00:42:25 -0500
+
+
+Started GET "/assets/logo2.png" for 127.0.0.1 at 2013-07-23 00:42:26 -0500
+
+
+Started GET "/assets/missing_little.png" for 127.0.0.1 at 2013-07-23 00:42:26 -0500
+
+
+Started GET "/projects" for 127.0.0.1 at 2013-07-23 00:42:42 -0500
+Processing by ProjectsController#index as HTML
+  [1m[35mUser Load (1.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mProject Load (1.1ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = 1[0m
+  Rendered projects/index.html.haml within layouts/application (4.3ms)
+Completed 200 OK in 36ms (Views: 29.4ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2013-07-23 00:42:44 -0500
+Processing by DashboardController#index as HTML
+  [1m[35mUser Load (1.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  Rendered dashboard/user.html.haml within layouts/application (0.9ms)
+Completed 200 OK in 37ms (Views: 32.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2013-07-23 00:43:43 -0500
+Processing by DashboardController#index as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered dashboard/user.html.haml within layouts/application (7.7ms)
+Completed 200 OK in 43ms (Views: 37.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-23 00:43:43 -0500
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-07-23 00:43:43 -0500
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2013-07-23 00:43:43 -0500
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-07-23 00:43:43 -0500
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-07-23 00:43:43 -0500
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-07-23 00:43:43 -0500
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-07-23 00:43:43 -0500
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-07-23 00:43:43 -0500
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2013-07-23 00:43:43 -0500
+
+
+Started GET "/assets/libs/angular.js?body=1" for 127.0.0.1 at 2013-07-23 00:43:43 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-23 00:43:43 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-23 00:43:43 -0500
+
+
+Started GET "/assets/libs/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-23 00:43:43 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-07-23 00:43:43 -0500
+
+
+Started GET "/assets/ng-rails-csrf.js?body=1" for 127.0.0.1 at 2013-07-23 00:43:43 -0500
+
+
+Started GET "/assets/angular/validateProductController.js?body=1" for 127.0.0.1 at 2013-07-23 00:43:43 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-23 00:43:43 -0500
+
+
+Started GET "/assets/libs/resource.js?body=1" for 127.0.0.1 at 2013-07-23 00:43:43 -0500
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-23 00:43:43 -0500
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2013-07-23 00:43:43 -0500
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-07-23 00:43:43 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-23 00:43:43 -0500
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-07-23 00:43:43 -0500
+
+
+Started GET "/assets/logo2.png" for 127.0.0.1 at 2013-07-23 00:43:43 -0500
+
+
+Started GET "/assets/missing_little.png" for 127.0.0.1 at 2013-07-23 00:43:43 -0500
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2013-07-23 00:43:55 -0500
+Processing by DashboardController#index as HTML
+  [1m[35mUser Load (1.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  Rendered dashboard/user.html.haml within layouts/application (11.1ms)
+Completed 200 OK in 40ms (Views: 34.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-23 00:43:55 -0500
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-07-23 00:43:55 -0500
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-07-23 00:43:55 -0500
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-07-23 00:43:55 -0500
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2013-07-23 00:43:55 -0500
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-07-23 00:43:55 -0500
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-07-23 00:43:55 -0500
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-07-23 00:43:55 -0500
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2013-07-23 00:43:55 -0500
+
+
+Started GET "/assets/libs/angular.js?body=1" for 127.0.0.1 at 2013-07-23 00:43:55 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-23 00:43:55 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-23 00:43:55 -0500
+
+
+Started GET "/assets/libs/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-23 00:43:55 -0500
+
+
+Started GET "/assets/libs/resource.js?body=1" for 127.0.0.1 at 2013-07-23 00:43:55 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-07-23 00:43:55 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-23 00:43:55 -0500
+
+
+Started GET "/assets/ng-rails-csrf.js?body=1" for 127.0.0.1 at 2013-07-23 00:43:55 -0500
+
+
+Started GET "/assets/angular/validateProductController.js?body=1" for 127.0.0.1 at 2013-07-23 00:43:55 -0500
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-23 00:43:55 -0500
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-07-23 00:43:55 -0500
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2013-07-23 00:43:55 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-23 00:43:55 -0500
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-07-23 00:43:55 -0500
+
+
+Started GET "/assets/logo2.png" for 127.0.0.1 at 2013-07-23 00:43:56 -0500
+
+
+Started GET "/assets/missing_little.png" for 127.0.0.1 at 2013-07-23 00:43:56 -0500
+
+
+Started GET "/assets/missing_little.png" for 127.0.0.1 at 2013-07-23 00:44:02 -0500
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2013-07-23 00:48:47 -0500
+Processing by DashboardController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered dashboard/user.html.haml within layouts/application (7.7ms)
+Completed 200 OK in 37ms (Views: 31.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/missing_little.png" for 127.0.0.1 at 2013-07-23 00:48:47 -0500
+
+
+Started GET "/projects" for 127.0.0.1 at 2013-07-23 00:48:48 -0500
+Processing by ProjectsController#index as HTML
+  [1m[35mUser Load (1.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mProject Load (1.0ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = 1[0m
+  Rendered projects/index.html.haml within layouts/application (3.9ms)
+Completed 200 OK in 32ms (Views: 25.7ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2013-07-23 00:48:49 -0500
+Processing by DashboardController#index as HTML
+  [1m[35mUser Load (1.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  Rendered dashboard/user.html.haml within layouts/application (0.9ms)
+Completed 200 OK in 30ms (Views: 24.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-23 00:48:53 -0500
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+Redirected to http://localhost:3000/dashboard
+Completed 302 Found in 8ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/logo2.png" for 127.0.0.1 at 2013-07-23 00:48:53 -0500
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2013-07-23 00:48:53 -0500
+Processing by DashboardController#index as HTML
+  [1m[35mUser Load (1.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  Rendered dashboard/user.html.haml within layouts/application (0.8ms)
+Completed 200 OK in 34ms (Views: 28.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/logo2.png" for 127.0.0.1 at 2013-07-23 00:48:54 -0500
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2013-07-23 00:48:57 -0500
+Processing by DashboardController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered dashboard/user.html.haml within layouts/application (0.7ms)
+Completed 200 OK in 39ms (Views: 34.3ms | ActiveRecord: 1.1ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2013-07-23 00:48:59 -0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"zKBDU+RA51ADMWlXPMB6sAlbrNDBxUQd8yE2362uxYc="}
+  [1m[35mUser Load (1.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 56ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-23 00:48:59 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (9.3ms)
+Completed 200 OK in 65ms (Views: 38.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-23 00:48:59 -0500
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-07-23 00:48:59 -0500
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-07-23 00:48:59 -0500
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-07-23 00:48:59 -0500
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-07-23 00:48:59 -0500
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-07-23 00:48:59 -0500
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2013-07-23 00:48:59 -0500
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2013-07-23 00:48:59 -0500
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-07-23 00:48:59 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-23 00:48:59 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-23 00:48:59 -0500
+
+
+Started GET "/assets/libs/angular.js?body=1" for 127.0.0.1 at 2013-07-23 00:48:59 -0500
+
+
+Started GET "/assets/libs/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-23 00:48:59 -0500
+
+
+Started GET "/assets/libs/resource.js?body=1" for 127.0.0.1 at 2013-07-23 00:48:59 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-07-23 00:48:59 -0500
+
+
+Started GET "/assets/angular/validateProductController.js?body=1" for 127.0.0.1 at 2013-07-23 00:48:59 -0500
+
+
+Started GET "/assets/ng-rails-csrf.js?body=1" for 127.0.0.1 at 2013-07-23 00:48:59 -0500
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-23 00:48:59 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-23 00:48:59 -0500
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2013-07-23 00:48:59 -0500
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-07-23 00:48:59 -0500
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-07-23 00:48:59 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-23 00:48:59 -0500
+
+
+Started GET "/assets/logo2.png" for 127.0.0.1 at 2013-07-23 00:49:00 -0500
+
+
+Started GET "/assets/hero-04.jpg" for 127.0.0.1 at 2013-07-23 00:49:00 -0500
