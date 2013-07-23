@@ -32,6 +32,7 @@ ActiveRecord::Schema.define(version: 20130723182312) do
     t.integer  "duration"
     t.float    "goal"
     t.string   "category"
+    t.boolean  "approved"
   end
 
   create_table "users", force: true do |t|
