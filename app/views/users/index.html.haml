@@ -1,0 +1,27 @@
+
+%center
+  %h2 Dashboard!
+
+%ul.nav.nav-tabs
+  %li.active
+    %a  Perfil
+  %li
+    %a  Message
+.navbar
+- @users do |f|
+  .row.usercontainer
+    .span8
+      .row
+        .span3.image
+          = image_tag ("missing_little.png") 
+          %hr
+        .span5.algo
+          %p 
+            #{f.name}
+          %p
+            #{f.email}
+            
+      .projects.same.hero 
+        Here go the users Projects
+    .span4.hero.userinfo
+      %p Info User
