@@ -1,5 +1,7 @@
 class ProjectsController < ApplicationController
   before_filter :authenticate_user!
+  before_filter :require_admin, only: :destroy
+
   def index
     #@project = Project.all
     @project = Project.where(user_id: current_user.id)
@@ -42,4 +44,14 @@ class ProjectsController < ApplicationController
   def project_params
    params.require(:project).permit(:project_name,:project_content,:duration,:city,:goal,:tags, :user_id)
   end
+
+  def require_admin
+    @user = current_user
+    unless current_user.admin?
+      flash[:error] = "You must be an Admin to do that!"
+      redirect_to projects_path 
+    end
+  end
+
+
 end

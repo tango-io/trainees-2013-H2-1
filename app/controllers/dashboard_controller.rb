@@ -4,4 +4,5 @@ class DashboardController < ApplicationController
   def index
       render 'user'
   end
+  
 end
