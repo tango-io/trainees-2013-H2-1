@@ -9,6 +9,7 @@ class ProjectsController < ApplicationController
 
   def new
     @project = Project.new
+    @categories = Category.all
   end
 
   def create
@@ -24,6 +25,7 @@ class ProjectsController < ApplicationController
 
   def edit
     @project = Project.find(params[:id])
+    @categories = Category.all
   end
 
   def update
@@ -42,7 +44,7 @@ class ProjectsController < ApplicationController
 
   private
   def project_params
-   params.require(:project).permit(:project_name,:project_content,:duration,:city,:goal,:tags, :user_id)
+   params.require(:project).permit(:project_name,:project_content,:duration,:city,:goal,:tags, :user_id, :category)
   end
 
   def require_admin
