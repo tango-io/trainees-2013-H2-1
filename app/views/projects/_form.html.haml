@@ -23,7 +23,7 @@
         #{f.text_field :goal}
         %p Category
         -#= select_tag "categories", options_for_select(@categories.collect{ |u| [ u.categories, u.id]})
-        #{f.collection_select :category , @categories, :id,:categories}
+        #{f.collection_select :sub_category_id , @category, :id,:name}
         %p Image 
         #{f.file_field :img_src}
         %p Tags 
