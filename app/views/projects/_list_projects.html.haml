@@ -1,12 +1,12 @@
-- @project.each do |f|
+- @projects.each do |project|
       
   %td
     %tr.border-bottom
-      %td= f.project_name
-      %td= f.project_content
-  %td= link_to 'Edit', edit_project_path(f)
+      %td= project.project_name
+      %td= project.project_content
+  %td= link_to 'Edit', edit_project_path(project)
   %td 
-  - if !f.approved
+  - unless project.approved
     %td
-      \#{link_to 'Delete', project_path(f), method: :delete}
+      \#{link_to 'Delete', project_path(project), method: :delete}
 = link_to 'New', new_project_path

@@ -3,7 +3,7 @@ class AdminsController < ApplicationController
   before_filter :require_admin
 
  def index
-    @project = Project.all
+    @projects = Project.all
  end
 
 
