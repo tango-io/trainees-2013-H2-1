@@ -7,7 +7,6 @@
   %li
     = link_to 'Account', edit_user_path(current_user.id)
 .navbar
-- @user.each do |data|  
   .row.usercontainer
     .span8
       .row
@@ -16,12 +15,12 @@
           %hr
         .span5.algo
           %p 
-            = data.name
+            = current_user.name
           %p
-            = data.email
+            = current_user.email
       .projects.same.hero 
         Here go the users Projects
     .span4.hero.userinfo
       %p
-        = data.biography
+        = current_user.biography
 
