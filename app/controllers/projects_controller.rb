@@ -17,7 +17,6 @@ class ProjectsController < ApplicationController
     @project = Project.new(project_params)
     #
     if @project.save
-      binding.pry
       redirect_to projects_path
     else
       render 'new'
