@@ -1,0 +1,14 @@
+- @projects.each do |project|
+  %td
+    %tr.border-bottom
+      - unless project.approved
+        %tr
+          %td= project.project_name
+          %td= project.project_content
+          %td
+            = form_for(:admins,  :html => { :method => :post }  ) do |fApproval|
+              = fApproval.check_box :approval
+              = fApproval.hidden_field 'projectId', :value => project.id
+              = fApproval.submit 'Approval'    
+        %td= link_to 'Edit', edit_project_path(project)
+        %td= link_to 'Delete', project_path(project), method: :delete
