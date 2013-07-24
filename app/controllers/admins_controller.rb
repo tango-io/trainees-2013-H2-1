@@ -2,10 +2,21 @@ class AdminsController < ApplicationController
   before_filter :authenticate_user!
   before_filter :require_admin
 
- def index
+  def index
     @project = Project.all
+    #binding.pry
  end
-
+ 
+ def create
+    if params[:admins][:approval] == "1"
+      ### Aprovar
+      @projectId = params[:admins][:projectId].gsub(/\D/, '').to_i
+      @project = Project.find(@projectId)
+      @project.approved = true
+      @project.save
+    end
+   redirect_to admins_path 
+ end
 
   private
   def admin_params

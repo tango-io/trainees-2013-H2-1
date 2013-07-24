@@ -5,6 +5,7 @@ class ProjectsController < ApplicationController
   def index
     #@project = Project.all
     @project = Project.where(user_id: current_user.id)
+    #binding.pry
   end
 
   def new
