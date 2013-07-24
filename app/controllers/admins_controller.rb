@@ -7,6 +7,17 @@ class AdminsController < ApplicationController
  end
 
 
+def create
+    if params[:admins][:approval] == "1"
+      ### Approved? 
+      @projectId = params[:admins][:projectId].gsub(/\D/, '').to_i
+      @project = Project.find(@projectId)
+      @project.approved = true
+      @project.save
+    end
+   redirect_to admins_path 
+ end
+
   private
   def admin_params
    params.require(:user).permit(:user_name, :user_id)
