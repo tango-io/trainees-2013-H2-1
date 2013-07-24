@@ -1,0 +1,24 @@
+%center 
+  %h2 User Dashboard!
+
+%ul.nav.nav-tabs
+  %li.active
+    %a  Perfil
+  %li
+  
+.navbar
+  .row.usercontainer
+  - @profile.each do |data|
+    .span8
+      %a= link_to 'Account', edit_user_path(data)
+      .row
+        .span3.image
+          = image_tag ("missing_little.png") 
+          %hr
+        .span5.algo
+          = data.name
+          = data.email
+      .projects.same.hero 
+        Here go the users Projects
+    .span4.hero.userinfo
+      = data.biography

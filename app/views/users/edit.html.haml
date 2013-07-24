@@ -1,0 +1,18 @@
+%ul.nav.nav-tabs
+  %li.active
+  %a Account
+.row.usercontainer 
+  = form_for @profile do |f|
+    .span4
+      %p Name
+      #{f.text_field :name}
+      %p Location 
+      #{f.text_field :location, :size => "20x10"}
+    .span4
+      %p Time zone 
+      #{f.text_field :time_zone}
+      %p Biography 
+      #{f.text_area :biography , :size => "10x10"}
+      = f.submit
+
+
