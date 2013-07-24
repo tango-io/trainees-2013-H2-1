@@ -1,24 +1,27 @@
 %center 
-  %h2 User Dashboard!
+  %h2 You are in the User Dashboard!
 
 %ul.nav.nav-tabs
   %li.active
-    %a  Perfil
+    = link_to 'Perfil', users_path(current_user.id)
   %li
-  
+    = link_to 'Account', edit_user_path(current_user.id)
 .navbar
+- @user.each do |data|  
   .row.usercontainer
-  - @user.each do |data|
     .span8
-      %a= link_to 'Account', edit_user_path(data)
       .row
         .span3.image
           = image_tag ("missing_little.png") 
           %hr
         .span5.algo
-          = data.name
-          = data.email
+          %p 
+            = data.name
+          %p
+            = data.email
       .projects.same.hero 
         Here go the users Projects
     .span4.hero.userinfo
-      = data.biography
+      %p
+        = data.biography
+

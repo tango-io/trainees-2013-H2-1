@@ -1,7 +1,13 @@
+%center 
+  %h2 You are in the User Dashboard!
+
+
 %ul.nav.nav-tabs
+  %li
+    = link_to 'Perfil', users_path(current_user.id)
   %li.active
-  %a Account
-.row.usercontainer 
+    = link_to 'Account', edit_user_path(current_user.id)
+.navbar.row.usercontainer 
   = form_for @user do |f|
     .span4
       %p Name

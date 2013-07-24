@@ -14,15 +14,14 @@ class UsersController < ApplicationController
 
   def update
     @user = User.find(params[:id])
-    binding.pry
     @user.update_attributes(user_params)
-    binding.pry
     render 'edit'
+    flash[:message]= 'Changes Saved'
   end
 
   private
   def user_params
-   params.require(:user).permit(:all) 
+   params.require(:user).permit(:name, :location, :time_zone,:biography) 
   end
 
 end
