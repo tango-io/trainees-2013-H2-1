@@ -1,24 +1,28 @@
 class UsersController < ApplicationController
 
   def index
-    @profile = User.where(id: current_user.id)
+    @user = User.where(id: current_user.id)
   end
   
   def new
-    @profile = User.all
+    @user = User.all
   end
   
   def edit
-    @profile = User.find(params[:id])
+    @user = User.find(params[:id])
   end
 
   def update
-
+    @user = User.find(params[:id])
+    binding.pry
+    @user.update_attributes(user_params)
+    binding.pry
+    render 'edit'
   end
 
   private
-  def user_paramas
-   params.require(:profile).permit.permit(:all) 
+  def user_params
+   params.require(:user).permit(:all) 
   end
 
 end

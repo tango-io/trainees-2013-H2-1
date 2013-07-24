@@ -8,7 +8,7 @@
   
 .navbar
   .row.usercontainer
-  - @profile.each do |data|
+  - @user.each do |data|
     .span8
       %a= link_to 'Account', edit_user_path(data)
       .row
