@@ -6,61 +6,7 @@
     = javascript_include_tag "application", "data-turbolinks-track" => true
     = csrf_meta_tags
   %body
-    .navbar.navbar-fixed-top.navbar-inner.nav-tabs
-      .container
-        .row
-          .span3.paddingtop
-            .kickstarterlogoup
-              %a{:href => root_path }
-                = image_tag ("logo2.png") 
-          .span4.paddingtop
-            - if user_signed_in?
-              \#{link_to "My Projects", projects_path}
-              \#{link_to "Dashboard", dashboard_index_path}
-            - else
-              %p What is Kickstarter?
-          .span3.paddingtop
-            %input{:placeholder => "Search", :type => "text"}/ 
-          .span2.paddingtop
-            - if user_signed_in?
-              #{current_user.email}
-              \#{link_to "Sign out", destroy_user_session_path, :method => :delete}
-            - else
-              = link_to "Sign up", new_user_registration_path
-              or #{link_to "sign in", new_user_session_path}
-
-    .container.main-container.hero-unit
-      - flash.each do |name, msg|
-        = content_tag :div, msg, :id => "flash_#{name}"
-      = yield
-    .mega-footer.row  
-      .footer.container
-        .right.span1.footerliststyle
-          %ul.footerliststyle
-            %li Art
-            %li Comics
-            %li Dance
-            %li Design
-            %li Fashion
-            %li Film and Video
-            %li Food
-        .right.span2.footerliststyle
-          %ul.footerliststyle
-            %li Games
-            %li Music
-            %li Photography
-            %li Publishing
-            %li Technology
-            %li Theater
-        .right.span1.footerliststyle
-          %ul.footerliststyle
-            %li Puerto Vallarta, Mexico
-            %li Staff Picks
-            %li Popular
-            %li Recently Launched
-            %li Small Projects
-            %li Most Funded
-            %li Curated Pages
-        .center.span2
-        .left.span3
-
+    .principal-containter
+      = render 'layouts/menu'
+      = render 'layouts/main_content'
+      = render 'layouts/footer'
