@@ -13,11 +13,14 @@ class UsersController < ApplicationController
 
   def update
     @user = User.find(params[:id])
-    @user.update_attributes(user_params)
-    render 'edit'
-    flash[:message]= 'Changes Saved'
+    if @user.update_attributes(user_params)
+      flash[:message] = "Changes Saved"
+      redirect_to edit_user_path     
+    else
+      render :edit, errors: @user.errors
+    end
   end
-
+   
   private
   def user_params
    params.require(:user).permit(:name, :location, :time_zone,:biography) 
