@@ -1,6 +1,7 @@
 Star::Application.routes.draw do
-  devise_for :users
+  devise_for :users, :controllers => {:registrations => "registrations"}
   resources :dashboard , :projects, :admins, :categories
+  post 'admins', to: 'admins#approvalProject' 
 
   root to: "home#index"
   # The priority is based upon order of creation: first created -> highest priority.
