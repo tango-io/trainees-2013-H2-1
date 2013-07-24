@@ -9,6 +9,5 @@ class ApplicationController < ActionController::Base
 
   def load_general_vars
     @project_count = Project.where(approved: [nil,false]).count
-    @is_admin = User.find(current_user.id).admin
   end
 end

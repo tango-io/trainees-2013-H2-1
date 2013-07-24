@@ -9,14 +9,15 @@ class ProjectsController < ApplicationController
 
   def new
     @project = Project.new
-    @categories = Category.all
+    @category = Category.all
   end
 
   def create
     @user = current_user
     @project = Project.new(project_params)
-    #binding.pry
+    #
     if @project.save
+      binding.pry
       redirect_to projects_path
     else
       render 'new'
@@ -25,7 +26,7 @@ class ProjectsController < ApplicationController
 
   def edit
     @project = Project.find(params[:id])
-    @categories = Category.all
+    @category = Category.all
   end
 
   def update
@@ -44,7 +45,7 @@ class ProjectsController < ApplicationController
 
   private
   def project_params
-   params.require(:project).permit(:project_name,:project_content,:duration,:city,:goal,:tags, :user_id, :category)
+   params.require(:project).permit(:project_name,:project_content,:duration,:city,:goal,:tags, :user_id, :sub_category_id)
   end
 
   def require_admin

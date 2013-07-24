@@ -16,7 +16,7 @@
       .span2.paddingtop
         - if user_signed_in?
           #{current_user.email}
-          - if @is_admin
+          - if current_user.admin?
             #{link_to @project_count, admins_path}
           \#{link_to "Sign out", destroy_user_session_path, :method => :delete}
         - else
