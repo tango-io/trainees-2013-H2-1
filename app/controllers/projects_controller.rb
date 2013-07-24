@@ -44,7 +44,7 @@ class ProjectsController < ApplicationController
 
   private
   def project_params
-   params.require(:project).permit(:project_name,:project_content,:duration,:city,:goal,:tags, :user_id, :category)
+   params.require(:project).permit(:project_name,:project_content,:duration,:city,:goal,:tags, :user_id, :sub_category_id)
   end
 
   def require_admin
