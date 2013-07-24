@@ -1,0 +1,24 @@
+%center 
+  %h2 You are in the User Dashboard!
+
+
+%ul.nav.nav-tabs
+  %li
+    = link_to 'Perfil', users_path(current_user.id)
+  %li.active
+    = link_to 'Account', edit_user_path(current_user.id)
+.navbar.row.usercontainer 
+  = form_for @user do |f|
+    .span4
+      %p Name
+      #{f.text_field :name}
+      %p Location 
+      #{f.text_field :location, :size => "20x10"}
+    .span4
+      %p Time zone 
+      #{f.time_zone_select(:time_zone, ActiveSupport::TimeZone.us_zones) }
+      %p Biography 
+      #{f.text_area :biography , :size => "10x10"}
+      = f.submit
+
+

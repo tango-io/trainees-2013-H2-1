@@ -1,0 +1,26 @@
+%center 
+  %h2 You are in the User Dashboard!
+
+%ul.nav.nav-tabs
+  %li.active
+    = link_to 'Perfil', users_path(current_user.id)
+  %li
+    = link_to 'Account', edit_user_path(current_user.id)
+.navbar
+  .row.usercontainer
+    .span8
+      .row
+        .span3.image
+          = image_tag ("missing_little.png") 
+          %hr
+        .span5.algo
+          %p 
+            = current_user.name
+          %p
+            = current_user.email
+      .projects.same.hero 
+        Here go the users Projects
+    .span4.hero.userinfo
+      %p
+        = current_user.biography
+
