@@ -46,7 +46,7 @@ class ProjectsController < ApplicationController
   def show
     @project = Project.find(params[:id])
     @owner= User.find(:all, :conditions => "id=#{@project[:user_id]}")
-    @categoryname = Category.find(:all ,:conditions => "id=#{@project[:sub_category_id]}")
+    #@categoryname = Category.find(:all ,:conditions => "id=#{@project[:sub_category_id]}")
   end
 
   private
