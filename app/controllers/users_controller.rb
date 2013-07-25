@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
 
   def index
+    @user = current_user
   end
   
   def new
@@ -23,7 +24,7 @@ class UsersController < ApplicationController
    
   private
   def user_params
-   params.require(:user).permit(:name, :location, :time_zone,:biography) 
+   params.require(:user).permit(:name, :location, :time_zone, :biography, :avatar) 
   end
 
 end
