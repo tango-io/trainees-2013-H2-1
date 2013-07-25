@@ -1,7 +1,8 @@
 %center
   .headerproject
     %h2= @project.project_name 
-    %p= @user.name
+    - @owner.each do |f|
+      %p= f.name
 .container
   .menu.row
     %ul.nav.nav-tabs
@@ -20,9 +21,8 @@
   .content.container.row
     .information.span8
       .video
-        .user-video
+        .owner-video
         %iframe{:allowfullscreen => "", :frameborder => "0", :height => "281", :mozallowfullscreen => "", :src => "http://player.vimeo.com/video/69424889?portrait=0", :webkitallowfullscreen => "", :width => "500"}
-        %p
         .span.button-video
       .shareproject
       .about
@@ -34,33 +34,38 @@
       .statsproject
         .alinged
           .backers
-            %span.num 20
+            %span.num 20 
             %p Bakers
           .num
             %span.num
-              %p= @project.goal
+              %p $ 0.000
           .date
             %span.num 13
             %p Days to go
           .backproject
-            %a.btn
+            %a.btn.tiny
               Back this project
-              %small 1.00 dollars
+              %br
+              1.00 dollars
           .banner
-            %span This project will be founded if at least @project.goal is piedged by $ DATE HERE
+            %span.tiny This project will be founded if at least #{@project.goal} is piedged by $DATE_HERE
           .creation-date
             %h5 Funding Period
             %p CREATION DATE - FINAL DATE (DAYS TO FINALITATION)
         .project-by
           .div.up
-            %img.user
+          - @owner.each do |f|
+            %hr/
+            -#= image_tag @owner.avatar.url
             %h5 Proect by:
-            %p=@user.name
-            %p=@user.location
+            %p= f.name
+            %p= f.location
           .div.down 
-            .user-stats
+            .owner-stats
+              %hr/
               %p number o projects and backets
-            .user-socialmedia
+            .owner-socialmedia
+              %hr/
               %p Facebook and twitter
         .pledges      
   .otherprojects    

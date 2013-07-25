@@ -44,7 +44,8 @@ class ProjectsController < ApplicationController
 
   def show
     @project = Project.find(params[:id])
-    @user = current_user
+    @owner= User.find(:all, :conditions => "id=#{@project[:user_id]}")
+    #@owner = @user.where(:id => @project.user_id) 
   end
 
   private
