@@ -42,6 +42,10 @@ class ProjectsController < ApplicationController
     redirect_to projects_path
   end
 
+  def show
+    @project = Project.find(params[:id])
+  end
+
   private
   def project_params
    params.require(:project).permit(:project_name,:project_content,:duration,:city,:goal,:tags, :user_id, :sub_category_id)
