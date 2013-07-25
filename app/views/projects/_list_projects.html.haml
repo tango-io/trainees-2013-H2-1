@@ -5,6 +5,7 @@
       %td= project.project_name
       %td= project.project_content
   %td= link_to 'Edit', edit_project_path(project)
+  %td= link_to 'Show Project', project_path(project)
   %td 
   - unless project.approved
     %td

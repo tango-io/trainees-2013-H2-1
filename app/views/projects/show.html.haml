@@ -1,63 +1,67 @@
 %center
   .headerproject
-    %h2 Name of Project
-    %p By :USER
+    %h2= @project.project_name 
+    %p= @user.name
 .container
   .menu.row
-    %ul.nav.nav-tabls
-      .span8
-        %li
-          Home
-        %li
-          Updates
-        %li
-          Backers
-        %li
-          Comments
-      .span4
-        %li
-          Place
-        %li
-          Category
+    %ul.nav.nav-tabs
+      %li.active
+        %a Home
+      %li
+        %a Updates(0)
+      %li
+        %a Backers(0)
+      %li
+        %a Comments(0)
+      %li
+        %a=@project.city
+      %li
+        %a=@project.sub_category_id
   .content.container.row
     .information.span8
       .video
+        .user-video
+        %iframe{:allowfullscreen => "", :frameborder => "0", :height => "281", :mozallowfullscreen => "", :src => "http://player.vimeo.com/video/69424889?portrait=0", :webkitallowfullscreen => "", :width => "500"}
+        %p
         .span.button-video
-      .shareproject.
+      .shareproject
       .about
         .information
+          %p= @project.project_content
       .risks    
         .reports
     .righaside.span4
       .statsproject
-        .backers
-          %span 20
-          %p Bakers
-        .num
-          %span $500
-        .date
-          %span 13
-          %p Days to go
-        .backproject
-          %a.btn
-            Back this project
-            %small 1.00 dollars
-        .banner
-          %p Tjisproject will be founded if at least $ GOALHERE is piedged by $ DATE HERE
-        .creation-date
-          %h5 Funding Period
-          %p CREATION DATE - FINAL DATE (DAYS TO FINALITATION)
-      .project-by
-        .div.up
-          %img.user
-          %h5 Proect by:
-          %p Name user Here
-          %p City Here
-        .div.down 
-          .user-stats
-            %p number o projects and backets
-          .user-socialmedia
-            %p Facebook and twitter
-      .pledges      
+        .alinged
+          .backers
+            %span.num 20
+            %p Bakers
+          .num
+            %span.num
+              %p= @project.goal
+          .date
+            %span.num 13
+            %p Days to go
+          .backproject
+            %a.btn
+              Back this project
+              %small 1.00 dollars
+          .banner
+            %span This project will be founded if at least @project.goal is piedged by $ DATE HERE
+          .creation-date
+            %h5 Funding Period
+            %p CREATION DATE - FINAL DATE (DAYS TO FINALITATION)
+        .project-by
+          .div.up
+            %img.user
+            %h5 Proect by:
+            %p=@user.name
+            %p=@user.location
+          .div.down 
+            .user-stats
+              %p number o projects and backets
+            .user-socialmedia
+              %p Facebook and twitter
+        .pledges      
   .otherprojects    
 
