@@ -19,6 +19,7 @@ gem 'pry'
 
 # Use postgresql as the database for Active Record
 gem 'pg'
+gem 'puma'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
