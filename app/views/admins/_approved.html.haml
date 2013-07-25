@@ -9,6 +9,6 @@
             = form_for(:admins,  :html => { :method => :post }  ) do |fApproval|
               = fApproval.check_box :approval
               = fApproval.hidden_field 'projectId', :value => project.id
-              = fApproval.submit 'Approval'    
+              = fApproval.submit 'Approve'    
         %td= link_to 'Edit', edit_project_path(project)
         %td= link_to 'Delete', project_path(project), method: :delete

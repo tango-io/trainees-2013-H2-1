@@ -1,6 +1,6 @@
 .navbar-inner
   .row
-    = form_for @project do |f|
+    = form_for @project, html: {multipart: true} do |f|
       - if @project.errors.any?
         .error_explanation
           %h2
@@ -24,13 +24,13 @@
         %p Category
         #{f.collection_select :sub_category_id , @categories, :id,:name}
         %p Image 
-        #{f.file_field :img_src}
+        #{f.file_field :image}
         %p Tags 
         #{f.text_field :tags}
         #{f.hidden_field :user_id , :value => current_user.id}    
       .span4
         .imgproject
-          = image_tag ("missing_little.png") 
+          = image_tag @project.image.url
           %hr
           %p
             = f.submit

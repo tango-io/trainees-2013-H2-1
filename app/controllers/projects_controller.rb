@@ -13,6 +13,7 @@ class ProjectsController < ApplicationController
   end
 
   def create
+    @categories = Category.all
     @user = current_user
     @project = Project.new(project_params)
     #
@@ -44,7 +45,7 @@ class ProjectsController < ApplicationController
 
   private
   def project_params
-   params.require(:project).permit(:project_name,:project_content,:duration,:city,:goal,:tags, :user_id, :sub_category_id)
+   params.require(:project).permit(:project_name,:project_content,:duration,:city,:goal,:tags, :user_id, :sub_category_id, :image)
   end
 
   def require_admin
