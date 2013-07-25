@@ -13,6 +13,7 @@ class ProjectsController < ApplicationController
   end
 
   def create
+    @categories = Category.all
     @user = current_user
     @project = Project.new(project_params)
     #
