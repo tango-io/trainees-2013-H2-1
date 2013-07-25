@@ -2,12 +2,15 @@ class AdminsController < ApplicationController
   before_filter :authenticate_user!
   before_filter :require_admin
 
- def index
+  def index
     @projects = Project.all
- end
+  end
 
+  def show
 
-def create
+  end
+
+  def create
     if params[:admins][:approval] == "1"
       ### Approved? 
       @projectId = params[:admins][:projectId].gsub(/\D/, '').to_i
@@ -17,6 +20,15 @@ def create
     end
    redirect_to admins_path 
  end
+
+  ##User Actions
+  def users_List
+    @users = User.all
+  end
+
+  def users_Admin
+
+  end
 
   private
   def admin_params

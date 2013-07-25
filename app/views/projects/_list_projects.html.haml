@@ -4,6 +4,8 @@
     %tr.border-bottom
       %td= project.project_name
       %td= project.project_content
+      - if project.approved
+        %td Approved  
   %td= link_to 'Edit', edit_project_path(project)
   %td 
   - unless project.approved

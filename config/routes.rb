@@ -1,6 +1,8 @@
 Star::Application.routes.draw do
   devise_for :users
   resources :dashboard , :projects, :admins, :categories , :users
+  get 'admins/users', to: 'admins#users_list'
+  post 'admins/users/:id', to: 'admins#users_admin'
 
   root to: "home#index"
   # The priority is based upon order of creation: first created -> highest priority.
