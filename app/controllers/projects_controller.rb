@@ -3,7 +3,7 @@ class ProjectsController < ApplicationController
   before_filter :require_admin, only: :destroy
 
   def index
-    @projects = current_user.custom_sorted
+    @projects = Project.where(user_id: current_user.id).custom_sorted 
   end
 
   def new
