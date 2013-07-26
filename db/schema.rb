@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130725132815) do
+ActiveRecord::Schema.define(version: 20130726161648) do
 
   create_table "categories", force: true do |t|
     t.string   "name"
@@ -35,6 +35,15 @@ ActiveRecord::Schema.define(version: 20130725132815) do
     t.boolean  "approved"
     t.integer  "sub_category_id"
     t.string   "image"
+  end
+
+  create_table "reports", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "project_id"
+    t.string   "reason"
+    t.string   "comment"
+    t.integer  "user_id"
   end
 
   create_table "users", force: true do |t|

@@ -22,7 +22,7 @@
     .information.span8
       .video
         .owner-video
-        %iframe{:allowfullscreen => "", :frameborder => "0", :height => "281", :mozallowfullscreen => "", :src => "http://player.vimeo.com/video/69424889?portrait=0", :webkitallowfullscreen => "", :width => "500"}
+          %iframe{:allowfullscreen => "", :frameborder => "0", :height => "281", :mozallowfullscreen => "", :src => "http://player.vimeo.com/video/69424889?portrait=0", :webkitallowfullscreen => "", :width => "500"}
         .span.button-video
       .shareproject
       .about
@@ -30,13 +30,36 @@
           %p= @project.project_content
       .risks    
         .reports
-          %a.btn.btn-danger
-            Report this Project
+          %a.btn.btn-report{"data-toggle" => "modal",:href =>"#Modal", :role => "button"} 
+            Report This Project
+        .report
+          .modal-header
+            %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", :type => "button"} ×
+            %h3#myModalLabel Please select a reason for your report 
+          .modal-body
+            = form_for :reports ,:url => report_path ,:method => :put do |f|
+              = f.radio_button :option, 'Spamming', checked: true 
+              This project creator is spamming me. Project creators are not permitted to spam. This includes sending unsolicited mass emails and unsolicited @messages on Twitter. 
+              %br
+              = f.radio_button :option, 'Charity Project', checked: false
+              This is a charity project. Funding for charities or causes is not permitted. This includes solicitations for charity organizations, awareness campaigns, and raising funds for personal (non-project) expenses. 
+              %br
+              = f.radio_button :option, 'Is not a Project', checked: false
+              This is not a project. A project is something with a clear end, like making an album, a film, or a new game. A project will eventually be completed, and something will be produced as a result.
+              %br
+              = f.radio_button :option, 'Prohibited Rewards', checked: false
+              Prohibited rewards. Raffles, discounts, coupons, contests, and investment offers are prohibited. For more, please review what's not allowed.
+              = f.radio_button :option, 'Abusive Behavior', checked: false
+              I see abusive behavior on this project. If you see inappropriate comments or other activity, let us know.
+              %br
+              = f.submit  
+          .modal-footer
+            %button.btn{"aria-hidden" => "true", "data-dismiss" => "modal"} Close
     .righaside.span4
       .statsproject
         .alinged
           .backers
-            %span.num 20
+            %span.num 0
             %p Bakers
           .num
             %span.num
@@ -48,9 +71,9 @@
             %a.btn.btn-success
               Back this project
               %br
-              1.00 dollars
+              1 minimum pledge
           .banner
-            %span.tiny This project will be founded if at least #{@project.goal} is piedged by $DATE_HERE
+            %span.tiny This project will be founded if at least #{@project.goal} is pliedged by $DATE_HERE
           .creation-date
             %h5 Funding Period
             %p CREATION DATE - FINAL DATE (DAYS TO FINALITATION)
