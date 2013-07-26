@@ -8,7 +8,6 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   validates :avatar, 
-    :presence => true , 
     :file_size => { :maximum => 5.megabytes.to_i} 
   validates_integrity_of :avatar
   validates_processing_of :avatar  
