@@ -22,12 +22,18 @@ class AdminsController < ApplicationController
  end
 
   ##User Actions
-  def users_List
+  def users_list
     @users = User.all
   end
 
-  def users_Admin
-
+  def users_admin
+    if params[:admins][:active_admin] == "1"
+      @userId = params[:admins][:userId].gsub(/\D/, '').to_i
+      @user = User.find(@userId)
+      @user.admin = true
+      @user.save
+    end
+    redirect_to admins_path
   end
 
   private
