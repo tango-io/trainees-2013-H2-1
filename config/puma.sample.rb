@@ -3,7 +3,11 @@
 environment 'production'
 rails_root = ''
 port       = ''
+<<<<<<< HEAD
 daemonize
+=======
+daemonize  false
+>>>>>>> origin/production
 
 pidfile         rails_root + '/tmp/pids/puma.pid'
 state_path      rails_root + '/tmp/pids/puma.state'
