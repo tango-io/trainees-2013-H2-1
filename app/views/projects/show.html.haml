@@ -30,9 +30,9 @@
           %p= @project.project_content
       .risks    
         .reports
-          %a.btn.btn-report{"data-toggle" => "modal",:href =>"#Modal", :role => "button"} 
+          %a.btn.btn-danger{"data-toggle" => "modal", :href => "#myModal", :role => "button"} 
             Report This Project
-        .report
+        .report#myModal.modal.hide.fade{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", :role => "dialog", :tabindex => "-1"}
           .modal-header
             %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", :type => "button"} ×
             %h3#myModalLabel Please select a reason for your report 
@@ -49,6 +49,7 @@
               %br
               = f.radio_button :option, 'Prohibited Rewards', checked: false
               Prohibited rewards. Raffles, discounts, coupons, contests, and investment offers are prohibited. For more, please review what's not allowed.
+              %br
               = f.radio_button :option, 'Abusive Behavior', checked: false
               I see abusive behavior on this project. If you see inappropriate comments or other activity, let us know.
               %br
