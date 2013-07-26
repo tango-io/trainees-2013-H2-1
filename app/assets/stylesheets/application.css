@@ -85,4 +85,8 @@ cursor: pointer;
 .tiny{
 font-size: 11px;
 }
+.modal-body, .modal-header , .report{
+font-size:12px;
+}
+
 
