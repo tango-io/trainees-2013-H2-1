@@ -1,11 +1,16 @@
+require 'file_size_validator' 
+
 class User < ActiveRecord::Base
-  # Include default devise modules. Others available are:
-  # :token_authenticatable, :confirmable,
-  # :lockable, :timeoutable and :omniauthable
+
+  mount_uploader :avatar, ImageUploader
+
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  # this line is for paperclip gem
-  has_attached_file :avatar, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/images/:style/missing.png"
+  validates :avatar, 
+    :presence => true , 
+    :file_size => { :maximum => 5.megabytes.to_i} 
+  validates_integrity_of :avatar
+  validates_processing_of :avatar  
 
 end

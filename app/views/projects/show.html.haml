@@ -1,0 +1,74 @@
+%center
+  .headerproject
+    %h2= @project.project_name 
+    - @owner.each do |f|
+      %p= f.name
+.container
+  .menu.row
+    %ul.nav.nav-tabs
+      %li.active
+        %a Home
+      %li
+        %a Updates(0)
+      %li
+        %a Backers(0)
+      %li
+        %a Comments(0)
+      %li
+        %a=@project.city
+      %li
+        %a=@project.sub_category_id
+  .content.container.row
+    .information.span8
+      .video
+        .owner-video
+        %iframe{:allowfullscreen => "", :frameborder => "0", :height => "281", :mozallowfullscreen => "", :src => "http://player.vimeo.com/video/69424889?portrait=0", :webkitallowfullscreen => "", :width => "500"}
+        .span.button-video
+      .shareproject
+      .about
+        .information
+          %p= @project.project_content
+      .risks    
+        .reports
+          %a.btn.btn-danger
+            Report this Project
+    .righaside.span4
+      .statsproject
+        .alinged
+          .backers
+            %span.num 20
+            %p Bakers
+          .num
+            %span.num
+              %p $ 00.00
+          .date
+            %span.num 13
+            %p Days to go
+          .backproject
+            %a.btn.btn-success
+              Back this project
+              %br
+              1.00 dollars
+          .banner
+            %span.tiny This project will be founded if at least #{@project.goal} is piedged by $DATE_HERE
+          .creation-date
+            %h5 Funding Period
+            %p CREATION DATE - FINAL DATE (DAYS TO FINALITATION)
+        .project-by
+          .div.up
+          - @owner.each do |f|
+            %hr/
+            -#= image_tag @owner.avatar.url
+            %h5 Proect by:
+            %p= f.name
+            %p= f.location
+          .div.down 
+            .owner-stats
+              %hr/
+              %p number o projects and backets
+            .owner-socialmedia
+              %hr/
+              %p Facebook and twitter
+        .pledges      
+  .otherprojects    
+

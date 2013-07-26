@@ -14,6 +14,8 @@
       #{f.text_field :name}
       %p Location 
       #{f.text_field :location, :size => "20x10"}
+      %p Avatar
+      #{f.file_field :avatar}
     .span4
       %p Time zone 
       #{f.time_zone_select(:time_zone, ActiveSupport::TimeZone.us_zones) }

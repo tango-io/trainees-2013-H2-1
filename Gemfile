@@ -11,6 +11,8 @@ gem 'haml'
 
 gem 'compass'
 
+gem 'carrierwave'
+
 gem "paperclip"
 
 gem 'pry'
