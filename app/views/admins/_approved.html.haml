@@ -6,7 +6,6 @@
         %td= project.project_content
         %td
           = form_for(:admins,  :html => { :method => :post }  ) do |fApproval|
-            = fApproval.check_box :approval
             = fApproval.hidden_field 'projectId', :value => project.id
             = fApproval.submit 'Approval'    
       %td= link_to 'Edit', edit_project_path(project)

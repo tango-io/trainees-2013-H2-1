@@ -12,29 +12,26 @@
       .span4
         - unless @project.approved 
           %p Project Name
-          #{f.text_field :project_name}
+          \#{f.text_field :project_name}
           %p Goal 
-          #{f.text_field :goal}
+          \#{f.text_field :goal}
           %p Duration 
-          #{f.text_field :duration}
+          \#{f.text_field :duration}
         %p Description: 
         #{f.text_area :project_content, :size => "20x10"}
       .span4
         %p City 
-        #{f.text_field :city}
+        \#{f.text_field :city}
         %p Category
-        #{f.collection_select :sub_category_id , @categories, :id,:name}
+        \#{f.collection_select :sub_category_id , @categories, :id,:name}
         %p Image 
-        #{f.file_field :img_src}
+        \#{f.file_field :img_src}
         %p Tags 
-        #{f.text_field :tags}
-        #{f.hidden_field :user_id , :value => current_user.id}    
+        \#{f.text_field :tags}
+        \#{f.hidden_field :user_id , :value => current_user.id}    
       .span4
         .imgproject
           = image_tag ("missing_little.png") 
           %hr
           %p
             = f.submit
-          
-
-         
