@@ -17,7 +17,7 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: starfishproyec
+  database: starfishproyec1
   pool: 5
   username: oscardev 
   password: 123456
@@ -47,7 +47,7 @@ development:
 test:
   adapter: postgresql
   encoding: unicode
-  database: teststarfishproyect
+  database: teststarfishproyect1
   pool: 5
   username: oscardev
   password: 123456
