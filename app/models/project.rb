@@ -2,6 +2,7 @@ require 'file_size_validator'
 
 class Project < ActiveRecord::Base
 
+  scope :custom_sorted, -> { self.order("((duration || ' days')::interval - ('#{Time.now}' - created_at)) ASC") }
   mount_uploader :image, ImageUploader
 
   validates_presence_of :project_name, :project_content, :tags, :city, :duration, :goal, message: "can't be empty" 
@@ -12,5 +13,5 @@ class Project < ActiveRecord::Base
     :presence => true , 
     :file_size => { :maximum => 5.megabytes.to_i} 
   validates_integrity_of :image
-    validates_processing_of :image   
+  validates_processing_of :image   
 end

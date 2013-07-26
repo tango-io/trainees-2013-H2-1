@@ -10,30 +10,28 @@
             - @project.errors.full_messages.each do |msg|
               %li.error_explanation= msg
       .span4
-        %p Project Name
-        #{f.text_field :project_name}
+        - unless @project.approved 
+          %p Project Name
+          \#{f.text_field :project_name}
+          %p Goal 
+          \#{f.text_field :goal}
+          %p Duration 
+          \#{f.text_field :duration}
         %p Description: 
         #{f.text_area :project_content, :size => "20x10"}
       .span4
-        %p Duration 
-        #{f.text_field :duration}
         %p City 
-        #{f.text_field :city}
-        %p Goal 
-        #{f.text_field :goal}
+        \#{f.text_field :city}
         %p Category
-        #{f.collection_select :sub_category_id , @categories, :id,:name}
+        \#{f.collection_select :sub_category_id , @categories, :id,:name}
         %p Image 
         #{f.file_field :image}
         %p Tags 
-        #{f.text_field :tags}
-        #{f.hidden_field :user_id , :value => current_user.id}    
+        \#{f.text_field :tags}
+        \#{f.hidden_field :user_id , :value => current_user.id}    
       .span4
         .imgproject
           = image_tag @project.image.url
           %hr
           %p
             = f.submit
-          
-
-         
