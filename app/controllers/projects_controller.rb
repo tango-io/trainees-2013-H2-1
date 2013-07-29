@@ -1,9 +1,9 @@
 class ProjectsController < ApplicationController
-  before_filter :authenticate_user!
+  skip_before_filter :authenticate_user!, only: [:show]
   before_filter :require_admin, only: :destroy
 
   def index
-    @projects = Project.where(user_id: current_user.id).custom_sorted 
+    @projects = current_user.projects.custom_sorted
   end
 
   def new
@@ -13,9 +13,7 @@ class ProjectsController < ApplicationController
 
   def create
     @categories = Category.all
-    @user = current_user
     @project = Project.new(project_params)
-    #
     if @project.save
       redirect_to projects_path
     else
@@ -44,8 +42,7 @@ class ProjectsController < ApplicationController
 
   def show
     @project = Project.find(params[:id])
-    @owner= User.find(:all, :conditions => "id=#{@project[:user_id]}")
-    #@categoryname = Category.find(:all ,:conditions => "id=#{@project[:sub_category_id]}")
+    @owner = @project.user
   end
 
   private
