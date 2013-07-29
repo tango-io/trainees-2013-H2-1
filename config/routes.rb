@@ -3,7 +3,25 @@ Star::Application.routes.draw do
   post 'admins/users', to: 'admins#users_admin'
   devise_for :users
   
-  resources :dashboard , :projects, :admins, :categories , :users, :reports
+  namespace :admin do
+    resources :projects, only: [:index] do
+      member do
+        put :approve
+      end
+    end
+
+    resources :users, only: [:index] do
+      member do
+        put :convert_admin
+      end
+    end
+  end
+
+  resources :dashboard, only: [:index]
+  resources :projects
+  resources :categories, only: [:new]
+  resources :users
+  resources :reports
 
   root to: "home#index"
 end

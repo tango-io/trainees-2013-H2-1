@@ -1,0 +1,12 @@
+%section#principal
+  %h2 Listing projects
+  .navbar-inner
+    %table{width: "100%"}
+      %tr
+        %th Name
+        %th Content
+        %td
+        %td
+        %td
+      %tr
+        = render partial: 'project', collection: @projects

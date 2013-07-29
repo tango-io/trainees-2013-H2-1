@@ -1,8 +1,7 @@
 %center
   .headerproject
     %h2= @project.project_name 
-    - @owner.each do |f|
-      %p= f.name
+    %p= @owner.name
 .container
   .menu.row
     %ul.nav.nav-tabs
@@ -83,12 +82,10 @@
             %p CREATION DATE - FINAL DATE (DAYS TO FINALITATION)
         .project-by
           .div.up
-          - @owner.each do |f|
             %hr/
-            -#= image_tag @owner.avatar.url
             %h5 Proect by:
-            %p= f.name
-            %p= f.location
+            %p= @owner.name
+            %p= @owner.location
           .div.down 
             .owner-stats
               %hr/
