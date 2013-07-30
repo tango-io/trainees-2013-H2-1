@@ -42,6 +42,7 @@ class ProjectsController < ApplicationController
 
   def show
     @project = Project.find(params[:id])
+    binding.pry
     @owner = @project.user
   end
 

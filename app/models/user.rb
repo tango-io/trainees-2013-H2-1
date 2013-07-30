@@ -2,7 +2,11 @@ require 'file_size_validator'
 
 class User < ActiveRecord::Base
 
+
+  has_many :projects, :dependent => :destroy
+
   mount_uploader :avatar, ImageUploader
+ 
 
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable

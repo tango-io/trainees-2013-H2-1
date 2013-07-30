@@ -1,12 +1,11 @@
 Star::Application.routes.draw do
-  get 'admins/users', to: 'admins#users_list'
-  post 'admins/users', to: 'admins#users_admin'
   devise_for :users
   
   namespace :admin do
     resources :projects, only: [:index] do
       member do
         put :approve
+
       end
     end
 
@@ -17,7 +16,6 @@ Star::Application.routes.draw do
     end
   end
 
-  resources :dashboard, only: [:index]
   resources :projects
   resources :categories, only: [:new]
   resources :users

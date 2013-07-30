@@ -2,6 +2,8 @@ require 'file_size_validator'
 
 class Project < ActiveRecord::Base
 
+  belongs_to :user
+
   scope :custom_sorted, -> { order("((duration || ' days')::interval - ('#{Time.now}' - created_at)) ASC") }
   scope :not_approved, -> { where(approved: [nil, false]) }
   mount_uploader :image, ImageUploader
