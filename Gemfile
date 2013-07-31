@@ -21,6 +21,12 @@ gem 'pry'
 gem 'pg'
 gem 'puma'
 
+# rspec
+group :development, :test do
+  gem 'rspec-rails', '~> 2.0'
+end
+
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 

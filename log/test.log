@@ -1,0 +1,150 @@
+  [1m[36m (25.4ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (59.6ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20130718174247)
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36m (110.0ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "email" character varying(255) DEFAULT '' NOT NULL, "encrypted_password" character varying(255) DEFAULT '' NOT NULL, "reset_password_token" character varying(255), "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" character varying(255), "last_sign_in_ip" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (43.9ms)[0m  CREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")
+  [1m[36m (63.3ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35mSQL (1.8ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20130718174247"]]
+  [1m[36m (17.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateProjects (20130718195247)
+  [1m[35m (0.6ms)[0m  BEGIN
+  [1m[36m (140.8ms)[0m  [1mCREATE TABLE "projects" ("id" serial primary key, "created_at" timestamp, "updated_at" timestamp, "project_name" character varying(255), "project_content" text) [0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20130718195247"]]
+  [1m[36m (6.7ms)[0m  [1mCOMMIT[0m
+Migrating to AddFieldsToProjects (20130719161549)
+  [1m[35m (0.6ms)[0m  BEGIN
+  [1m[36m (0.8ms)[0m  [1mALTER TABLE "projects" ADD COLUMN "user_id" integer[0m
+  [1m[35m (0.7ms)[0m  ALTER TABLE "projects" ADD COLUMN "tags" character varying(255)
+  [1m[36m (0.7ms)[0m  [1mALTER TABLE "projects" ADD COLUMN "city" character varying(255)[0m
+  [1m[35m (0.6ms)[0m  ALTER TABLE "projects" ADD COLUMN "img_src" character varying(255)
+  [1m[36m (0.6ms)[0m  [1mALTER TABLE "projects" ADD COLUMN "duration" integer[0m
+  [1m[35m (0.6ms)[0m  ALTER TABLE "projects" ADD COLUMN "goal" float
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20130719161549"]]
+  [1m[35m (12.7ms)[0m  COMMIT
+Migrating to AddAvatarFieldToUser (20130719194938)
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.9ms)[0m  ALTER TABLE "users" ADD COLUMN "avatar_file_name" character varying(255)
+  [1m[36m (0.7ms)[0m  [1mALTER TABLE "users" ADD COLUMN "avatar_content_type" character varying(255)[0m
+  [1m[35m (0.6ms)[0m  ALTER TABLE "users" ADD COLUMN "avatar_file_size" integer
+  [1m[36m (0.7ms)[0m  [1mALTER TABLE "users" ADD COLUMN "avatar_updated_at" timestamp[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20130719194938"]]
+  [1m[36m (9.6ms)[0m  [1mCOMMIT[0m
+Migrating to AddAdmins (20130722232901)
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36m (0.9ms)[0m  [1mALTER TABLE "users" ADD COLUMN "name" character varying(255)[0m
+  [1m[35m (0.9ms)[0m  ALTER TABLE "users" ADD COLUMN "location" character varying(255)
+  [1m[36m (0.8ms)[0m  [1mALTER TABLE "users" ADD COLUMN "time_zone" character varying(255)[0m
+  [1m[35m (0.7ms)[0m  ALTER TABLE "users" ADD COLUMN "biography" text
+  [1m[36m (214.3ms)[0m  [1mALTER TABLE "users" ADD COLUMN "admin" boolean DEFAULT 'f'[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20130722232901"]]
+  [1m[36m (19.9ms)[0m  [1mCOMMIT[0m
+Migrating to CreateCategories (20130723151842)
+  [1m[35m (0.6ms)[0m  BEGIN
+  [1m[36m (49.4ms)[0m  [1mCREATE TABLE "categories" ("id" serial primary key, "categories" character varying(255), "parent_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20130723151842"]]
+  [1m[36m (17.2ms)[0m  [1mCOMMIT[0m
+Migrating to AddFieldstoProjects (20130723182312)
+  [1m[35m (0.6ms)[0m  BEGIN
+  [1m[36m (0.8ms)[0m  [1mALTER TABLE "projects" ADD COLUMN "category" character varying(255)[0m
+  [1m[35m (0.7ms)[0m  ALTER TABLE "projects" ADD COLUMN "approved" boolean
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20130723182312"]]
+  [1m[35m (17.0ms)[0m  COMMIT
+Migrating to AddTypeToCategories (20130724162044)
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35m (3.3ms)[0m  ALTER TABLE "categories" RENAME COLUMN "categories" TO "name"
+  [1m[36m (58.0ms)[0m  [1mALTER TABLE "categories" ADD COLUMN "type" character varying(255)[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20130724162044"]]
+  [1m[36m (15.8ms)[0m  [1mCOMMIT[0m
+Migrating to AddSubCategoryIdToProjects (20130724163218)
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36m (0.9ms)[0m  [1mALTER TABLE "projects" DROP "category"[0m
+  [1m[35m (0.6ms)[0m  ALTER TABLE "projects" ADD COLUMN "sub_category_id" integer
+  [1m[36mSQL (3.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20130724163218"]]
+  [1m[35m (7.4ms)[0m  COMMIT
+Migrating to AddImgToProject (20130725104032)
+  [1m[36m (0.6ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.9ms)[0m  ALTER TABLE "projects" ADD COLUMN "image" character varying(255)
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20130725104032"]]
+  [1m[35m (12.5ms)[0m  COMMIT
+Migrating to AddAvatarFieldToUsers (20130725132815)
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35m (1.0ms)[0m  ALTER TABLE "users" ADD COLUMN "avatar" character varying(255)
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20130725132815"]]
+  [1m[35m (11.3ms)[0m  COMMIT
+Migrating to CreateReports (20130726161648)
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35m (112.4ms)[0m  CREATE TABLE "reports" ("id" serial primary key, "created_at" timestamp, "updated_at" timestamp, "project_id" integer, "reason" character varying(255), "comment" character varying(255), "user_id" integer) 
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20130726161648"]]
+  [1m[35m (12.7ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.7ms)[0m  BEGIN
+Processing by ProjectsController#index as HTML
+Completed 500 Internal Server Error in 28ms
+  [1m[36m (0.6ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mUser Load (2.3ms)[0m  SELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mUser Load (2.1ms)[0m  SELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.5ms)[0m  BEGIN
+Processing by ProjectsController#index as HTML
+Completed 500 Internal Server Error in 10ms
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.5ms)[0m  BEGIN
+Processing by ProjectsController#index as HTML
+Completed 500 Internal Server Error in 11ms
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.5ms)[0m  BEGIN
+Processing by ProjectsController#index as HTML
+Completed 500 Internal Server Error in 11ms
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36m (0.6ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36m (0.9ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.5ms)[0m  BEGIN
+Processing by ProjectsController#index as HTML
+Completed 401 Unauthorized in 79ms
+  Rendered text template (0.1ms)
+  [1m[36m (0.6ms)[0m  [1mROLLBACK[0m
