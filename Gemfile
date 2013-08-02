@@ -5,6 +5,8 @@ gem 'rails', '4.0.0'
 
 gem 'ng-rails-csrf'
 
+gem 'rspec-rails'
+
 gem 'devise'
 
 gem 'haml'
